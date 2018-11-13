@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+@import "./components/languageBanner/languageBanner.css";
+@import "./components/languageButton/languageButton.css";
+@import "./components/mainPosterBanner/mainPosterBanner.css";
+@import "./components/mustDoBanner/mustDoBanner.css";
+@import "./components/toDoCard/toDoCard.css";
+@import "./components/promotionBanner/promotionBanner.css";
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";

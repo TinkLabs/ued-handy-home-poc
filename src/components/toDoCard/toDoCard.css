@@ -1,0 +1,42 @@
+.toDoCard {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    border: 0.5px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+.toDoCard .articleImage {
+    width: 125px;
+    height: 125px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    object-fit: cover;
+}
+.toDoCard .articleInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: 85px;
+    padding: 0.7rem 0.5rem;
+}
+.articleInfo .articleTitle {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.articleInfo .placeType,
+.articleInfo .transportTime {
+    color: grey;
+    font-size: 0.7rem;
+}
+.articleInfo .transportTime {
+    padding-top: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.transportTime img {
+    height: 13px;
+}

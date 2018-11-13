@@ -1,0 +1,22 @@
+.mustDoBanner {
+    width: 100vw;
+    padding: 0.5rem 0;
+}
+.subMustDoBanner {
+    margin: 0 1rem 0.7rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.subMustDoBanner .eatLikeALocal {
+    font-size: 1rem;
+}
+.subMustDoBanner .seeMore {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.sliderContainer {
+    margin: 0 0 0 1rem;
+}

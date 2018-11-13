@@ -1,0 +1,36 @@
+.mainPosterBanner {
+    margin: 1rem;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/* .posterContext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    margin: 1rem;
+}
+.posterContext h1 {
+    margin-bottom: 0.5rem;
+}
+.posterContext h3 {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+.bookNowBtn {
+    background-color: #ff8400;
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    border-radius: 3px;
+    align-self: flex-end;
+} */
