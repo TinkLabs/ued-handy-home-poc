@@ -1,0 +1,36 @@
+{
+    "locale": "SC",
+    "eatLikeALocal": [
+        {
+            "title": "SC Best Chicken Rice",
+            "placeType": "Hawker Food",
+            "transportType": "walk",
+            "transportTime": "18 min from hotel",
+            "image": "article1/drawable-hdpi/straight.jpg"
+        },
+        {
+            "title": "5 Local Drinks",
+            "placeType": "Bars",
+            "transportType": "drive",
+            "transportTime": "18 min from hotel",
+            "image": "article2/drawable-hdpi/straight.jpg"
+        },
+        {
+            "title": "Local Cafe",
+            "placeType": "Coffee Shop",
+            "transportType": "walk",
+            "transportTime": "18 min from hotel",
+            "image": "article3/drawable-hdpi/straight.jpg"
+        }
+    ],
+    "ADBlock": [
+        {
+            "name": "Gardens by the Bay",
+            "image": "ad1/drawable-hdpi/resting.png"
+        },
+        {
+            "name": "A Local Shopping Mall",
+            "image": "ad2/drawable-hdpi/resting.png"
+        }
+    ]
+}

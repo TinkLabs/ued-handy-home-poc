@@ -5,21 +5,21 @@ export default class ToDoCard extends React.Component {
         super(props);
 
         this.state = {
-            etaIcon: require("../../images/eta_walk.svg"),
+            etaIcon: "",
         }
     }
     componentDidMount() {
         this.setState({
             etaIcon: require(`../../images/eta_${this.props.transportType}.svg`),
+            image: require(`../../images/${this.props.image}`),
         });
     }
     render() {
-        console.log(this.state.etaIcon);
         return (
             <div className="toDoCard">
                 <img
                     className="articleImage"
-                    src={this.props.image}
+                    src={this.state.image}
                     alt="food" />
                 <div className="articleInfo">
                     <div className="articleTitle">{this.props.title}</div>

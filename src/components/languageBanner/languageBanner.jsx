@@ -7,19 +7,28 @@ export default class LanguageBanner extends React.Component {
         return (
             <div className="LanguageBanner">
                 <LanguageButton
-                    language={"ENGLISH"}
-                    selected={true}
+                    onClick={this.props.onClick}
+                    language={this.props.availableLanguage[0].full}
+                    locale={this.props.availableLanguage[0].short}
+                    selected={
+                        this.props.availableLanguage[0].short === this.props.displayLanguage}
                 />
                 <LanguageButton
-                    language={"简体中文"}
-                    selected={false}
+                    onClick={this.props.onClick}
+                    language={this.props.availableLanguage[1].full}
+                    locale={this.props.availableLanguage[1].short}
+                    selected={
+                        this.props.availableLanguage[1].short === this.props.displayLanguage}
                 />
                 <LanguageButton
-                    language={"繁體中文"}
-                    selected={false}
+                    onClick={this.props.onClick}
+                    language={this.props.availableLanguage[2].full}
+                    locale={this.props.availableLanguage[2].short}
+                    selected={
+                        this.props.availableLanguage[2].short === this.props.displayLanguage}
                 />
                 <div className="langBtnWrapper systemLanguageSelector">
-                    <a href="chooselang:">
+                    <a href="xchooselang:">
                         <img src={logo} alt="" />
                     </a>
                 </div>

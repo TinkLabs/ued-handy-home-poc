@@ -4,7 +4,7 @@
     width: 25vw;
     height: 100%;
 }
-.langBtnWrapper a {
+.langBtnWrapper span {
     width: 100%;
     height: 100%;
     color: grey;
@@ -18,7 +18,7 @@
     opacity: 1;
     border-bottom: 1px solid #1976d2;
 }
-.selected a {
+.selected span {
     font-weight: bold;
     color: #0d47a1;
 }

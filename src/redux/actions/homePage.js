@@ -1,17 +1,20 @@
-// import {
-//     Action,
-//     Dispatch
-// } from "redux";
 // import axios from "axios";
-
 // import { API_SERVER } from "src/redux/store";
 
 export const homePageActions = {
-    GET_ID_SUCCESS: "GET_ID_SUCCESS",
-    GET_ID_FAIL: "GET_ID_FAIL",
+    SET_DISPLAY_LANGUAGE: "SET_DISPLAY_LANGUAGE",
+    GET_CONTENT_SUCCESS: "GET_CONTENT_SUCCESS",
+    GET_CONTENT_FAIL: "GET_CONTENT_FAIL",
 }
 
-export function getUserID(userId) {
+export const setDisplayLanguage = (locale) => {
+    return {
+        type: homePageActions.SET_DISPLAY_LANGUAGE,
+        displayLanguage: locale,
+    }
+}
+export const getContent = (locales) => dispatch => {
+    dispatch(getContentSuccess(locales));
     // axios
     //     .post(`API_SERVER`, `package`)
     //     .then(res => {
@@ -25,15 +28,16 @@ export function getUserID(userId) {
     //         dispatch(getUserIDFail(err));
     //     });
 }
-export function getUserIDSuccess(userId) {
+export const getContentSuccess = (locales) => {
+    const pkg = locales.map(l => require(`../../localeContent/${l.short}/content.json`));
     return {
-        type: homePageActions.GET_ID_SUCCESS,
-        userId,
+        type: homePageActions.GET_CONTENT_SUCCESS,
+        content: pkg,
     }
 }
-export function getUserIDFail(err) {
+export const getContentFail = (err) => {
     return {
-        type: homePageActions.GET_ID_FAIL,
+        type: homePageActions.GET_CONTENT_FAIL,
         err,
     }
 }
