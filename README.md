@@ -23,7 +23,7 @@ update url in cms if needed
 ### sample json
 ```
 {
-    "locale": "EN",
+    "locale": "en_US",
     "eatLikeALocal": [
         {
             "title": "Best Chicken Rice",

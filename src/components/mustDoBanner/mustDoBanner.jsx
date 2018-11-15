@@ -1,5 +1,6 @@
 import * as React from "react";
 import Slider from "react-slick";
+import mixpanel from '../../utils/mixpanel';
 import ToDoCard from "../toDoCard/toDoCard";
 
 export default class MustDoBanner extends React.Component {
@@ -27,20 +28,40 @@ export default class MustDoBanner extends React.Component {
                     <div className="eatLikeALocal">
                         EAT LIKE A LOCAL
                     </div>
-                    <div className="seeMore">
+                    <a 
+                        className="seeMore"
+                        href="articleList:1"
+                        onClick={() => {
+                            if (window.Android) {window.Android.showToast("see more");}
+                            mixpanel().track("Homepage Click", {
+                                click_type: "see-more"
+                            });
+                        }}
+                    >
                         SEE MORE
-                    </div>
+                    </a>
                 </div>
                 <div className="sliderContainer">
                     <Slider {...this.state.sliderSettings}>
                         { articles.map((fa, i) => (
                             <ToDoCard
                                 key={i}
-                                image={fa.image}
                                 title={fa.title}
+                                iLink={fa.iLink}
                                 placeType={fa.placeType}
                                 transportType={fa.transportType}
                                 transportTime={fa.transportTime}
+                                image={fa.image}
+                                onClickMixpanel={() => {
+                                    // if (window.Android) {window.Android.showToast(fa.title);}
+                                    mixpanel().track("Content Impression", {
+                                        content_title: fa.title,
+                                        content_id: fa.content_id,
+                                        content_type: fa.content_type,
+                                        content_locale: fa.content_locale,
+                                        content_position: fa.content_position,
+                                    });
+                                }}
                             />
                         ))}
                     </Slider>

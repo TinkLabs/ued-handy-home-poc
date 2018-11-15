@@ -1,0 +1,27 @@
+.promotionTicketATag {
+    text-decoration: none;
+}
+.promotionTicket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+}
+
+.ticketInfo {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.bookTicketButton {
+    border-radius: 4px;
+    background-color: #ff8400;
+}
+
+.bookTicketButton span {
+    align-self: center;
+    color: white;
+}

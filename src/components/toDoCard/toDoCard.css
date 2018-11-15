@@ -1,9 +1,15 @@
+.toDoCardATag {
+    text-decoration: none;
+}
+
 .toDoCard {
     display: flex;
     flex-direction: column;
     width: 125px;
     border: 0.5px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
     border-radius: 4px;
+    margin-bottom: 1rem;
 }
 .toDoCard .articleImage {
     width: 125px;

@@ -15,6 +15,7 @@
 .subMustDoBanner .seeMore {
     font-size: 0.8rem;
     color: grey;
+    text-decoration: none;
 }
 
 .sliderContainer {
