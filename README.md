@@ -74,13 +74,13 @@ update url in cms if needed
     ],
     "ADBlock": [
         {
-            "id": 1,
+            "ad_id": 1,
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
             "image": "ad1/drawable-hdpi/resting.png",
             "ADTicket": [
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "1",
                     "iLink": "xdeallanding:1",
                     "dealName": "Gardens by the Bay 1 Day Ticket",
@@ -89,7 +89,7 @@ update url in cms if needed
                     "salesRecord": "63K Sold"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "2",
                     "iLink": "xdeallanding:2",
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
@@ -98,7 +98,7 @@ update url in cms if needed
                     "salesRecord": "1K+ Sold"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "3",
                     "iLink": "xdeallanding:3",
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
@@ -113,6 +113,12 @@ update url in cms if needed
 ```
 
 ### TODO
+- live ad
+- update iLinks
 - config webpack to load resource with abs path
 - error handling in webview (network and corrupt file)
 - error logging
+- set web default lang as device lang, else fallback to ENG
+- find a way to cache web lang status
+    > now: current lang > ilink > back > default lang
+    > new: current lang > ilink > back > current lang

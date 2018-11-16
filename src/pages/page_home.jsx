@@ -28,6 +28,10 @@ class PureHomePage extends React.Component {
 		this.onSelectLang = this.onSelectLang.bind(this);
 		this.loadNewLangResource = this.loadNewLangResource.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
+		// demo
+		this.changeHotel81 = this.changeHotel81.bind(this);
+		this.changeHotel375 = this.changeHotel375.bind(this);
+		this.changeHotel1357 = this.changeHotel1357.bind(this);
 	}
 	componentDidMount() {
 		// add scrollspy
@@ -84,17 +88,20 @@ class PureHomePage extends React.Component {
 	}
 	handleScroll(event) {
 		// if (window.Android) {window.Android.showToast(window.scrollY);}
-		// screen 1 = 'chicken rice' = window.scrollY === 105
-		// screen 2 = bottom = window.scrollY === 704
-		if (window.scrollY === 105) {
+		// screen 1 = 'chicken rice' = window.scrollY === 105?
+		// screen 2 = bottom = window.scrollY === 704?
+		if ((this.lastPosition < 105 && window.scrollY >= 105)
+			|| (this.lastPosition > 105 && window.scrollY <= 105)) {
 			if (window.Android) { window.Android.showToast(window.scrollY); }
+			console.log(window.scrollY);
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 1,
 			});
 		}
-		if (window.scrollY === 704) {
+		if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
 			if (window.Android) { window.Android.showToast(window.scrollY); }
+			console.log(window.innerHeight);
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 2,
@@ -141,11 +148,20 @@ class PureHomePage extends React.Component {
 			...updates,
 		});
 	}
+	changeHotel81() {
+		this.props.setGlobalProperties({"hotel_id": "81"});
+	}
+	changeHotel375() {
+		this.props.setGlobalProperties({"hotel_id": "375"});
+	}
+	changeHotel1357() {
+		this.props.setGlobalProperties({"hotel_id": "1357"});
+	}
 	render() {
 		if (this.state.loaded) {
 			// alert(JSON.stringify(this.state));
 			// alert(JSON.stringify(this.props));
-			console.log(this.props.content)
+			// console.log(this.props.content)
 			return (
 				<div className="homePage">
 					<LanguageBanner
@@ -182,6 +198,9 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
+					<button onClick={this.changeHotel81}>81</button>
+					<button onClick={this.changeHotel375}>375</button>
+					<button onClick={this.changeHotel1357}>1357</button>
 				</div>
 			)
 		}

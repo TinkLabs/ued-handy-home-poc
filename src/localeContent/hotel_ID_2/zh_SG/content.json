@@ -50,13 +50,13 @@
     ],
     "ADBlock": [
         {
-            "id": 1,
+            "ad_id": 1,
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
             "image": "ad1/drawable-hdpi/resting.png",
             "ADTicket": [
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "1",
                     "iLink": "xdeallanding:1",
                     "dealName": "Gardens by the Bay 1 Day Ticket",
@@ -67,7 +67,7 @@
                     "item_type": "deals"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "2",
                     "iLink": "xdeallanding:2",
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
@@ -78,7 +78,7 @@
                     "item_type": "deals"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "3",
                     "iLink": "xdeallanding:3",
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",

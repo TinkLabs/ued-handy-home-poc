@@ -22,11 +22,24 @@ export default class MustDoBanner extends React.Component {
     }
     render() {
         const articles = this.props.articles.find(c => c.locale === this.props.displayLanguage).eatLikeALocal;
+        let eatLikeALocal = "";
+        let seeMore = "";
+        if (this.props.displayLanguage === "en_US") {
+            eatLikeALocal = "EAT LIKE A LOCAL";
+            seeMore = "SEE MORE";
+        } else if (this.props.displayLanguage === "zh_HK") {
+            eatLikeALocal = "地道美食";
+            seeMore = "查看更多";
+        } else if (this.props.displayLanguage === "zh_SG") {
+            eatLikeALocal = "地道美食";
+            seeMore = "查看更多";
+        }
         return (
             <div className="mustDoBanner">
                 <div className="subMustDoBanner">
                     <div className="eatLikeALocal">
-                        EAT LIKE A LOCAL
+                        {eatLikeALocal}
+                        {/* EAT LIKE A LOCAL */}
                     </div>
                     <a 
                         className="seeMore"
@@ -38,7 +51,8 @@ export default class MustDoBanner extends React.Component {
                             });
                         }}
                     >
-                        SEE MORE
+                        {seeMore}
+                        {/* SEE MORE */}
                     </a>
                 </div>
                 <div className="sliderContainer">
