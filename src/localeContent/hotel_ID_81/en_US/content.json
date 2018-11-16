@@ -12,11 +12,11 @@
     },
     "eatLikeALocal": [
         {
-            "title": "en_US 81a Best Chicken Rice",
+            "title": "Best Chicken Rice",
             "iLink": "article:10941",
             "placeType": "Hawker Food",
-            "transportType": "walk",
-            "transportTime": "18 min from hotel",
+            "transportType": "drive",
+            "transportTime": "6 min from hotel",
             "image": "article1/drawable-hdpi/straight.jpg",
             "content_id": "8",
             "content_type": "article",
@@ -26,9 +26,9 @@
         {
             "title": "5 Local Drinks",
             "iLink": "article:10036",
-            "placeType": "Bars",
-            "transportType": "drive",
-            "transportTime": "18 min from hotel",
+            "placeType": "Bars & Beverages",
+            "transportType": "walk",
+            "transportTime": "4 min from hotel",
             "image": "article2/drawable-hdpi/straight.jpg",
             "content_id": "8",
             "content_type": "article",
@@ -36,11 +36,11 @@
             "content_position": "2"
         },
         {
-            "title": "Local Cafe",
+            "title": "Best Local Cafe",
             "iLink": "article:10852",
             "placeType": "Coffee Shop",
-            "transportType": "walk",
-            "transportTime": "18 min from hotel",
+            "transportType": "drive",
+            "transportTime": "7 min from hotel",
             "image": "article3/drawable-hdpi/straight.jpg",
             "content_id": "8",
             "content_type": "article",
@@ -50,37 +50,46 @@
     ],
     "ADBlock": [
         {
-            "id": 1,
+            "ad_id": 1,
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
             "image": "ad1/drawable-hdpi/resting.png",
             "ADTicket": [
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "1",
-                    "iLink": "xdeallanding:1",
+                    "iLink": "deallanding:108",
                     "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
-                    "salesRecord": "63K Sold"
+                    "salesRecord": "63K Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "108"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "2",
-                    "iLink": "xdeallanding:2",
+                    "iLink": "deallanding:2538",
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
-                    "salesRecord": "1K+ Sold"
+                    "salesRecord": "1K+ Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "2538"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "3",
-                    "iLink": "xdeallanding:3",
+                    "iLink": "deallanding:2541",
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",
-                    "salesRecord": "795 Sold"
+                    "salesRecord": "795 Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "2541"
                 }
             ]
         }

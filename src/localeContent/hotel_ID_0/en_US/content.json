@@ -50,37 +50,46 @@
     ],
     "ADBlock": [
         {
-            "id": 1,
+            "ad_id": 1,
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
             "image": "ad1/drawable-hdpi/resting.png",
             "ADTicket": [
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "1",
-                    "iLink": "xdeallanding:1",
+                    "iLink": "deallanding:108",
                     "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
-                    "salesRecord": "63K Sold"
+                    "salesRecord": "63K Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "108"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "2",
-                    "iLink": "xdeallanding:2",
+                    "iLink": "deallanding:2538",
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
-                    "salesRecord": "1K+ Sold"
+                    "salesRecord": "1K+ Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "2538"
                 },
                 {
-                    "id": "1",
+                    "ad_id": "1",
                     "ticket_ID": "3",
-                    "iLink": "xdeallanding:3",
+                    "iLink": "deallanding:2541",
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",
-                    "salesRecord": "795 Sold"
+                    "salesRecord": "795 Sold",
+                    "item": "Gardens by the Bay",
+                    "item_type": "deals",
+                    "item_id": "2541"
                 }
             ]
         }

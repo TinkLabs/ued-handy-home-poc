@@ -1,5 +1,5 @@
 import * as React from "react";
-// import mixpanel from '../../utils/mixpanel';
+import mixpanel from '../../utils/mixpanel';
 
 export default class PromotionTickets extends React.Component {
     render() {
@@ -7,15 +7,14 @@ export default class PromotionTickets extends React.Component {
             <a
                 href={this.props.iLink}
                 className="promotionTicketATag"
-                // onClick={() => {
-                //     mixpanel().track("Advertising Banner Click", {
-                //         campaign_id: this.props.campaign_id
-                //         campaign_name: this.props.campaign_name
-                //         banner_id: this.props.banner_id
-                //         banner_name: this.props.banner_name
-                //         screen_name: this.props.screen_name
-                //     });
-                // }}
+                onClick={() => {
+                    mixpanel().track("Deal Click", {
+                        item: this.props.item,
+                        item_id: this.props.item_id,
+                        item_type: this.props.item_type,
+                        item_position: this.props.ticket_ID,
+                    });
+                }}
             >
                 <div
                     className="promotionTicket"
@@ -37,9 +36,7 @@ export default class PromotionTickets extends React.Component {
                         </div>
                     </div>
                     <div className="bookTicketButton">
-                    <div>
-                        <span>BOOK</span>
-                    </div>
+                        <p>BOOK</p>
                     </div>
                 </div>
             </a>

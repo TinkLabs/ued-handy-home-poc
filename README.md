@@ -1,8 +1,8 @@
 ### data
-set available language in `src/localeContent/availableLanguage.json`
-text content goes to `src/localeContent/<LANG>/content.json`
+set available language in `src/localeContent/hotelList.json`
+text content goes to `src/localeContent/<locale>/content.json`
 language independent image goes to `src/images/`
-language dependent image goes to `src/localeContent/<LANG>/`
+language dependent image goes to `src/localeContent/<locale>/`
 
 
 ### run
@@ -24,38 +24,95 @@ update url in cms if needed
 ```
 {
     "locale": "en_US",
+    "hotel_ID": "0",
+    "mainPosterBanner": {
+        "locale": "en_US",
+        "iLink": "ticket:39",
+        "image": "top-banner-set/drawable-hdpi/top_banner.png",
+        "item": "USS",
+        "item_id": "8",
+        "item_type": "deals",
+        "item_position": "1"
+    },
     "eatLikeALocal": [
         {
-            "title": "Best Chicken Rice",
+            "title": "en_US 0 Best Chicken Rice",
+            "iLink": "article:10941",
             "placeType": "Hawker Food",
             "transportType": "walk",
             "transportTime": "18 min from hotel",
-            "image": "article1/drawable-hdpi/straight.jpg"
+            "image": "article1/drawable-hdpi/straight.jpg",
+            "content_id": "8",
+            "content_type": "article",
+            "content_locale": "en_US",
+            "content_position": "1"
         },
         {
             "title": "5 Local Drinks",
+            "iLink": "article:10036",
             "placeType": "Bars",
             "transportType": "drive",
             "transportTime": "18 min from hotel",
-            "image": "article2/drawable-hdpi/straight.jpg"
+            "image": "article2/drawable-hdpi/straight.jpg",
+            "content_id": "8",
+            "content_type": "article",
+            "content_locale": "en_US",
+            "content_position": "2"
         },
         {
             "title": "Local Cafe",
+            "iLink": "article:10852",
             "placeType": "Coffee Shop",
             "transportType": "walk",
             "transportTime": "18 min from hotel",
-            "image": "article3/drawable-hdpi/straight.jpg"
+            "image": "article3/drawable-hdpi/straight.jpg",
+            "content_id": "8",
+            "content_type": "article",
+            "content_locale": "en_US",
+            "content_position": "3"
         }
     ],
     "ADBlock": [
         {
+            "id": 1,
+            "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
-            "image": "ad1/drawable-hdpi/resting.png"
-        },
-        {
-            "name": "A Local Shopping Mall",
-            "image": "ad2/drawable-hdpi/resting.png"
+            "image": "ad1/drawable-hdpi/resting.png",
+            "ADTicket": [
+                {
+                    "id": "1",
+                    "ticket_ID": "1",
+                    "iLink": "xdeallanding:1",
+                    "dealName": "Gardens by the Bay 1 Day Ticket",
+                    "sellingPrice": "SGD 23",
+                    "originalPrice": "28",
+                    "salesRecord": "63K Sold"
+                },
+                {
+                    "id": "1",
+                    "ticket_ID": "2",
+                    "iLink": "xdeallanding:2",
+                    "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
+                    "sellingPrice": "SGD 59",
+                    "originalPrice": "62",
+                    "salesRecord": "1K+ Sold"
+                },
+                {
+                    "id": "1",
+                    "ticket_ID": "3",
+                    "iLink": "xdeallanding:3",
+                    "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
+                    "sellingPrice": "SGD 28",
+                    "originalPrice": "30",
+                    "salesRecord": "795 Sold"
+                }
+            ]
         }
     ]
 }
 ```
+
+### TODO
+- config webpack to load resource with abs path
+- error handling in webview (network and corrupt file)
+- error logging

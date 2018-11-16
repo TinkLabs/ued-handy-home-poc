@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from 'react-redux';
-import mixpanel from '../../utils/mixpanel';
+import mixpanel from '../utils/mixpanel';
 
 import LanguageBanner from "../components/languageBanner/languageBanner";
 import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
@@ -24,7 +24,7 @@ class PureHomePage extends React.Component {
 			promotions: [],
 		}
 
-		this.lastPosition = 0;
+		this.lastPosition = [];
 		this.onSelectLang = this.onSelectLang.bind(this);
 		this.loadNewLangResource = this.loadNewLangResource.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
@@ -35,20 +35,20 @@ class PureHomePage extends React.Component {
 
 		// get hotel id to prepare display content
 		const notReady = !this.props.globalPropertiesReady;
-		const isAndroid = typeof(window.Android) !== "undefined";
+		const isAndroid = typeof (window.Android) !== "undefined";
 		let hasGetGP = "undefined";
 		if (isAndroid) {
-			hasGetGP = typeof(window.Android.getGlobalProperties) !== "undefined";
+			hasGetGP = typeof (window.Android.getGlobalProperties) !== "undefined";
 		}
 		if (notReady && isAndroid && hasGetGP) {
 			const globalProperties = JSON.parse(window.Android.getGlobalProperties());
 			const gp = {
 				"hotel_id": globalProperties.hotel_id
 			}
-			if (window.Android) {window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`);}
+			if (window.Android) { window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`); }
 			this.props.setGlobalProperties(gp);
 		} else {
-			const p = { "hotel_id":"2" };
+			const p = { "hotel_id": "2" };
 			this.props.setGlobalProperties(p);
 		}
 	}
@@ -83,17 +83,18 @@ class PureHomePage extends React.Component {
 		return !update.has(false);
 	}
 	handleScroll(event) {
+		// if (window.Android) {window.Android.showToast(window.scrollY);}
 		// screen 1 = 'chicken rice' = window.scrollY === 105
 		// screen 2 = bottom = window.scrollY === 704
 		if (window.scrollY === 105) {
-			if (window.Android) {window.Android.showToast(window.scrollY);}
+			if (window.Android) { window.Android.showToast(window.scrollY); }
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 1,
 			});
 		}
 		if (window.scrollY === 704) {
-			if (window.Android) {window.Android.showToast(window.scrollY);}
+			if (window.Android) { window.Android.showToast(window.scrollY); }
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 2,
@@ -115,7 +116,7 @@ class PureHomePage extends React.Component {
 		const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${localeContent.mainPosterBanner.image}`);
 		const adArray = localeContent.ADBlock.map(ad => (
 			{
-				id: ad.id,
+				ad_id: ad.ad_id,
 				name: ad.name,
 				iLink: ad.iLink,
 				image: require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${ad.image}`),
@@ -123,14 +124,14 @@ class PureHomePage extends React.Component {
 		));
 		updates.loaded = true;
 		updates.loadedLang = this.state.loadedLang.concat(locale);
-		updates.mainPosterBanner = 
+		updates.mainPosterBanner =
 			this.state.mainPosterBanner
-			.filter(p => (p.locale !== locale))
-			.concat({
-				locale,
-				iLink: localeContent.mainPosterBanner.iLink,
-				image: `url(${bannerPath})`
-			});
+				.filter(p => (p.locale !== locale))
+				.concat({
+					locale,
+					iLink: localeContent.mainPosterBanner.iLink,
+					image: `url(${bannerPath})`
+				});
 		updates.promotions = this.state.promotions.concat({
 			locale: locale,
 			ads: adArray,
@@ -144,6 +145,7 @@ class PureHomePage extends React.Component {
 		if (this.state.loaded) {
 			// alert(JSON.stringify(this.state));
 			// alert(JSON.stringify(this.props));
+			console.log(this.props.content)
 			return (
 				<div className="homePage">
 					<LanguageBanner
@@ -163,20 +165,22 @@ class PureHomePage extends React.Component {
 					{
 						this.state.promotions
 							.find(p => p.locale === this.props.displayLanguage).ads
-							.map(p => (
-								<PromotionBanner
-									key={p.id}
-									id={p.id}
-									iLink={p.iLink}
-									image={p.image}
-									tickets={
-										this.props.content
-										.filter(c => c.locale === this.props.displayLanguage)[0]
-										.ADBlock
-										.filter(ad => ad.id === p.id)[0]
-									}
-								/>
-							))
+							.map(p => {
+								return (
+									<PromotionBanner
+										key={p.ad_id}
+										id={p.ad_id}
+										iLink={p.iLink}
+										image={p.image}
+										tickets={
+											this.props.content
+												.filter(c => c.locale === this.props.displayLanguage)[0]
+												.ADBlock
+												.filter(ad => ad.ad_id === p.ad_id)[0]
+										}
+									/>
+								)
+							})
 					}
 				</div>
 			)
