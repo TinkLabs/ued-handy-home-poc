@@ -1,6 +1,6 @@
 [
     {
-        "hotel": "hotelName",
+        "hotel": "default",
         "hotel_ID": "0",
         "availableLanguage": 
             [
@@ -19,7 +19,7 @@
             ]
     },
     {
-        "hotel": "hotelName",
+        "hotel": "design demo",
         "hotel_ID": "2",
         "availableLanguage": 
             [
@@ -38,7 +38,45 @@
             ]
     },
     {
-        "hotel": "hotelName",
+        "hotel": "SGP - Concorde Hotel",
+        "hotel_ID": "81",
+        "availableLanguage": 
+            [
+                {
+                    "full": "English",
+                    "short": "en_US"
+                },
+                {
+                    "full": "简体中文",
+                    "short": "zh_SG"
+                },
+                {
+                    "full": "繁體中文",
+                    "short": "zh_HK"
+                }
+            ]
+    },
+    {
+        "hotel": "SGP - Holiday Inn Express Clarke Quay",
+        "hotel_ID": "357",
+        "availableLanguage": 
+            [
+                {
+                    "full": "English",
+                    "short": "en_US"
+                },
+                {
+                    "full": "简体中文",
+                    "short": "zh_SG"
+                },
+                {
+                    "full": "繁體中文",
+                    "short": "zh_HK"
+                }
+            ]
+    },
+    {
+        "hotel": "SGP - Furama City Centre",
         "hotel_ID": "1357",
         "availableLanguage": 
             [

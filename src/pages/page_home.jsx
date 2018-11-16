@@ -1,5 +1,6 @@
 import * as React from "react";
 import { connect } from 'react-redux';
+import mixpanel from '../../utils/mixpanel';
 
 import LanguageBanner from "../components/languageBanner/languageBanner";
 import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
@@ -23,10 +24,16 @@ class PureHomePage extends React.Component {
 			promotions: [],
 		}
 
+		this.lastPosition = 0;
 		this.onSelectLang = this.onSelectLang.bind(this);
 		this.loadNewLangResource = this.loadNewLangResource.bind(this);
+		this.handleScroll = this.handleScroll.bind(this);
 	}
 	componentDidMount() {
+		// add scrollspy
+		window.addEventListener('scroll', this.handleScroll);
+
+		// get hotel id to prepare display content
 		const notReady = !this.props.globalPropertiesReady;
 		const isAndroid = typeof(window.Android) !== "undefined";
 		let hasGetGP = "undefined";
@@ -44,6 +51,9 @@ class PureHomePage extends React.Component {
 			const p = { "hotel_id":"2" };
 			this.props.setGlobalProperties(p);
 		}
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
 	}
 	componentDidUpdate() {
 		// 
@@ -71,6 +81,26 @@ class PureHomePage extends React.Component {
 			update.add(false);
 		}
 		return !update.has(false);
+	}
+	handleScroll(event) {
+		// screen 1 = 'chicken rice' = window.scrollY === 105
+		// screen 2 = bottom = window.scrollY === 704
+		if (window.scrollY === 105) {
+			if (window.Android) {window.Android.showToast(window.scrollY);}
+			mixpanel().track("Screen View", {
+				screenName: "Home",
+				screen_number: 1,
+			});
+		}
+		if (window.scrollY === 704) {
+			if (window.Android) {window.Android.showToast(window.scrollY);}
+			mixpanel().track("Screen View", {
+				screenName: "Home",
+				screen_number: 2,
+			});
+		}
+		// update last position
+		this.lastPosition = window.scrollY;
 	}
 	onSelectLang(locale) {
 		// change lang, target lang first load
@@ -112,6 +142,8 @@ class PureHomePage extends React.Component {
 	}
 	render() {
 		if (this.state.loaded) {
+			// alert(JSON.stringify(this.state));
+			// alert(JSON.stringify(this.props));
 			return (
 				<div className="homePage">
 					<LanguageBanner

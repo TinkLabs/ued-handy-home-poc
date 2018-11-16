@@ -32,9 +32,10 @@ export default class PromotionBanner extends React.Component {
                 </a>
                 <div className="tickets">
                     {
-                        this.props.tickets.ADTicket.map(ticketInfo => (
+                        this.props.tickets.ADTicket.map((ticketInfo, i) => (
                             <PromotionTicket
                                 { ...ticketInfo }
+                                key={i}
                                 ticketIcon={this.state.ticketIcon}
                             />
                         ))

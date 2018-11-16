@@ -33,11 +33,13 @@ export default class PromotionTickets extends React.Component {
                                 alt="ticketIcon"
                                 className=""
                             />
-                            <span>${this.props.salesRecord}</span>
+                            <span>{this.props.salesRecord}</span>
                         </div>
                     </div>
                     <div className="bookTicketButton">
+                    <div>
                         <span>BOOK</span>
+                    </div>
                     </div>
                 </div>
             </a>
