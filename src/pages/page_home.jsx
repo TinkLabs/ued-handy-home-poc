@@ -47,12 +47,18 @@ class PureHomePage extends React.Component {
 		if (notReady && isAndroid && hasGetGP) {
 			const globalProperties = JSON.parse(window.Android.getGlobalProperties());
 			const gp = {
-				"hotel_id": globalProperties.hotel_id
+				"hotel_id": globalProperties.hotel_id,
+				"deviceLocale": globalProperties.deviceLocale,
 			}
-			if (window.Android) { window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`); }
+			// alert(Object.keys(globalProperties))
+			// alert(globalProperties.user_language)
+			// if (window.Android) { window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`); }
 			this.props.setGlobalProperties(gp);
 		} else {
-			const p = { "hotel_id": "2" };
+			const p = {
+				"hotel_id": "2",
+				"deviceLocale": "zh_HK",
+			};
 			this.props.setGlobalProperties(p);
 		}
 	}
@@ -67,16 +73,19 @@ class PureHomePage extends React.Component {
 		// after global prop is fetched (ie hotel_id changed)
 		// write hotel specific content to store
 		if (this.props.hotel_ID !== nextProps.hotel_ID) {
-			this.props.getContent(nextProps.hotel_ID, this.props.availableLanguage);
+			// console.log('diff hotel')
+			this.props.getContent(nextProps.hotel_ID, nextProps.availableLanguage);
 			update.add(false);
 		}
 		// hotel specific content is loaded
 		if (this.props.loaded !== nextProps.loaded) {
-			this.loadNewLangResource(nextProps.displayLanguage);
+			// console.log('need to load')
+			this.loadNewLangResource(nextProps.displayLanguage, undefined ,nextProps);
 			update.add(false);
 		}
 		// change lang, target lang loaded
 		if (this.props.displayLanguage !== nextProps.displayLanguage) {
+			// console.log("diff lang")
 			update.add(true);
 		}
 		// switch to new lang
@@ -92,16 +101,16 @@ class PureHomePage extends React.Component {
 		// screen 2 = bottom = window.scrollY === 704?
 		if ((this.lastPosition < 105 && window.scrollY >= 105)
 			|| (this.lastPosition > 105 && window.scrollY <= 105)) {
-			if (window.Android) { window.Android.showToast(window.scrollY); }
-			console.log(window.scrollY);
+			// if (window.Android) { window.Android.showToast(window.scrollY); }
+			// console.log(window.scrollY);
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 1,
 			});
 		}
 		if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
-			if (window.Android) { window.Android.showToast(window.scrollY); }
-			console.log(window.innerHeight);
+			// if (window.Android) { window.Android.showToast(window.scrollY); }
+			// console.log(window.innerHeight);
 			mixpanel().track("Screen View", {
 				screenName: "Home",
 				screen_number: 2,
@@ -117,9 +126,12 @@ class PureHomePage extends React.Component {
 		}
 		this.props.setDisplayLanguage(locale);
 	}
-	loadNewLangResource(locale, hotel_ID = this.props.hotel_ID) {
+	loadNewLangResource(locale, hotel_ID = this.props.hotel_ID, props = this.props) {
 		const updates = {};
-		const localeContent = this.props.content.find(content => content.locale === locale);
+		// console.log(locale)
+		// console.log(hotel_ID)
+		// console.log(props)
+		const localeContent = props.content.find(content => content.locale === locale);
 		const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${localeContent.mainPosterBanner.image}`);
 		const adArray = localeContent.ADBlock.map(ad => (
 			{
@@ -149,13 +161,13 @@ class PureHomePage extends React.Component {
 		});
 	}
 	changeHotel81() {
-		this.props.setGlobalProperties({"hotel_id": "81"});
+		this.props.setGlobalProperties({"hotel_id": "81", "deviceLocale": "en_US"});
 	}
 	changeHotel375() {
-		this.props.setGlobalProperties({"hotel_id": "375"});
+		this.props.setGlobalProperties({"hotel_id": "375", "deviceLocale": "en_US"});
 	}
 	changeHotel1357() {
-		this.props.setGlobalProperties({"hotel_id": "1357"});
+		this.props.setGlobalProperties({"hotel_id": "1357", "deviceLocale": "en_US"});
 	}
 	render() {
 		if (this.state.loaded) {

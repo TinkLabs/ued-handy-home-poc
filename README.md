@@ -1,26 +1,69 @@
-### data
-set available language in `src/localeContent/hotelList.json`
-text content goes to `src/localeContent/<locale>/content.json`
-language independent image goes to `src/images/`
-language dependent image goes to `src/localeContent/<locale>/`
-
 
 ### run
 ```
 yarn install
 yarn start
 ```
-navigate to localhost:3000
+- navigate to localhost:3000
 
 ### deploy
 ```
 yarn build
 ```
-upload to s3 bucket
-make permission everyone:READ
-update url in cms if needed
+1. upload to s3 bucket
+2. make permission everyone:READ
+3. update url in cms if needed
 
-### sample json
+### mixpanel
+
+```js
+// mixpanel setting, init, global var in
+src/utils/mixpanel.js
+```
+
+### data
+
+```js
+// set available language in
+"src/localeContent/hotelList.json"
+// text content goes to 
+"src/localeContent/<locale>/content.json"
+// language independent image goes to
+"src/images/"
+// language dependent image goes to
+"src/localeContent/<locale>/"
+```
+
+### sample hotelList.json
+
+```js
+[
+    {
+        "hotel": "default",
+        "hotel_ID": "0",
+        "availableLanguage": 
+            [
+                {
+                    "full": "English",
+                    "short": "en_US"
+                },
+                {
+                    "full": "简体中文",
+                    "short": "zh_SG"
+                },
+                {
+                    "full": "繁體中文",
+                    "short": "zh_HK"
+                }
+            ]
+    },
+]
+```
+
+
+
+### sample content.json
+
 ```
 {
     "locale": "en_US",
@@ -113,11 +156,11 @@ update url in cms if needed
 ```
 
 ### TODO
-- live ad
 - update iLinks
 - config webpack to load resource with abs path
 - error handling in webview (network and corrupt file)
-- error logging
+
+    > react16 provides `componentDidCatch()` on error handling
 - set web default lang as device lang, else fallback to ENG
 - find a way to cache web lang status
     > now: current lang > ilink > back > default lang

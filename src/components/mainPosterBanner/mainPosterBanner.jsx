@@ -11,7 +11,7 @@ export default class MainPosterBanner extends React.Component {
             <a
                 href={banner.iLink}
                 onClick={() => {
-                    if (window.Android) {window.Android.showToast(banner.iLink);}
+                    // if (window.Android) {window.Android.showToast(banner.iLink);}
                     mixpanel().track("Deal Click", {
                         item: banner.item,
                         item_id: banner.item_id,

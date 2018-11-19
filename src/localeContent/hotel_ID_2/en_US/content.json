@@ -3,7 +3,7 @@
     "hotel_ID": "2",
     "mainPosterBanner": {
         "locale": "en_US",
-        "iLink": "ticket:39",
+        "iLink": "poi:39",
         "image": "top-banner-set/drawable-hdpi/top_banner.png",
         "item": "USS",
         "item_id": "8",
@@ -58,7 +58,7 @@
                 {
                     "ad_id": "1",
                     "ticket_ID": "1",
-                    "iLink": "deallanding:108",
+                    "iLink": "ticket:108",
                     "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
@@ -70,7 +70,7 @@
                 {
                     "ad_id": "1",
                     "ticket_ID": "2",
-                    "iLink": "deallanding:2538",
+                    "iLink": "ticket:2538",
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
@@ -82,7 +82,7 @@
                 {
                     "ad_id": "1",
                     "ticket_ID": "3",
-                    "iLink": "deallanding:2541",
+                    "iLink": "ticket:2541",
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",

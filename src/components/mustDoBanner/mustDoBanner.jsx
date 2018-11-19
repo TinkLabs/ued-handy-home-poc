@@ -43,9 +43,9 @@ export default class MustDoBanner extends React.Component {
                     </div>
                     <a 
                         className="seeMore"
-                        href="articleList:1"
+                        href="articleList:35"
                         onClick={() => {
-                            if (window.Android) {window.Android.showToast("see more");}
+                            // if (window.Android) {window.Android.showToast("see more");}
                             mixpanel().track("Homepage Click", {
                                 click_type: "see-more"
                             });

@@ -1,5 +1,8 @@
 import * as React from "react";
 import PromotionTicket from "../promotionTicket/promotionTicket";
+// import GoogleTagManager from "../googleTagManager/googleTagManager"
+// import DFPAD from "../dfpManager/dfpManager"
+import GPTAD from "../gptAD/gptAD"
 import mixpanel from '../../utils/mixpanel';
 
 export default class PromotionBanner extends React.Component {
@@ -28,8 +31,11 @@ export default class PromotionBanner extends React.Component {
                     href={this.props.iLink}
                     onClick={this.onClickADBanner}
                 >
-                    <div className="promotionBanner" key={this.props.id}>
-                        <img src={this.props.image} alt="banner"/>
+                    <div className="gptAD">
+                        <GPTAD
+                            adUnitPath={"/21623654641/Test/TEST-NHS-01"}
+                            slotSize={[328, 210]}
+                        />
                     </div>
                 </a>
                 <div className="tickets">

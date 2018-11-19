@@ -11,7 +11,8 @@ const initialState = {
     loaded: false,
     globalPropertiesReady: false,
     globalProperties: {
-        hotel_id: defaultHotel_ID
+        hotel_id: defaultHotel_ID,
+        deviceLocale: defaultLanguage, 
     },
     availableLanguage,
     displayLanguage: defaultLanguage,
@@ -21,10 +22,21 @@ const initialState = {
 export const homePageReducer = (state = initialState, action) => {
     switch(action.type) {
         case homePageActions.SET_GLOBAL_PROPERTIES: {
+            let displayLanguage = defaultLanguage;
+            if (typeof(action.globalProperties.deviceLocale) !== "undefined") {
+                const deviceLocale = action.globalProperties.deviceLocale;
+                // console.log(deviceLocale);
+                if (availableLanguage.find(locale => locale.short === deviceLocale)) {
+                    // console.log('have')
+                    displayLanguage = deviceLocale
+                }
+            }
+            // console.log(displayLanguage)
             return {
                 ...state,
                 globalProperties: action.globalProperties,
-                globalPropertiesReady: true
+                globalPropertiesReady: true,
+                // displayLanguage: displayLanguage
             }
         }
         case homePageActions.SET_DISPLAY_LANGUAGE: {
