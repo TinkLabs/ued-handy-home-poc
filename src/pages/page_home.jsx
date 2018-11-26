@@ -104,7 +104,7 @@ class PureHomePage extends React.Component {
 			// if (window.Android) { window.Android.showToast(window.scrollY); }
 			// console.log(window.scrollY);
 			mixpanel().track("Screen View", {
-				screenName: "Home",
+				"Screen Name": "Home",
 				screen_number: 1,
 			});
 		}
@@ -112,7 +112,7 @@ class PureHomePage extends React.Component {
 			// if (window.Android) { window.Android.showToast(window.scrollY); }
 			// console.log(window.innerHeight);
 			mixpanel().track("Screen View", {
-				screenName: "Home",
+				"Screen Name": "Home",
 				screen_number: 2,
 			});
 		}

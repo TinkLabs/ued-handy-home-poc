@@ -3,8 +3,8 @@
     "hotel_ID": "1357",
     "mainPosterBanner": {
         "locale": "zh_HK",
-        "iLink": "poi:39",
-        "image": "top-banner-set/drawable-hdpi/top_banner.png",
+        "iLink": "dealcatalog:7",
+        "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
         "item": "USS",
         "item_id": "8",
         "item_type": "deals",
@@ -24,7 +24,7 @@
             "content_position": "1"
         },
         {
-            "title": "5家地道飲料",
+            "title": "五家地道飲料",
             "iLink": "article:10036",
             "placeType": "酒吧和飲料",
             "transportType": "walk",
@@ -36,7 +36,7 @@
             "content_position": "2"
         },
         {
-            "title": "人氣特色咖啡店",
+            "title": "特色咖啡店",
             "iLink": "article:10852",
             "placeType": "咖啡店",
             "transportType": "walk",

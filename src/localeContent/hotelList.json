@@ -57,6 +57,25 @@
             ]
     },
     {
+        "hotel": "SGP - demo 250",
+        "hotel_ID": "250",
+        "availableLanguage": 
+            [
+                {
+                    "full": "English",
+                    "short": "en_US"
+                },
+                {
+                    "full": "简体中文",
+                    "short": "zh_SG"
+                },
+                {
+                    "full": "繁體中文",
+                    "short": "zh_HK"
+                }
+            ]
+    },
+    {
         "hotel": "SGP - Holiday Inn Express Clarke Quay",
         "hotel_ID": "357",
         "availableLanguage": 
