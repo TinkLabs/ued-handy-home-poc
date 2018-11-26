@@ -45,6 +45,7 @@ export default class PromotionBanner extends React.Component {
                                 { ...ticketInfo }
                                 key={i}
                                 ticketIcon={this.state.ticketIcon}
+                                displayLanguage={this.props.displayLanguage}
                             />
                         ))
                     }

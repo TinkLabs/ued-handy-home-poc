@@ -3,6 +3,14 @@ import mixpanel from '../../utils/mixpanel';
 
 export default class PromotionTickets extends React.Component {
     render() {
+        let book = "";
+        if (this.props.displayLanguage === "en_US") {
+            book = "BOOK";
+        } else if (this.props.displayLanguage === "zh_HK") {
+            book = "預訂";
+        } else if (this.props.displayLanguage === "zh_SG") {
+            book = "预订";
+        }
         return (
             <a
                 href={this.props.iLink}
@@ -36,7 +44,7 @@ export default class PromotionTickets extends React.Component {
                         </div>
                     </div>
                     <div className="bookTicketButton">
-                        <p>BOOK</p>
+                        <p>{book}</p>
                     </div>
                 </div>
             </a>

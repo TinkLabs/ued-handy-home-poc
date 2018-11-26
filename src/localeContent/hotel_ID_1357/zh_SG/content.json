@@ -36,7 +36,7 @@
             "content_position": "2"
         },
         {
-            "title": "人气咖啡店",
+            "title": "特色咖啡店",
             "iLink": "article:10852",
             "placeType": "咖啡店",
             "transportType": "walk",
@@ -62,7 +62,7 @@
                     "dealName": "滨海湾花园一日票",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
-                    "salesRecord": "63K Sold",
+                    "salesRecord": "63K 已出售",
                     "item": "Gardens by the Bay",
                     "item_type": "deals",
                     "item_id": "108"
@@ -74,7 +74,7 @@
                     "dealName": "夜游滨海湾花园 (含酒店接送)",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
-                    "salesRecord": "1K+ Sold",
+                    "salesRecord": "1K+ 已出售",
                     "item": "Gardens by the Bay",
                     "item_type": "deals",
                     "item_id": "2538"
@@ -86,7 +86,7 @@
                     "dealName": "滨海湾花园 (含酒店接送)",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",
-                    "salesRecord": "795 Sold",
+                    "salesRecord": "795 已出售",
                     "item": "Gardens by the Bay",
                     "item_type": "deals",
                     "item_id": "2541"

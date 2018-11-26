@@ -5,13 +5,12 @@ export default class ToDoCard extends React.Component {
         super(props);
 
         this.state = {
-            etaIcon: "",
+            image: "",
         }
         this.onClick = this.onClick.bind(this);
     }
     componentDidMount() {
         this.setState({
-            etaIcon: require(`../../images/eta_${this.props.transportType}.svg`),
             image: require(`../../images/${this.props.image}`),
         });
     }
@@ -38,7 +37,7 @@ export default class ToDoCard extends React.Component {
                             <div className="placeType">{this.props.placeType}</div>
                             <div className="transportTime">
                                 <img
-                                    src={this.state.etaIcon}
+                                    src={require(`../../images/eta_${this.props.transportType}.svg`)}
                                     alt="transport"
                                     className=""
                                 />

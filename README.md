@@ -129,7 +129,7 @@ src/utils/mixpanel.js
                     "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
-                    "salesRecord": "63K Sold"
+                    "salesRecord": "63K 已出售"
                 },
                 {
                     "ad_id": "1",
@@ -138,7 +138,7 @@ src/utils/mixpanel.js
                     "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
-                    "salesRecord": "1K+ Sold"
+                    "salesRecord": "1K+ 已出售"
                 },
                 {
                     "ad_id": "1",
@@ -147,7 +147,7 @@ src/utils/mixpanel.js
                     "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",
-                    "salesRecord": "795 Sold"
+                    "salesRecord": "795 已出售"
                 }
             ]
         }
