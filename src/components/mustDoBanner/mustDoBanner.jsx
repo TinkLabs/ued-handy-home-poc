@@ -27,10 +27,10 @@ export default class MustDoBanner extends React.Component {
         if (this.props.displayLanguage === "en_US") {
             eatLikeALocal = "EAT LIKE A LOCAL";
             seeMore = "SEE MORE";
-        } else if (this.props.displayLanguage === "zh_HK") {
+        } else if (this.props.displayLanguage === "zh_TW") {
             eatLikeALocal = "地道美食";
             seeMore = "查看更多";
-        } else if (this.props.displayLanguage === "zh_SG") {
+        } else if (this.props.displayLanguage === "zh_CN") {
             eatLikeALocal = "地道美食";
             seeMore = "查看更多";
         }

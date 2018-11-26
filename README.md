@@ -49,11 +49,11 @@ src/utils/mixpanel.js
                 },
                 {
                     "full": "简体中文",
-                    "short": "zh_SG"
+                    "short": "zh_CN"
                 },
                 {
                     "full": "繁體中文",
-                    "short": "zh_HK"
+                    "short": "zh_TW"
                 }
             ]
     },

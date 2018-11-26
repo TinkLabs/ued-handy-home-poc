@@ -6,10 +6,10 @@ export default class PromotionTickets extends React.Component {
         let book = "";
         if (this.props.displayLanguage === "en_US") {
             book = "BOOK";
-        } else if (this.props.displayLanguage === "zh_HK") {
-            book = "預訂";
-        } else if (this.props.displayLanguage === "zh_SG") {
-            book = "预订";
+        } else if (this.props.displayLanguage === "zh_TW") {
+            book = "預 訂";
+        } else if (this.props.displayLanguage === "zh_CN") {
+            book = "预 订";
         }
         return (
             <a

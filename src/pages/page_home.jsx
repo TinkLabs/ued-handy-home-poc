@@ -50,14 +50,12 @@ class PureHomePage extends React.Component {
 				"hotel_id": globalProperties.hotel_id,
 				"deviceLocale": globalProperties.deviceLocale,
 			}
-			// alert(Object.keys(globalProperties))
-			// alert(globalProperties.user_language)
 			// if (window.Android) { window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`); }
 			this.props.setGlobalProperties(gp);
 		} else {
 			const p = {
 				"hotel_id": "2",
-				"deviceLocale": "zh_HK",
+				"deviceLocale": "zh_TW",
 			};
 			this.props.setGlobalProperties(p);
 		}
@@ -65,27 +63,21 @@ class PureHomePage extends React.Component {
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.handleScroll);
 	}
-	componentDidUpdate() {
-		// 
-	}
 	shouldComponentUpdate(nextProps, nextState) {
 		let update = new Set();
 		// after global prop is fetched (ie hotel_id changed)
 		// write hotel specific content to store
 		if (this.props.hotel_ID !== nextProps.hotel_ID) {
-			// console.log('diff hotel')
 			this.props.getContent(nextProps.hotel_ID, nextProps.availableLanguage);
 			update.add(false);
 		}
 		// hotel specific content is loaded
 		if (this.props.loaded !== nextProps.loaded) {
-			// console.log('need to load')
 			this.loadNewLangResource(nextProps.displayLanguage, undefined ,nextProps);
 			update.add(false);
 		}
 		// change lang, target lang loaded
 		if (this.props.displayLanguage !== nextProps.displayLanguage) {
-			// console.log("diff lang")
 			update.add(true);
 		}
 		// switch to new lang
@@ -102,7 +94,6 @@ class PureHomePage extends React.Component {
 		if ((this.lastPosition < 105 && window.scrollY >= 105)
 			|| (this.lastPosition > 105 && window.scrollY <= 105)) {
 			// if (window.Android) { window.Android.showToast(window.scrollY); }
-			// console.log(window.scrollY);
 			mixpanel().track("Screen View", {
 				"Screen Name": "Home",
 				screen_number: 1,
@@ -110,7 +101,6 @@ class PureHomePage extends React.Component {
 		}
 		if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
 			// if (window.Android) { window.Android.showToast(window.scrollY); }
-			// console.log(window.innerHeight);
 			mixpanel().track("Screen View", {
 				"Screen Name": "Home",
 				screen_number: 2,
@@ -128,9 +118,6 @@ class PureHomePage extends React.Component {
 	}
 	loadNewLangResource(locale, hotel_ID = this.props.hotel_ID, props = this.props) {
 		const updates = {};
-		// console.log(locale)
-		// console.log(hotel_ID)
-		// console.log(props)
 		const localeContent = props.content.find(content => content.locale === locale);
 		const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${localeContent.mainPosterBanner.image}`);
 		const adArray = localeContent.ADBlock.map(ad => (
@@ -171,9 +158,6 @@ class PureHomePage extends React.Component {
 	}
 	render() {
 		if (this.state.loaded) {
-			// alert(JSON.stringify(this.state));
-			// alert(JSON.stringify(this.props));
-			// console.log(this.props.content)
 			return (
 				<div className="homePage">
 					<LanguageBanner

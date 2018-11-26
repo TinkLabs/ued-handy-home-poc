@@ -6,8 +6,8 @@
         "iLink": "dealcatalog:7",
         "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
         "item": "USS",
-        "item_id": "8",
-        "item_type": "deals",
+        "item_id": "7",
+        "item_type": "attractions",
         "item_position": "1"
     },
     "eatLikeALocal": [
@@ -18,7 +18,7 @@
             "transportType": "drive",
             "transportTime": "6 min from hotel",
             "image": "article1/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10941",
             "content_type": "article",
             "content_locale": "en_US",
             "content_position": "1"
@@ -30,7 +30,7 @@
             "transportType": "walk",
             "transportTime": "4 min from hotel",
             "image": "article2/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10036",
             "content_type": "article",
             "content_locale": "en_US",
             "content_position": "2"
@@ -42,7 +42,7 @@
             "transportType": "drive",
             "transportTime": "7 min from hotel",
             "image": "article3/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10852",
             "content_type": "article",
             "content_locale": "en_US",
             "content_position": "3"

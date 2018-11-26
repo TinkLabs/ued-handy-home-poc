@@ -33,8 +33,10 @@ export default class PromotionBanner extends React.Component {
                 >
                     <div className="gptAD">
                         <GPTAD
-                            adUnitPath={"/21623654641/Test/TEST-NHS-01"}
+                            // adUnitPath={"/21623654641/Tinklabs/NHS-01"}
+                            adUnitPath={"/21623654641/Test/Test-NHS-01"}
                             slotSize={[328, 210]}
+                            // target={["lang", `${this.props.displayLanguage.toLowerCase()}`]}
                         />
                     </div>
                 </a>

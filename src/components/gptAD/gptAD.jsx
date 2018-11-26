@@ -5,6 +5,7 @@ GPT.enableSingleRequest();
 
 export default class GPTAD extends React.Component {
     render() {
+        // GPT.setTargeting(this.props.target[0], this.props.target[1]);
         return (
             <GPT
                 adUnitPath={this.props.adUnitPath}

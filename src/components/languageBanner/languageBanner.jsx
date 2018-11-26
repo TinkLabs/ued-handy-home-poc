@@ -32,9 +32,9 @@ export default class LanguageBanner extends React.Component {
                         href="chooselang:"
                         onClick={() => {
                             // if (window.Android) {window.Android.showToast("more");}
-                            mixpanel().track("Hotel Home Banner Click", {
+                            mixpanel().track("Homepage Click", {
                                 click_type: "choose_language",
-                                user_language: "more"
+                                choose_language: "more"
                             });
                         }}
                     >

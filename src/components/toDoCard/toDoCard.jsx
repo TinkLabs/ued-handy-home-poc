@@ -39,7 +39,7 @@ export default class ToDoCard extends React.Component {
                                 <img
                                     src={require(`../../images/eta_${this.props.transportType}.svg`)}
                                     alt="transport"
-                                    className=""
+                                    className="transportType"
                                 />
                                 <span>
                                     {this.props.transportTime}

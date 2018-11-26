@@ -31,6 +31,10 @@
   }
 }
 
+.homePage {
+  padding-bottom: 1rem;
+}
+
 @import "./components/languageBanner/languageBanner.css";
 @import "./components/languageButton/languageButton.css";
 @import "./components/mainPosterBanner/mainPosterBanner.css";

@@ -1,50 +1,50 @@
 {
-    "locale": "zh_HK",
-    "hotel_ID": "81",
+    "locale": "zh_TW",
+    "hotel_ID": "2",
     "mainPosterBanner": {
-        "locale": "zh_HK",
+        "locale": "zh_TW",
         "iLink": "dealcatalog:7",
         "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
         "item": "USS",
-        "item_id": "8",
-        "item_type": "deals",
+        "item_id": "7",
+        "item_type": "attractions",
         "item_position": "1"
     },
     "eatLikeALocal": [
         {
-            "title": "必食大排檔海南雞飯",
+            "title": "zh_TW 2 Best Chicken Rice",
             "iLink": "article:10941",
-            "placeType": "美食中心",
-            "transportType": "drive",
-            "transportTime": "距離酒店 6 分",
+            "placeType": "Hawker Food",
+            "transportType": "walk",
+            "transportTime": "18 min from hotel",
             "image": "article1/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10941",
             "content_type": "article",
-            "content_locale": "zh_HK",
+            "content_locale": "zh_TW",
             "content_position": "1"
         },
         {
-            "title": "五家地道飲料",
+            "title": "5 Local Drinks",
             "iLink": "article:10036",
-            "placeType": "酒吧和飲料",
-            "transportType": "walk",
-            "transportTime": "距離酒店 4 分",
+            "placeType": "Bars",
+            "transportType": "drive",
+            "transportTime": "18 min from hotel",
             "image": "article2/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10036",
             "content_type": "article",
-            "content_locale": "zh_HK",
+            "content_locale": "zh_TW",
             "content_position": "2"
         },
         {
-            "title": "特色咖啡店",
+            "title": "Local Cafe",
             "iLink": "article:10852",
-            "placeType": "咖啡店",
-            "transportType": "drive",
-            "transportTime": "距離酒店 7 分",
+            "placeType": "Coffee Shop",
+            "transportType": "walk",
+            "transportTime": "18 min from hotel",
             "image": "article3/drawable-hdpi/straight.jpg",
-            "content_id": "8",
+            "content_id": "10852",
             "content_type": "article",
-            "content_locale": "zh_HK",
+            "content_locale": "zh_TW",
             "content_position": "3"
         }
     ],
@@ -59,37 +59,34 @@
                     "ad_id": "1",
                     "ticket_ID": "1",
                     "iLink": "ticket:108",
-                    "dealName": "濱海灣花園一日票",
+                    "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
                     "salesRecord": "63K 已出售",
                     "item": "Gardens by the Bay",
-                    "item_type": "deals",
-                    "item_id": "108"
+                    "item_type": "deals"
                 },
                 {
                     "ad_id": "1",
                     "ticket_ID": "2",
                     "iLink": "ticket:2538",
-                    "dealName": "夜遊濱海灣花園 (包酒店接送)",
+                    "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                     "sellingPrice": "SGD 59",
                     "originalPrice": "62",
                     "salesRecord": "1K+ 已出售",
                     "item": "Gardens by the Bay",
-                    "item_type": "deals",
-                    "item_id": "2538"
+                    "item_type": "deals"
                 },
                 {
                     "ad_id": "1",
                     "ticket_ID": "3",
                     "iLink": "ticket:2541",
-                    "dealName": "濱海灣花園 (包酒店接送)",
+                    "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                     "sellingPrice": "SGD 28",
                     "originalPrice": "30",
                     "salesRecord": "795 已出售",
                     "item": "Gardens by the Bay",
-                    "item_type": "deals",
-                    "item_id": "2541"
+                    "item_type": "deals"
                 }
             ]
         }

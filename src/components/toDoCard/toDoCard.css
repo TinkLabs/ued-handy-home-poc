@@ -31,17 +31,26 @@
     color: black;
     font-size: 1rem;
     line-height: 1.5;
-}
-.articleInfo .placeType,
-.articleInfo .transportTime {
-    color: grey;
-    font-size: 0.7rem;
+    height: 3rem;
 }
 .articleInfo .transportTime {
     padding-top: 0.4rem;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    height: 0.7rem;
+}
+.articleInfo .placeType {
+    color: grey;
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+.articleInfo .transportTime {
+    color: grey;
+    /* color: red; */
+    font-size: 11px;
+    line-height: 1;
+    padding-top: 3px;
 }
 .transportTime img {
     height: 13px;
