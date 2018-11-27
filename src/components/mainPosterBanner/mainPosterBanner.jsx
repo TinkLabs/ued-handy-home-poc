@@ -13,10 +13,14 @@ export default class MainPosterBanner extends React.Component {
                 onClick={() => {
                     // if (window.Android) {window.Android.showToast(banner.iLink);}
                     mixpanel().track("POI Click", {
-                        item: banner.item,
-                        item_id: banner.item_id,
-                        item_type: banner.item_type,
-                        item_position: banner.item_position,
+                        // item: this.props.bannerInfo.item,
+                        // item_id: this.props.bannerInfo.item_id,
+                        // item_type: this.props.bannerInfo.item_type,
+                        // item_position: this.props.bannerInfo.item_position,
+                        item: 'USS',
+                        item_id: '7',
+                        item_type: 'attractions',
+                        item_position: '1',
                     });
                 }}
             >

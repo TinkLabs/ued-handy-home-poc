@@ -11,34 +11,53 @@ export default class PromotionBanner extends React.Component {
             ticketIcon: require("../../images/ticketIcon.svg"),
         }
         this.onClickADBanner = this.onClickADBanner.bind(this);
+        this.localeADReady = this.localeADReady.bind(this);
     }
-    onClickADBanner() {
+    componentWillUnmount() {
+        window.removeEventListener('click');
+    }
+
+    onClickADBanner(e) {
+        console.log('ad click',
+            this.props.adInfo.campaignid,
+            this.props.adInfo.campaignname,
+            this.props.adInfo.bannerid,
+            this.props.adInfo.bannername,
+            this.props.adInfo["screen name"],
+        )
         mixpanel().track("Advertising Banner Click", {
-            campaign_id: this.props.campaign_id,
-            campaign_name: this.props.campaign_name,
-            banner_id: this.props.banner_id,
-            banner_name: this.props.banner_name,
-            screen_name: this.props.screen_name,
+            campaignid: this.props.adInfo.campaignid,
+            campaignname: this.props.adInfo.campaignname,
+            bannerid: this.props.adInfo.bannerid,
+            bannername: this.props.adInfo.bannername,
+            "screen name": this.props.adInfo["screen name"],
+            position: 1
+        });
+    }
+    localeADReady() {
+        mixpanel().track("Ads Image downloaded", {
+            campaignid: this.props.adInfo.campaignid,
+            campaignname: this.props.adInfo.campaignname,
+            bannerid: this.props.adInfo.bannerid,
+            bannername: this.props.adInfo.bannername,
+            "screen name": this.props.adInfo["screen name"],
+            position: 1
         });
     }
     render() {
-        // console.log(this.props.displayLanguage)
         const localeArray = this.props.availableLanguage.map(lang => lang.short.toLowerCase());
         return (
             <div>
-                <a
-                    href={this.props.iLink}
-                    onClick={this.onClickADBanner}
-                >
-                    <div className="gptAD">
-                        <GPTAD
-                            adUnitPath={"/21623654641/Tinklabs/NHS-01"}
-                            slotSize={[328, 210]}
-                            targetArr={["lang", localeArray]}
-                            target={this.props.displayLanguage.toLowerCase()}
-                        />
-                    </div>
-                </a>
+                <div className="gptAD">
+                    <GPTAD
+                        adUnitPath={"/21623654641/Tinklabs/NHS-01"}
+                        slotSize={[328, 210]}
+                        targetArr={["lang", localeArray]}
+                        target={this.props.displayLanguage.toLowerCase()}
+                        onSlotOnload={this.localeADReady}
+                        onClick={this.onClickADBanner}
+                    />
+                </div>
                 <div className="tickets">
                     {
                         this.props.tickets.ADTicket.map((ticketInfo, i) => (

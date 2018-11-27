@@ -169,6 +169,11 @@ class PureHomePage extends React.Component {
 						mainPosterBanner={
 							this.state.mainPosterBanner.find(b => b.locale === this.props.displayLanguage)
 						}
+						bannerInfo={
+							this.props.content
+							.find(content => content.locale === this.props.displayLanguage)
+							.mainPosterBanner
+						}
 					/>
 					<MustDoBanner
 						displayLanguage={this.props.displayLanguage}
@@ -186,6 +191,11 @@ class PureHomePage extends React.Component {
 										image={p.image}
 										availableLanguage={this.props.availableLanguage}
 										displayLanguage={this.props.displayLanguage}
+										adInfo={
+											this.props.content
+												.filter(c => c.locale === this.props.displayLanguage)[0]
+												.ADBlock[0]
+										}
 										tickets={
 											this.props.content
 												.filter(c => c.locale === this.props.displayLanguage)[0]

@@ -54,6 +54,12 @@
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
             "image": "ad1/drawable-hdpi/resting.png",
+            "campaignid": "2874",
+            "campaignname": "Gardens By the Bay - June '16",
+            
+            "bannername": "home_sgp_gbtb",
+            "screen name": "Home",
+            "position": "1",
             "ADTicket": [
                 {
                     "id": "1",
