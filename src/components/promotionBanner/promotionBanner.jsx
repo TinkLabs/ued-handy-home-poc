@@ -1,7 +1,5 @@
 import * as React from "react";
 import PromotionTicket from "../promotionTicket/promotionTicket";
-// import GoogleTagManager from "../googleTagManager/googleTagManager"
-// import DFPAD from "../dfpManager/dfpManager"
 import GPTAD from "../gptAD/gptAD"
 import mixpanel from '../../utils/mixpanel';
 
@@ -24,7 +22,8 @@ export default class PromotionBanner extends React.Component {
         });
     }
     render() {
-        // console.log(this.props.tickets)
+        // console.log(this.props.displayLanguage)
+        const localeArray = this.props.availableLanguage.map(lang => lang.short.toLowerCase());
         return (
             <div>
                 <a
@@ -33,10 +32,10 @@ export default class PromotionBanner extends React.Component {
                 >
                     <div className="gptAD">
                         <GPTAD
-                            // adUnitPath={"/21623654641/Tinklabs/NHS-01"}
-                            adUnitPath={"/21623654641/Test/Test-NHS-01"}
+                            adUnitPath={"/21623654641/Tinklabs/NHS-01"}
                             slotSize={[328, 210]}
-                            // target={["lang", `${this.props.displayLanguage.toLowerCase()}`]}
+                            targetArr={["lang", localeArray]}
+                            target={this.props.displayLanguage.toLowerCase()}
                         />
                     </div>
                 </a>
@@ -44,7 +43,7 @@ export default class PromotionBanner extends React.Component {
                     {
                         this.props.tickets.ADTicket.map((ticketInfo, i) => (
                             <PromotionTicket
-                                { ...ticketInfo }
+                                {...ticketInfo}
                                 key={i}
                                 ticketIcon={this.state.ticketIcon}
                                 displayLanguage={this.props.displayLanguage}

@@ -10,3 +10,7 @@
     height: 210px;
     margin-bottom: 0.5rem;
 }
+
+iframe {
+    border-radius: 4px;
+}

@@ -184,6 +184,7 @@ class PureHomePage extends React.Component {
 										id={p.ad_id}
 										iLink={p.iLink}
 										image={p.image}
+										availableLanguage={this.props.availableLanguage}
 										displayLanguage={this.props.displayLanguage}
 										tickets={
 											this.props.content

@@ -2,6 +2,7 @@ import * as React from "react";
 import Slider from "react-slick";
 import mixpanel from '../../utils/mixpanel';
 import ToDoCard from "../toDoCard/toDoCard";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default class MustDoBanner extends React.Component {
     constructor(props) {
@@ -39,7 +40,6 @@ export default class MustDoBanner extends React.Component {
                 <div className="subMustDoBanner">
                     <div className="eatLikeALocal">
                         {eatLikeALocal}
-                        {/* EAT LIKE A LOCAL */}
                     </div>
                     <a 
                         className="seeMore"
@@ -52,34 +52,47 @@ export default class MustDoBanner extends React.Component {
                         }}
                     >
                         {seeMore}
-                        {/* SEE MORE */}
                     </a>
                 </div>
-                <div className="sliderContainer">
-                    <Slider {...this.state.sliderSettings}>
-                        { articles.map((fa, i) => (
-                            <ToDoCard
-                                key={i}
-                                title={fa.title}
-                                iLink={fa.iLink}
-                                placeType={fa.placeType}
-                                transportType={fa.transportType}
-                                transportTime={fa.transportTime}
-                                image={fa.image}
-                                onClickMixpanel={() => {
-                                    // if (window.Android) {window.Android.showToast(fa.title);}
-                                    mixpanel().track("Content Impression", {
-                                        content_title: fa.title,
-                                        content_id: fa.content_id,
-                                        content_type: fa.content_type,
-                                        content_locale: fa.content_locale,
-                                        content_position: fa.content_position,
-                                    });
-                                }}
-                            />
-                        ))}
-                    </Slider>
-                </div>
+                    <div className="sliderContainer">
+                        <Slider {...this.state.sliderSettings}>
+                            { articles.map((fa, i) => (
+                                <VisibilitySensor
+                                    key={i}
+                                    onChange={(isVisible) => {
+                                        // if (window.Android) {window.Android.showToast(isVisible);}
+                                        // console.log(isVisible)
+                                        mixpanel().track("Content Impression", {
+                                            content_title: fa.title,
+                                            content_id: fa.content_id,
+                                            content_type: fa.content_type,
+                                            content_locale: fa.content_locale,
+                                            content_position: fa.content_position,
+                                        });
+                                    }}
+                                >
+                                    <ToDoCard
+                                        title={fa.title}
+                                        iLink={fa.iLink}
+                                        placeType={fa.placeType}
+                                        transportType={fa.transportType}
+                                        transportTime={fa.transportTime}
+                                        image={fa.image}
+                                        onClickMixpanel={() => {
+                                            // if (window.Android) {window.Android.showToast(fa.title);}
+                                            mixpanel().track("Listing Banner Click", {
+                                                content_title: fa.title,
+                                                content_id: fa.content_id,
+                                                content_type: fa.content_type,
+                                                content_locale: fa.content_locale,
+                                                content_position: fa.content_position,
+                                            });
+                                        }}
+                                    />
+                                </VisibilitySensor>
+                            ))}
+                        </Slider>
+                    </div>
             </div>
         );
     }
