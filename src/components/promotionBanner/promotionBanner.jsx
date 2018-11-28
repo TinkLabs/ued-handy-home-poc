@@ -13,18 +13,8 @@ export default class PromotionBanner extends React.Component {
         this.onClickADBanner = this.onClickADBanner.bind(this);
         this.localeADReady = this.localeADReady.bind(this);
     }
-    componentWillUnmount() {
-        window.removeEventListener('click');
-    }
-
+    // fired after user click ad and right before redirect
     onClickADBanner(e) {
-        console.log('ad click',
-            this.props.adInfo.campaignid,
-            this.props.adInfo.campaignname,
-            this.props.adInfo.bannerid,
-            this.props.adInfo.bannername,
-            this.props.adInfo["screen name"],
-        )
         mixpanel().track("Advertising Banner Click", {
             campaignid: this.props.adInfo.campaignid,
             campaignname: this.props.adInfo.campaignname,
@@ -34,6 +24,7 @@ export default class PromotionBanner extends React.Component {
             position: 1
         });
     }
+    // fired after slot (locale) specific ad is displayed
     localeADReady() {
         mixpanel().track("Ads Image downloaded", {
             campaignid: this.props.adInfo.campaignid,

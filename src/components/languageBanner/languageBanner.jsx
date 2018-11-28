@@ -14,7 +14,6 @@ export default class LanguageBanner extends React.Component {
                             key={i}
                             onClick={this.props.onClick}
                             onClickMixpanel={() => {
-                                // if (window.Android) {window.Android.showToast(lang.full);}
                                 mixpanel().track('Homepage Click', {
                                     click_type: "choose_language",
                                     user_language: lang.full
@@ -31,7 +30,6 @@ export default class LanguageBanner extends React.Component {
                     <a 
                         href="chooselang:"
                         onClick={() => {
-                            // if (window.Android) {window.Android.showToast("more");}
                             mixpanel().track("Homepage Click", {
                                 click_type: "choose_language",
                                 choose_language: "more"

@@ -11,16 +11,11 @@ export default class MainPosterBanner extends React.Component {
             <a
                 href={banner.iLink}
                 onClick={() => {
-                    // if (window.Android) {window.Android.showToast(banner.iLink);}
                     mixpanel().track("POI Click", {
-                        // item: this.props.bannerInfo.item,
-                        // item_id: this.props.bannerInfo.item_id,
-                        // item_type: this.props.bannerInfo.item_type,
-                        // item_position: this.props.bannerInfo.item_position,
-                        item: 'USS',
-                        item_id: '7',
-                        item_type: 'attractions',
-                        item_position: '1',
+                        item: this.props.bannerInfo.item,
+                        item_id: this.props.bannerInfo.item_id,
+                        item_type: this.props.bannerInfo.item_type,
+                        item_position: this.props.bannerInfo.item_position,
                     });
                 }}
             >

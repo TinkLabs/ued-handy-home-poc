@@ -1,6 +1,7 @@
 import * as React from "react";
 import { connect } from 'react-redux';
 import mixpanel from '../utils/mixpanel';
+import VisibilitySensor from "react-visibility-sensor";
 
 import LanguageBanner from "../components/languageBanner/languageBanner";
 import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
@@ -50,7 +51,6 @@ class PureHomePage extends React.Component {
 				"hotel_id": globalProperties.hotel_id,
 				"deviceLocale": globalProperties.deviceLocale,
 			}
-			// if (window.Android) { window.Android.showToast(`welcome to hotel ${globalProperties.hotel_id}`); }
 			this.props.setGlobalProperties(gp);
 		} else {
 			const p = {
@@ -99,13 +99,13 @@ class PureHomePage extends React.Component {
 				screen_number: 1,
 			});
 		}
-		if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
-			// if (window.Android) { window.Android.showToast(window.scrollY); }
-			mixpanel().track("Screen View", {
-				"Screen Name": "Home",
-				screen_number: 2,
-			});
-		}
+		// if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
+		// 	// if (window.Android) { window.Android.showToast(window.scrollY); }
+		// 	mixpanel().track("Screen View", {
+		// 		"Screen Name": "Home",
+		// 		screen_number: 2,
+		// 	});
+		// }
 		// update last position
 		this.lastPosition = window.scrollY;
 	}
@@ -206,6 +206,18 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
+					<VisibilitySensor
+						onChange={(isVisible) => {
+							if (isVisible) {
+								mixpanel().track("Screen View", {
+									"Screen Name": "Home",
+									screen_number: 2,
+								});
+							}
+						}}
+					>
+						<div style={{height: "1px", opacity: "0"}}/>
+					</VisibilitySensor>
 					<button onClick={this.changeHotel81}>81</button>
 					<button onClick={this.changeHotel375}>375</button>
 					<button onClick={this.changeHotel1357}>1357</button>
