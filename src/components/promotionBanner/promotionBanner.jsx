@@ -1,4 +1,5 @@
 import * as React from "react";
+import LoadingAnimate from "../loadingAnimate/loadingAnimate";
 import PromotionTicket from "../promotionTicket/promotionTicket";
 import GPTAD from "../gptAD/gptAD"
 import mixpanel from '../../utils/mixpanel';
@@ -9,6 +10,7 @@ export default class PromotionBanner extends React.Component {
 
         this.state = {
             ticketIcon: require("../../images/ticketIcon.svg"),
+            adReady: false,
         }
         this.onClickADBanner = this.onClickADBanner.bind(this);
         this.localeADReady = this.localeADReady.bind(this);
@@ -26,6 +28,7 @@ export default class PromotionBanner extends React.Component {
     }
     // fired after slot (locale) specific ad is displayed
     localeADReady() {
+        console.log('ready')
         mixpanel().track("Ads Image downloaded", {
             campaignid: this.props.adInfo.campaignid,
             campaignname: this.props.adInfo.campaignname,
@@ -34,12 +37,23 @@ export default class PromotionBanner extends React.Component {
             "screen name": this.props.adInfo["screen name"],
             position: 1
         });
+        this.setState({
+            adReady: true,
+        });
     }
     render() {
         const localeArray = this.props.availableLanguage.map(lang => lang.short.toLowerCase());
         return (
             <div>
                 <div className="gptAD">
+                    {
+                        (this.state.adReady) ?
+                        null :
+                        <LoadingAnimate
+                            type="spin"
+                            color="rgb(53, 126, 221)"
+                        />
+                    }
                     <GPTAD
                         adUnitPath={"/21623654641/Tinklabs/NHS-01"}
                         slotSize={[328, 210]}
