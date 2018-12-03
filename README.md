@@ -156,12 +156,9 @@ src/utils/mixpanel.js
 ```
 
 ### TODO
-- update iLinks
+- ~~update iLinks~~
 - config webpack to load resource with abs path
 - error handling in webview (network and corrupt file)
-
     > react16 provides `componentDidCatch()` on error handling
 - set web default lang as device lang, else fallback to ENG
-- find a way to cache web lang status
-    > now: current lang > ilink > back > default lang
-    > new: current lang > ilink > back > current lang
+- ~~prev.lang cached in localStorage~~

@@ -96,6 +96,7 @@ class PureHomePage extends React.Component {
 
 		/*
 		 *	Read user preference, switch to previous language.
+		 *	prevLang > sysLang > defaultLang
 		 */
 		const prevLocale = localStorage.getItem('homePageLocale');
 		if (prevLocale !== null

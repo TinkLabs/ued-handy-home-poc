@@ -28,7 +28,6 @@ export default class PromotionBanner extends React.Component {
     }
     // fired after slot (locale) specific ad is displayed
     localeADReady() {
-        console.log('ready')
         mixpanel().track("Ads Image downloaded", {
             campaignid: this.props.adInfo.campaignid,
             campaignname: this.props.adInfo.campaignname,
