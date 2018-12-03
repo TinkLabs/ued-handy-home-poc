@@ -35,11 +35,11 @@ export const getContent = (hotelID, locales) => dispatch => {
     //         dispatch(getUserIDFail(err));
     //     });
 }
-export const getContentSuccess = (hotelID, locales) => {
-    const pkg = locales.map(l => require(`../../localeContent/hotel_ID_${hotelID}/${l.short}/content.json`));
+export const getContentSuccess = (hotelID) => {
+    const content = require(`../../localeContent/hotel_ID_${hotelID}/content.json`);
     return {
         type: homePageActions.GET_CONTENT_SUCCESS,
-        content: pkg,
+        content,
     }
 }
 export const getContentFail = (err) => {

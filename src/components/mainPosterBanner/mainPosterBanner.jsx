@@ -1,21 +1,22 @@
 import * as React from "react";
 import mixpanel from '../../utils/mixpanel';
+// import env from '';
 
 export default class MainPosterBanner extends React.Component {
     render() {
-        const banner = this.props.mainPosterBanner;
+        const banner = this.props.bannerInfo;
         const topBannerStyle = {
-            backgroundImage: banner.image,
+            backgroundImage: banner.path,
         }
         return (
             <a
                 href={banner.iLink}
                 onClick={() => {
                     mixpanel().track("POI Click", {
-                        item: this.props.bannerInfo.item,
-                        item_id: this.props.bannerInfo.item_id,
-                        item_type: this.props.bannerInfo.item_type,
-                        item_position: this.props.bannerInfo.item_position,
+                        item: banner.item,
+                        item_id: banner.item_id,
+                        item_type: banner.item_type,
+                        item_position: banner.item_position,
                     });
                 }}
             >

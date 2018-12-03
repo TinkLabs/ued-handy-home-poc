@@ -22,7 +22,7 @@ export default class MustDoBanner extends React.Component {
         }
     }
     render() {
-        const articles = this.props.articles.find(c => c.locale === this.props.displayLanguage).eatLikeALocal;
+        const articles = this.props.content[this.props.displayLanguage].eatLikeALocal;
         let eatLikeALocal = "";
         let seeMore = "";
         if (this.props.displayLanguage === "en_US") {

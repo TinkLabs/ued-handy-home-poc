@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
     "mixpanel-browser": "^2.23.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dfp": "^0.7.6",
     "react-dom": "^16.6.1",
@@ -13,6 +15,7 @@
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
+    "react-scroll": "^1.7.10",
     "react-slick": "^0.23.2",
     "react-visibility-sensor": "^5.0.2",
     "reactstrap": "^6.5.0",
@@ -38,5 +41,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://handy-staging-test.s3.amazonaws.com/react-build"
+  "homepage": "https://handy-staging-test.s3.amazonaws.com/react-tester-build"
 }

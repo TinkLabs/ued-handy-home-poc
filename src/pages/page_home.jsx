@@ -2,6 +2,7 @@ import * as React from "react";
 import { connect } from 'react-redux';
 import mixpanel from '../utils/mixpanel';
 import VisibilitySensor from "react-visibility-sensor";
+import PropTypes from 'prop-types';
 
 import LanguageBanner from "../components/languageBanner/languageBanner";
 import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
@@ -14,78 +15,95 @@ import {
 	getContent,
 } from "../redux/actions/homePage";
 
+const IProps = {
+	availableLanguage: PropTypes.array,
+	displayLanguage: PropTypes.string,
+	hotel_ID: PropTypes.string,
+	content: PropTypes.object,
+	globalPropertiesReady: PropTypes.bool,
+	loaded: PropTypes.bool,
+	setGlobalProperties: PropTypes.func,
+	setDisplayLanguage: PropTypes.func,
+	getContent: PropTypes.func,
+}
+
 class PureHomePage extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			loaded: false,
-			loadedLang: [],
-			mainPosterBanner: [],
+			userPreference: [],
+			imgLoaded: false,
+			mainBannerPkg: [],
 			promotions: [],
 		}
 
 		this.lastPosition = [];
 		this.onSelectLang = this.onSelectLang.bind(this);
-		this.loadNewLangResource = this.loadNewLangResource.bind(this);
+		this.loadImgResource = this.loadImgResource.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
 		// demo
-		this.changeHotel81 = this.changeHotel81.bind(this);
-		this.changeHotel375 = this.changeHotel375.bind(this);
-		this.changeHotel1357 = this.changeHotel1357.bind(this);
+		this.changeHotel = this.changeHotel.bind(this);
 	}
 	componentDidMount() {
 		// add scrollspy
 		window.addEventListener('scroll', this.handleScroll);
 
-		// get hotel id to prepare display content
+		// get hotel id and device locale to prepare display content
 		const notReady = !this.props.globalPropertiesReady;
 		const isAndroid = typeof (window.Android) !== "undefined";
+		let gp;
 		let hasGetGP = "undefined";
 		if (isAndroid) {
 			hasGetGP = typeof (window.Android.getGlobalProperties) !== "undefined";
 		}
 		if (notReady && isAndroid && hasGetGP) {
 			const globalProperties = JSON.parse(window.Android.getGlobalProperties());
-			const gp = {
+			gp = {
 				"hotel_id": globalProperties.hotel_id,
+				// device locale is not ready in 7.6.x
 				"deviceLocale": globalProperties.deviceLocale,
 			}
-			this.props.setGlobalProperties(gp);
 		} else {
-			const p = {
+			// default hotel for 1st render
+			gp = {
 				"hotel_id": "2",
-				"deviceLocale": "zh_TW",
+				"deviceLocale": "zh_CN",
 			};
-			this.props.setGlobalProperties(p);
 		}
+		this.props.setGlobalProperties(gp);
 	}
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this.handleScroll);
 	}
 	shouldComponentUpdate(nextProps, nextState) {
-		let update = new Set();
-		// after global prop is fetched (ie hotel_id changed)
-		// write hotel specific content to store
+		/*
+		 *	`hotel_id` changed (DidMount / demo), write new hotel specific content to store 
+		 */
 		if (this.props.hotel_ID !== nextProps.hotel_ID) {
-			this.props.getContent(nextProps.hotel_ID, nextProps.availableLanguage);
-			update.add(false);
+			this.props.getContent(nextProps.hotel_ID);
+			return false;
 		}
-		// hotel specific content is loaded
+		// hotel specific content is loaded in nextProps, now load img
 		if (this.props.loaded !== nextProps.loaded) {
-			this.loadNewLangResource(nextProps.displayLanguage, undefined ,nextProps);
-			update.add(false);
+			this.loadImgResource(nextProps);
+			return false;
 		}
-		// change lang, target lang loaded
-		if (this.props.displayLanguage !== nextProps.displayLanguage) {
-			update.add(true);
+
+		/*
+		 *	Change lang, target lang loaded, nth special, go on.
+		 */
+
+		/*
+		 *	Read user preference, switch to previous language.
+		 */
+		const prevLocale = localStorage.getItem('homePageLocale');
+		if (prevLocale !== null
+			&& prevLocale !== nextProps.displayLanguage) {
+			this.props.setDisplayLanguage(prevLocale);
+			return false;
 		}
-		// switch to new lang
-		if (!nextState.loaded) {
-			this.loadNewLangResource(nextProps.displayLanguage);
-			update.add(false);
-		}
-		return !update.has(false);
+		return true;
 	}
 	handleScroll(event) {
 		// if (window.Android) {window.Android.showToast(window.scrollY);}
@@ -99,65 +117,51 @@ class PureHomePage extends React.Component {
 				screen_number: 1,
 			});
 		}
-		// if ((this.lastPosition < window.innerHeight && window.scrollY >= window.innerHeight)) {
-		// 	// if (window.Android) { window.Android.showToast(window.scrollY); }
-		// 	mixpanel().track("Screen View", {
-		// 		"Screen Name": "Home",
-		// 		screen_number: 2,
-		// 	});
-		// }
-		// update last position
 		this.lastPosition = window.scrollY;
 	}
 	onSelectLang(locale) {
-		// change lang, target lang first load
-		if (this.state.loadedLang.indexOf(locale) === -1) {
-			this.loadNewLangResource(locale);
-		}
+		/*
+		 *	Save to localStorage for future ref
+		 *	Udpate to redux as well
+		 */
+		localStorage.setItem('homePageLocale', locale);
 		this.props.setDisplayLanguage(locale);
 	}
-	loadNewLangResource(locale, hotel_ID = this.props.hotel_ID, props = this.props) {
+	loadImgResource(props = this.props) {
+		/*
+		 *	Load all hotel- and locale- specific img to state.
+		 *	Img will be external call when BE is ready,
+		 *	this part will be used to load default img
+		 */
 		const updates = {};
-		const localeContent = props.content.find(content => content.locale === locale);
-		const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${localeContent.mainPosterBanner.image}`);
-		const adArray = localeContent.ADBlock.map(ad => (
-			{
-				ad_id: ad.ad_id,
-				name: ad.name,
-				iLink: ad.iLink,
-				image: require(`../localeContent/hotel_ID_${hotel_ID}/${locale}/${ad.image}`),
-			}
-		));
-		updates.loaded = true;
-		updates.loadedLang = this.state.loadedLang.concat(locale);
-		updates.mainPosterBanner =
-			this.state.mainPosterBanner
-				.filter(p => (p.locale !== locale))
-				.concat({
-					locale,
-					iLink: localeContent.mainPosterBanner.iLink,
-					image: `url(${bannerPath})`
-				});
-		updates.promotions = this.state.promotions.concat({
-			locale: locale,
-			ads: adArray,
+		const hotel_ID = props.hotel_ID;
+		const content = props.content;
+		const mainBannerPkg = [];
+		const promotions = [];
+		props.availableLanguage.forEach(locale => {
+			const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].mainPosterBanner.image}`);
+			mainBannerPkg.push({
+				...content[locale.short].mainPosterBanner,
+				path: `url(${bannerPath})`,
+			});
+			const ADPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
+			promotions.push({
+				...content[locale.short].ADBlock[0],
+				path: `url(${ADPath})`,
+			})
 		});
+		updates.imgLoaded = true;
+		updates.mainBannerPkg = mainBannerPkg;
+		updates.promotions = promotions;
 		this.setState({
-			...this.state,
 			...updates,
 		});
 	}
-	changeHotel81() {
-		this.props.setGlobalProperties({"hotel_id": "81", "deviceLocale": "en_US"});
-	}
-	changeHotel375() {
-		this.props.setGlobalProperties({"hotel_id": "375", "deviceLocale": "en_US"});
-	}
-	changeHotel1357() {
-		this.props.setGlobalProperties({"hotel_id": "1357", "deviceLocale": "en_US"});
+	changeHotel(e) {
+		this.props.setGlobalProperties({ "hotel_id": e.currentTarget.innerHTML, "deviceLocale": this.props.displayLanguage });
 	}
 	render() {
-		if (this.state.loaded) {
+		if (this.state.imgLoaded) {
 			return (
 				<div className="homePage">
 					<LanguageBanner
@@ -166,42 +170,25 @@ class PureHomePage extends React.Component {
 						onClick={this.onSelectLang}
 					/>
 					<MainPosterBanner
-						mainPosterBanner={
-							this.state.mainPosterBanner.find(b => b.locale === this.props.displayLanguage)
-						}
 						bannerInfo={
-							this.props.content
-							.find(content => content.locale === this.props.displayLanguage)
-							.mainPosterBanner
+							this.state.mainBannerPkg.find(b => b.locale === this.props.displayLanguage)
 						}
 					/>
 					<MustDoBanner
 						displayLanguage={this.props.displayLanguage}
-						articles={this.props.content}
+						content={this.props.content}
 					/>
 					{
 						this.state.promotions
-							.find(p => p.locale === this.props.displayLanguage).ads
+							.filter(p => p.locale === this.props.displayLanguage)
 							.map(p => {
 								return (
 									<PromotionBanner
 										key={p.ad_id}
 										id={p.ad_id}
-										iLink={p.iLink}
-										image={p.image}
-										availableLanguage={this.props.availableLanguage}
+										availableLanguage={this.props.availableLanguage} // for fetching google ads
 										displayLanguage={this.props.displayLanguage}
-										adInfo={
-											this.props.content
-												.filter(c => c.locale === this.props.displayLanguage)[0]
-												.ADBlock[0]
-										}
-										tickets={
-											this.props.content
-												.filter(c => c.locale === this.props.displayLanguage)[0]
-												.ADBlock
-												.filter(ad => ad.ad_id === p.ad_id)[0]
-										}
+										adInfo={p}
 									/>
 								)
 							})
@@ -216,11 +203,11 @@ class PureHomePage extends React.Component {
 							}
 						}}
 					>
-						<div style={{height: "1px", opacity: "0"}}/>
+						<div style={{ height: "1px", opacity: "0" }} />
 					</VisibilitySensor>
-					<button onClick={this.changeHotel81}>81</button>
-					<button onClick={this.changeHotel375}>375</button>
-					<button onClick={this.changeHotel1357}>1357</button>
+					<button onClick={this.changeHotel}>81</button>
+					<button onClick={this.changeHotel}>375</button>
+					<button onClick={this.changeHotel}>1357</button>
 				</div>
 			)
 		}
@@ -230,12 +217,12 @@ class PureHomePage extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		loaded: state.homePage.loaded,
 		availableLanguage: state.homePage.availableLanguage,
 		displayLanguage: state.homePage.displayLanguage,
-		content: state.homePage.content,
 		hotel_ID: state.homePage.globalProperties.hotel_id,
+		content: state.homePage.content,
 		globalPropertiesReady: state.homePage.globalPropertiesReady,
+		loaded: state.homePage.loaded,
 	};
 }
 
@@ -246,6 +233,8 @@ const mapDispatchToProps = (dispatch) => {
 		getContent: (hotelID, locales) => dispatch(getContent(hotelID, locales)),
 	};
 }
+
+PureHomePage.propTypes = IProps;
 
 const HomePage = connect(mapStateToProps, mapDispatchToProps)(PureHomePage);
 

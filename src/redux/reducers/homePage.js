@@ -5,7 +5,7 @@ const hotelList = require(`../../localeContent/hotelList.json`);
 const defaultHotel_ID = hotelList[0].hotel_ID;
 const availableLanguage = hotelList.find(hotel => hotel.hotel_ID === defaultHotel_ID).availableLanguage;
 const defaultLanguage = availableLanguage[0].short;
-const defaultContent = require(`../../localeContent/hotel_ID_${defaultHotel_ID}/${defaultLanguage}/content.json`);
+const defaultContent = require(`../../localeContent/hotel_ID_${defaultHotel_ID}/content.json`);
 
 const initialState = {
     loaded: false,
@@ -16,7 +16,7 @@ const initialState = {
     },
     availableLanguage,
     displayLanguage: defaultLanguage,
-    content: [defaultContent],
+    content: defaultContent,
 }
 
 export const homePageReducer = (state = initialState, action) => {
@@ -25,18 +25,15 @@ export const homePageReducer = (state = initialState, action) => {
             let displayLanguage = defaultLanguage;
             if (typeof(action.globalProperties.deviceLocale) !== "undefined") {
                 const deviceLocale = action.globalProperties.deviceLocale;
-                // console.log(deviceLocale);
                 if (availableLanguage.find(locale => locale.short === deviceLocale)) {
-                    // console.log('have')
                     displayLanguage = deviceLocale
                 }
             }
-            // console.log(displayLanguage)
             return {
                 ...state,
                 globalProperties: action.globalProperties,
                 globalPropertiesReady: true,
-                // displayLanguage: displayLanguage
+                displayLanguage,
             }
         }
         case homePageActions.SET_DISPLAY_LANGUAGE: {
