@@ -5,7 +5,9 @@ import {
 	// Route,
 	// Redirect,
 	Switch,
+	Route,
 } from "react-router-dom";
+import { withCookies } from 'react-cookie';
 
 import HomePage from "../pages/page_home";
 import ErrorPage from "../pages/page_error";
@@ -39,7 +41,10 @@ class MainRouter extends React.Component {
 				<Router>
 					<div className="App">
 						<Switch>
-							<HomePage />
+							<Route
+								path="/"
+								render={()=>(<HomePage cookies={this.props.cookies} />)}
+							/>
 						</Switch>
 					</div>
 				</Router>
@@ -48,4 +53,4 @@ class MainRouter extends React.Component {
 	}
 }
 
-export default MainRouter;
+export default withCookies(MainRouter);

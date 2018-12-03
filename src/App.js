@@ -1,32 +1,18 @@
 import * as React from 'react';
-import { connect } from "react-redux";
+import { withCookies } from 'react-cookie';
 import MainRouter from "./router/mainRouter"
 
 // import pages
 import './App.css';
 
-class PureApp extends React.Component {
+class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<MainRouter />
-			</div>
+                <MainRouter cookies={this.props.cookies} />
+            </div>
 		);
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		//
-	}
-}
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-		// 
-	}
-}
-
-const App = connect(mapStateToProps, mapDispatchToProps)(PureApp);
-
-export default App;
+export default withCookies(App);

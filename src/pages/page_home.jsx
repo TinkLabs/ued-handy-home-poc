@@ -42,6 +42,8 @@ class PureHomePage extends React.Component {
 		this.onSelectLang = this.onSelectLang.bind(this);
 		this.loadImgResource = this.loadImgResource.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
+		this.getCookies = this.getCookies.bind(this);
+		this.setCookies = this.setCookies.bind(this);
 		// demo
 		this.changeHotel = this.changeHotel.bind(this);
 	}
@@ -119,6 +121,13 @@ class PureHomePage extends React.Component {
 			});
 		}
 		this.lastPosition = window.scrollY;
+	}
+	getCookies(label) {
+		console.log(this.props.cookies.get(label));
+	}
+	setCookies(label, value, path) {
+		// EG: this.setCookies('name', 'sb', '/');
+		this.props.cookies.set(label, value, { path });
 	}
 	onSelectLang(locale) {
 		/*
@@ -216,7 +225,7 @@ class PureHomePage extends React.Component {
 	};
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
 	return {
 		availableLanguage: state.homePage.availableLanguage,
 		displayLanguage: state.homePage.displayLanguage,
@@ -224,6 +233,8 @@ const mapStateToProps = (state) => {
 		content: state.homePage.content,
 		globalPropertiesReady: state.homePage.globalPropertiesReady,
 		loaded: state.homePage.loaded,
+
+		cookies: ownProps.cookies,
 	};
 }
 
