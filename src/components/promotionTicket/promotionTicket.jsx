@@ -1,7 +1,19 @@
 import * as React from "react";
 import mixpanel from '../../utils/mixpanel';
+import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
-export default class PromotionTickets extends React.Component {
+const styles = theme => ({
+    root: {
+        ...theme.mixins.gutters(),
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        marginLeft: "1rem",
+        marginRight: "1rem",
+    },
+});
+
+class PromotionTickets extends React.Component {
     render() {
         let book = "";
         if (this.props.displayLanguage === "en_US") {
@@ -11,6 +23,7 @@ export default class PromotionTickets extends React.Component {
         } else if (this.props.displayLanguage === "zh_CN") {
             book = "预 订";
         }
+        const { classes } = this.props;
         return (
             <a
                 href={this.props.iLink}
@@ -24,6 +37,7 @@ export default class PromotionTickets extends React.Component {
                     });
                 }}
             >
+            <Paper className={classes.root} elevation={1}>
                 <div
                     className="promotionTicket"
                     key={this.props.ticket_ID}
@@ -44,10 +58,13 @@ export default class PromotionTickets extends React.Component {
                         </div>
                     </div>
                     <div className="bookTicketButton">
-                        <p>{book}</p>
+                        <div>{book}</div>
                     </div>
                 </div>
+                </Paper>
             </a>
         )
     }
 }
+
+export default withStyles(styles)(PromotionTickets);

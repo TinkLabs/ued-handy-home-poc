@@ -1,0 +1,8 @@
+.signUpBanner,
+.signUpBannerAnchor,
+.signUpBannerImg {
+  width: 100%;
+}
+.signUpBannerAnchor {
+  margin: 1rem;
+}

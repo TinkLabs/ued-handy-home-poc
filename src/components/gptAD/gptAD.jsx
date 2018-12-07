@@ -39,7 +39,7 @@ export default class GPTAD extends React.Component {
                 adUnitPath={this.props.adUnitPath}
                 slotSize={this.props.slotSize}
                 targeting={{ lang: this.props.target }}
-                onSlotOnload={this.props.onSlotOnload}
+                onSlotRenderEnded={this.props.onSlotOnload}
                 collapseEmptyDiv
                 forceSafeFrame
             />

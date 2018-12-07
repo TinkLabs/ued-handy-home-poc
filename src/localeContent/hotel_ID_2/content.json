@@ -37,7 +37,7 @@
                 "content_position": "2"
             },
             {
-                "title": "Best Local Cafe",
+                "title": "Best Local Cafes",
                 "iLink": "article:10852",
                 "placeType": "Coffee Shop",
                 "transportType": "walk",
@@ -70,7 +70,7 @@
                         "dealName": "Gardens by the Bay 1 Day Ticket",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K Sold",
+                        "salesRecord": "63K+ Sold",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"
@@ -173,7 +173,7 @@
                         "dealName": "滨海湾花园一日票",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K 已出售",
+                        "salesRecord": "63K+ 已出售",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"
@@ -276,7 +276,7 @@
                         "dealName": "濱海灣花園一日票",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K 已出售",
+                        "salesRecord": "63K+ 已出售",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"

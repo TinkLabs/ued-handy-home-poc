@@ -8,6 +8,7 @@ import LanguageBanner from "../components/languageBanner/languageBanner";
 import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
 import MustDoBanner from "../components/mustDoBanner/mustDoBanner";
 import PromotionBanner from "../components/promotionBanner/promotionBanner";
+import SignUp from "../components/signUp/signUp";
 
 import {
 	setGlobalProperties,
@@ -36,6 +37,8 @@ class PureHomePage extends React.Component {
 			imgLoaded: false,
 			mainBannerPkg: [],
 			promotions: [],
+			hiDotComURL: "http://hi.com/prelaunch",
+			hiDotComBanner: "",
 		}
 
 		this.lastPosition = [];
@@ -160,9 +163,11 @@ class PureHomePage extends React.Component {
 				path: `url(${ADPath})`,
 			})
 		});
+		const hiDotComBanner = "url(".concat(require("../images/hidotcom.png")).concat(")");
 		updates.imgLoaded = true;
 		updates.mainBannerPkg = mainBannerPkg;
 		updates.promotions = promotions;
+		updates.hiDotComBanner = hiDotComBanner;
 		this.setState({
 			...updates,
 		});
@@ -180,6 +185,7 @@ class PureHomePage extends React.Component {
 						onClick={this.onSelectLang}
 					/>
 					<MainPosterBanner
+						tracking
 						bannerInfo={
 							this.state.mainBannerPkg.find(b => b.locale === this.props.displayLanguage)
 						}
@@ -203,6 +209,10 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
+					<SignUp
+						locale={this.props.displayLanguage}
+						redirectURL={this.state.hiDotComURL}
+					/>
 					<VisibilitySensor
 						onChange={(isVisible) => {
 							if (isVisible) {

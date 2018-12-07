@@ -6,18 +6,21 @@ export default class MainPosterBanner extends React.Component {
     render() {
         const banner = this.props.bannerInfo;
         const topBannerStyle = {
+            ...banner.styles,
             backgroundImage: banner.path,
         }
         return (
             <a
                 href={banner.iLink}
                 onClick={() => {
-                    mixpanel().track("POI Click", {
-                        item: banner.item,
-                        item_id: banner.item_id,
-                        item_type: banner.item_type,
-                        item_position: banner.item_position,
-                    });
+                    if (this.props.tracking) {
+                        mixpanel().track("POI Click", {
+                            item: banner.item,
+                            item_id: banner.item_id,
+                            item_type: banner.item_type,
+                            item_position: banner.item_position,
+                        });
+                    }
                 }}
             >
                 <div 

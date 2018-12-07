@@ -1,0 +1,21 @@
+.signUpTextBox {
+  background-color: white;
+  border-radius: 5px;
+}
+.signUpTextBox input {
+  border-radius: 5px;
+}
+.placeholder {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #9b9b9b;
+}
+.badge span {
+  top: 35px;
+  right: 10px;
+  color: white;
+}
+.badge-ok span {
+  background-color: green;
+}

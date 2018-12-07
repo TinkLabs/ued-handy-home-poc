@@ -1,25 +1,26 @@
 .mustDoBanner {
-    width: 100vw;
-    padding: 0.2rem 0;
+  width: 100vw;
+  /* padding: 0.2rem 0; */
+  padding-bottom: 1rem;
 }
 .subMustDoBanner {
-    margin: 0 1rem 0.7rem 1rem;
-    height: 18px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+  margin: 0 1rem 0.7rem 1rem;
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .subMustDoBanner .eatLikeALocal {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .subMustDoBanner .seeMore {
-    font-size: 0.8rem;
-    color: grey;
-    text-decoration: none;
-    /* text-align: end; */
+  font-size: 0.8rem;
+  color: grey;
+  text-decoration: none;
+  /* text-align: end; */
 }
 
 .sliderContainer {
-    margin: 0 0 0 1rem;
+  margin: 0 0 0 1rem;
 }

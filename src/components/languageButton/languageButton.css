@@ -9,10 +9,11 @@
     height: 100%;
     color: grey;
     opacity: 0.9;
+    border: none;
     text-decoration: none;
     line-height: 2rem;
-    border: none;
     font-size: 12px;
+    letter-spacing: 1.2px;
 }
 .selected {
     opacity: 1;

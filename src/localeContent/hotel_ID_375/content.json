@@ -5,7 +5,7 @@
         "mainPosterBanner": {
             "locale": "en_US",
             "iLink": "dealcatalog:7",
-            "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
+            "image": "top_banner_en_US.jpg",
             "item": "USS",
             "item_id": "7",
             "item_type": "attractions",
@@ -37,7 +37,7 @@
                 "content_position": "2"
             },
             {
-                "title": "Best Local Cafe",
+                "title": "Best Local Cafes",
                 "iLink": "article:10852",
                 "placeType": "Coffee Shop",
                 "transportType": "drive",
@@ -55,7 +55,7 @@
                 "ad_id": 1,
                 "iLink": "xdeallanding:1",
                 "name": "Gardens by the Bay",
-                "image": "ad1/drawable-hdpi/resting.png",
+                "image": "ad_en_US.png",
                 "campaignid": "2874",
                 "campaignname": "Gardens By the Bay - June '16",
                 "bannername": "home_sgp_gbtb",
@@ -69,7 +69,7 @@
                         "dealName": "Gardens by the Bay 1 Day Ticket",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K Sold",
+                        "salesRecord": "63K+ Sold",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"
@@ -108,7 +108,7 @@
         "mainPosterBanner": {
             "locale": "zh_CN",
             "iLink": "dealcatalog:7",
-            "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
+            "image": "top_banner_zh_CN.jpg",
             "item": "USS",
             "item_id": "7",
             "item_type": "attractions",
@@ -158,7 +158,7 @@
                 "ad_id": 1,
                 "iLink": "xdeallanding:1",
                 "name": "Gardens by the Bay",
-                "image": "ad1/drawable-hdpi/resting.png",
+                "image": "ad_zh_CN.png",
                 "campaignid": "2874",
                 "campaignname": "Gardens By the Bay - June '16",
                 "bannername": "home_sgp_gbtb",
@@ -172,7 +172,7 @@
                         "dealName": "滨海湾花园一日票",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K 已出售",
+                        "salesRecord": "63K+ 已出售",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"
@@ -211,7 +211,7 @@
         "mainPosterBanner": {
             "locale": "zh_TW",
             "iLink": "dealcatalog:7",
-            "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
+            "image": "top_banner_zh_TW.jpg",
             "item": "USS",
             "item_id": "7",
             "item_type": "attractions",
@@ -261,7 +261,7 @@
                 "ad_id": 1,
                 "iLink": "xdeallanding:1",
                 "name": "Gardens by the Bay",
-                "image": "ad1/drawable-hdpi/resting.png",
+                "image": "ad_zh_TW.png",
                 "campaignid": "2874",
                 "campaignname": "Gardens By the Bay - June '16",
                 "bannername": "home_sgp_gbtb",
@@ -275,7 +275,7 @@
                         "dealName": "濱海灣花園一日票",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K 已出售",
+                        "salesRecord": "63K+ 已出售",
                         "item": "Gardens by the Bay",
                         "item_type": "deals",
                         "item_id": "108"

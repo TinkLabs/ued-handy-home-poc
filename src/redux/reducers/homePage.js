@@ -17,6 +17,7 @@ const initialState = {
     availableLanguage,
     displayLanguage: defaultLanguage,
     content: defaultContent,
+    signUpStatus: "",
 }
 
 export const homePageReducer = (state = initialState, action) => {
@@ -53,6 +54,24 @@ export const homePageReducer = (state = initialState, action) => {
             return {
                 ...state,
                 err: action.err
+            };
+        }
+        case homePageActions.SIGN_UP_STATUS_RESET: {
+            return {
+                ...state,
+                signUpStatus: '',
+            };
+        }
+        case homePageActions.SIGN_UP_SUCCESS: {
+            return {
+                ...state,
+                signUpStatus: 'SIGN_UP_SUCCESS',
+            };
+        }
+        case homePageActions.SIGN_UP_FAIL: {
+            return {
+                ...state,
+                signUpStatus: action.err,
             };
         }
         default: {

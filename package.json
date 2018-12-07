@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
     "axios": "^0.18.0",
     "dotenv": "^6.1.0",
     "mixpanel-browser": "^2.23.0",
@@ -11,6 +12,7 @@
     "react-cookie": "^3.0.7",
     "react-dfp": "^0.7.6",
     "react-dom": "^16.6.1",
+    "react-form-validator-core": "^0.5.1",
     "react-google-tag-manager": "^2.2.1",
     "react-gpt": "^2.0.1",
     "react-loading": "^2.0.3",
@@ -43,5 +45,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://handy-staging-test.s3.amazonaws.com/react-tester-build"
+  "homepage": "https://handy-staging-test.s3.amazonaws.com/react-build"
 }

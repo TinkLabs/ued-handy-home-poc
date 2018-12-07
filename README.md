@@ -71,7 +71,7 @@ src/utils/mixpanel.js
     "mainPosterBanner": {
         "locale": "en_US",
         "iLink": "ticket:39",
-        "image": "top-banner-set/drawable-hdpi/top_banner.jpg",
+        "image": "top_banner_en_US.jpg",
         "item": "USS",
         "item_id": "8",
         "item_type": "deals",
@@ -120,7 +120,7 @@ src/utils/mixpanel.js
             "ad_id": 1,
             "iLink": "xdeallanding:1",
             "name": "Gardens by the Bay",
-            "image": "ad1/drawable-hdpi/resting.png",
+            "image": "ad_en_US.png",
             "ADTicket": [
                 {
                     "ad_id": "1",
@@ -129,7 +129,7 @@ src/utils/mixpanel.js
                     "dealName": "Gardens by the Bay 1 Day Ticket",
                     "sellingPrice": "SGD 23",
                     "originalPrice": "28",
-                    "salesRecord": "63K 已出售"
+                    "salesRecord": "63K+ 已出售"
                 },
                 {
                     "ad_id": "1",
