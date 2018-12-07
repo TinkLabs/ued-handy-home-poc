@@ -1,20 +1,20 @@
 import * as React from "react";
 import { connect } from 'react-redux';
-import mixpanel from '../utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
-import LanguageBanner from "../components/languageBanner/languageBanner";
-import MainPosterBanner from "../components/mainPosterBanner/mainPosterBanner";
-import MustDoBanner from "../components/mustDoBanner/mustDoBanner";
-import PromotionBanner from "../components/promotionBanner/promotionBanner";
-import SignUp from "../components/signUp/signUp";
+import LanguageBanner from "components/languageBanner/languageBanner";
+import MainPosterBanner from "components/mainPosterBanner/mainPosterBanner";
+import MustDoBanner from "components/mustDoBanner/mustDoBanner";
+import PromotionBanner from "components/promotionBanner/promotionBanner";
+import SignUp from "components/signUp/signUp";
 
 import {
 	setGlobalProperties,
 	setDisplayLanguage,
 	getContent,
-} from "../redux/actions/homePage";
+} from "redux/actions/homePage";
 
 const IProps = {
 	availableLanguage: PropTypes.array,
@@ -37,7 +37,7 @@ class PureHomePage extends React.Component {
 			imgLoaded: false,
 			mainBannerPkg: [],
 			promotions: [],
-			hiDotComURL: "http://hi.com/prelaunch",
+			hiDotComURL: process.env.REACT_APP_HI_REDIRECT,
 			hiDotComBanner: "",
 		}
 
@@ -152,18 +152,18 @@ class PureHomePage extends React.Component {
 		const mainBannerPkg = [];
 		const promotions = [];
 		props.availableLanguage.forEach(locale => {
-			const bannerPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].mainPosterBanner.image}`);
+			const bannerPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].mainPosterBanner.image}`);
 			mainBannerPkg.push({
 				...content[locale.short].mainPosterBanner,
 				path: `url(${bannerPath})`,
 			});
-			const ADPath = require(`../localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
+			const ADPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
 			promotions.push({
 				...content[locale.short].ADBlock[0],
 				path: `url(${ADPath})`,
 			})
 		});
-		const hiDotComBanner = "url(".concat(require("../images/hidotcom.png")).concat(")");
+		const hiDotComBanner = "url(".concat(require("images/hidotcom.png")).concat(")");
 		updates.imgLoaded = true;
 		updates.mainBannerPkg = mainBannerPkg;
 		updates.promotions = promotions;
@@ -252,7 +252,7 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		setGlobalProperties: (globalProperties) => dispatch(setGlobalProperties(globalProperties)),
 		setDisplayLanguage: (locale) => dispatch(setDisplayLanguage(locale)),
-		getContent: (hotelID, locales) => dispatch(getContent(hotelID, locales)),
+		getContent: (hotelID) => dispatch(getContent(hotelID)),
 	};
 }
 

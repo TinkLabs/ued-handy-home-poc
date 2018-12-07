@@ -1,54 +1,63 @@
 import React from "react"
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
-export default class ToDoCard extends React.Component {
-    constructor(props) {
-        super(props);
+const styles = {
+    card: {
+        width: "125px",
+    },
+    media: {
+        width: "125px",
+        height: "125px",
+    },
+    content: {
+        padding: 0,
+    }
+};
 
-        this.state = {
-            image: "",
-        }
-        this.onClick = this.onClick.bind(this);
-    }
-    componentDidMount() {
-        this.setState({
-            image: require(`../../images/${this.props.image}`),
-        });
-    }
-    onClick() {
-        this.props.onClickMixpanel();
-    }
+class ToDoCard extends React.Component {
     render() {
+        const { classes } = this.props;
+        const image = require(`images/${this.props.image}`);
+        const etaIcon = require(`images/eta_${this.props.transportType}.svg`);
         return (
             <a
                 className="toDoCardATag"
                 href={this.props.iLink}
-                onClick={this.onClick}
+                onClick={this.props.onClickMixpanel}
             >
-                <div
-                    className="toDoCard"
-                >
-                    <img
-                        className="articleImage"
-                        src={this.state.image}
-                        alt="food" />
-                    <div className="articleInfo">
-                        <div className="articleTitle">{this.props.title}</div>
-                        <div>
-                            <div className="placeType">{this.props.placeType}</div>
-                            <div className="transportTime">
-                                <img
-                                    src={require(`../../images/eta_${this.props.transportType}.svg`)}
-                                    alt="transport"
-                                    className="transportType"
-                                />
-                                <span>
-                                    {this.props.transportTime}
-                                </span>
+                <Card className={classes.card}>
+                    <div className="toDoCard">
+                        <CardMedia
+                            className={classes.media}
+                            image={image}
+                            alt="food"
+                        />
+                        <CardContent className={classes.content}>
+                            <div className="articleInfo">
+                                <div className="articleTitle">{this.props.title}</div>
+                                <div>
+                                    <div className="placeType">{this.props.placeType}</div>
+                                    <div className="transportTime">
+                                        <img
+                                            src={etaIcon}
+                                            alt="transport"
+                                            className="transportType"
+                                        />
+                                        <span>
+                                            {this.props.transportTime}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </CardContent>
                     </div>
-                </div>
+                </Card>
             </a>
         )
     }
 }
+
+export default withStyles(styles)(ToDoCard);

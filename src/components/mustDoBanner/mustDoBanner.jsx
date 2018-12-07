@@ -1,7 +1,7 @@
 import * as React from "react";
 import Slider from "react-slick";
-import mixpanel from '../../utils/mixpanel';
-import ToDoCard from "../toDoCard/toDoCard";
+import mixpanel from 'utils/mixpanel';
+import ToDoCard from "components/toDoCard/toDoCard";
 import VisibilitySensor from "react-visibility-sensor";
 
 export default class MustDoBanner extends React.Component {
@@ -54,7 +54,9 @@ export default class MustDoBanner extends React.Component {
                     </a>
                 </div>
                     <div className="sliderContainer">
-                        <Slider {...this.state.sliderSettings}>
+                        <Slider
+                            {...this.state.sliderSettings}
+                        >
                             { articles.map((fa, i) => (
                                 <VisibilitySensor
                                     key={i}

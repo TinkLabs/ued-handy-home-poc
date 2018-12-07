@@ -1,11 +1,11 @@
 
-import { homePageActions } from "../actions/homePage";
+import { homePageActions } from "redux/actions/homePage";
 
-const hotelList = require(`../../localeContent/hotelList.json`);
+const hotelList = require(`localeContent/hotelList.json`);
 const defaultHotel_ID = hotelList[0].hotel_ID;
 const availableLanguage = hotelList.find(hotel => hotel.hotel_ID === defaultHotel_ID).availableLanguage;
 const defaultLanguage = availableLanguage[0].short;
-const defaultContent = require(`../../localeContent/hotel_ID_${defaultHotel_ID}/content.json`);
+const defaultContent = require(`localeContent/hotel_ID_${defaultHotel_ID}/content.json`);
 
 const initialState = {
     loaded: false,

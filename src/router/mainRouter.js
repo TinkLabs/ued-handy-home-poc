@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 import { withCookies } from 'react-cookie';
 
-import HomePage from "../pages/page_home";
-import ErrorPage from "../pages/page_error";
+import HomePage from "pages/page_home";
+import ErrorPage from "pages/page_error";
 
 class MainRouter extends React.Component {
 	constructor(props) {

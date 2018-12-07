@@ -1,8 +1,8 @@
 import * as React from "react";
-import mixpanel from '../../utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
 
-import logo from "../../images/lang.svg";
-import LanguageButton from "../../components/languageButton/languageButton";
+import logo from "images/lang.svg";
+import LanguageButton from "components/languageButton/languageButton";
 
 export default class LanguageBanner extends React.Component {
     render() {

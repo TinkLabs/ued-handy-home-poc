@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 // import getConfig from 'getConfig';
 // import cookie from 'utils/Cookie';
 
@@ -7,7 +8,7 @@ import axios from 'axios';
 // import getOrderHistoryExample from './exampleResponse/getOrderHistory';
 
 const axiosInstance = axios.create({
-    baseURL: "localhost:3000/",
+    baseURL: process.env.API_URL,
 });
 
 /*
@@ -65,32 +66,22 @@ axiosInstance.interceptors.response.use(
                 });
             }
         }
-        // if (error.config.url.includes('/config')) {
-        //     return new Promise((resolve) => {
-        //         setTimeout(() => {
-        //             resolve({
-        //                 data: getConfigExample,
-        //                 status: 200,
-        //                 statusText: 'OK',
-        //                 headers: {},
-        //                 config: error.config,
-        //             });
-        //         }, 800);
-        //     });
-        // }
-        // if (error.config.url.includes('/order_history')) {
-        //     return new Promise((resolve) => {
-        //         setTimeout(() => {
-        //             resolve({
-        //                 data: getOrderHistoryExample,
-        //                 status: 200,
-        //                 statusText: 'OK',
-        //                 headers: {},
-        //                 config: error.config,
-        //             });
-        //         }, 800);
-        //     });
-        // }
+        if (error.config.url.includes('/api/content')) {
+            return new Promise((resolve) => {
+                const data = JSON.parse(error.config.data);
+                const hotelID = data.hotelID;
+                const hotelContent = require(`localeContent/hotel_ID_${hotelID}/content.json`);
+                setTimeout(() => {
+                    resolve({
+                        data: hotelContent,
+                        status: 200,
+                        statusText: 'OK',
+                        headers: {},
+                        config: error.config,
+                    });
+                }, 800);
+            });
+        }
         return Promise.resolve(error);
     },
 );

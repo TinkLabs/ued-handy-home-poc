@@ -1,5 +1,5 @@
 import * as React from "react";
-import mixpanel from '../../utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
 // import env from '';
 
 export default class MainPosterBanner extends React.Component {

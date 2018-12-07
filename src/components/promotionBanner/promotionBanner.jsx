@@ -1,15 +1,15 @@
 import * as React from "react";
-import LoadingAnimate from "../loadingAnimate/loadingAnimate";
-import PromotionTicket from "../promotionTicket/promotionTicket";
-import GPTAD from "../gptAD/gptAD"
-import mixpanel from '../../utils/mixpanel';
+import LoadingAnimate from "components/loadingAnimate/loadingAnimate";
+import PromotionTicket from "components/promotionTicket/promotionTicket";
+import GPTAD from "components/gptAD/gptAD"
+import mixpanel from 'utils/mixpanel';
 
 export default class PromotionBanner extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            ticketIcon: require("../../images/ticketIcon.svg"),
+            ticketIcon: require("images/ticketIcon.svg"),
             adReady: false,
         }
         this.onClickADBanner = this.onClickADBanner.bind(this);

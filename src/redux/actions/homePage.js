@@ -1,4 +1,4 @@
-import axios from "../../utils/axios";
+import axios from "utils/axios";
 
 export const homePageActions = {
     SET_GLOBAL_PROPERTIES: "SET_GLOBAL_PROPERTIES",
@@ -22,23 +22,30 @@ export const setDisplayLanguage = (locale) => {
         displayLanguage: locale,
     }
 }
-export const getContent = (hotelID, locales) => dispatch => {
-    dispatch(getContentSuccess(hotelID, locales));
-    // axios
-    //     .post(`API_SERVER`, `package`)
-    //     .then(res => {
-    //         if (res.status === 200) {
-    //             dispatch(getUserIDSuccess(res.data));
-    //         } else {
-    //             dispatch(getUserIDFail(res.status));
-    //         }
-    //     })
-    //     .catch(err => {
-    //         dispatch(getUserIDFail(err));
-    //     });
+export const getContent = (hotelID) => dispatch => {
+    // dispatch(getContentSuccess(hotelID));
+    axios.post('/api/content', {hotelID})
+        .then(res => {
+            switch (res.status) {
+                case 200: {
+                    dispatch(getContentSuccess(res.data));
+                    break;
+                }
+                case 300: {
+                    dispatch(getContentSuccess(res.statusText));
+                    break;
+                }
+                default: {
+                    dispatch(getContentSuccess(res.statusText));
+                    break;
+                }
+            }
+        })
+        .catch(err => console.log(err));
+        
 }
-export const getContentSuccess = (hotelID) => {
-    const content = require(`../../localeContent/hotel_ID_${hotelID}/content.json`);
+export const getContentSuccess = (content) => {
+    // const content = require(`localeContent/hotel_ID_${hotelID}/content.json`);
     return {
         type: homePageActions.GET_CONTENT_SUCCESS,
         content,
@@ -68,7 +75,8 @@ export const signUp = (email) => dispatch => {
                     break;
                 }
             }
-        });
+        })
+        .catch(err => console.log(err));
 }
 export const signUpStatusReset = () => {
     return {

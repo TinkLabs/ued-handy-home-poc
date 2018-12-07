@@ -24,3 +24,7 @@
 .sliderContainer {
   margin: 0 0 0 1rem;
 }
+.slick-track {
+  margin-bottom: 4px;
+  padding-left: 1px;
+}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import mixpanel from '../../utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
@@ -10,6 +10,7 @@ const styles = theme => ({
         paddingRight: "10px",
         marginLeft: "1rem",
         marginRight: "1rem",
+        marginBottom: "0.5rem",
     },
 });
 

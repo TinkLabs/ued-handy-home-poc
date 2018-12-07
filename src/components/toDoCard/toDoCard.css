@@ -6,10 +6,12 @@
     display: flex;
     flex-direction: column;
     width: 125px;
-    border: 0.5px solid rgba(0,0,0,0.2);
+    /* border: 0.5px solid rgba(0,0,0,0.2);
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; */
+}.toDoCard > div:last-child {
+    padding-bottom: 0;
 }
 .toDoCard .articleImage {
     width: 125px;

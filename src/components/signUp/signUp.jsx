@@ -2,12 +2,12 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // import { ValidatorForm } from "react-form-validator-core";
-// import SignUpTextBox from "../textBox/textBox";
-// import PopUp from "../popUp/popUp";
+// import SignUpTextBox from "textBox/textBox";
+// import PopUp from "popUp/popUp";
 
 import {
     signUp,
-} from "../../redux/actions/homePage";
+} from "redux/actions/homePage";
 
 const IProps = {
     signUpStatus: PropTypes.string,
@@ -121,7 +121,7 @@ class PureSignUp extends React.Component {
                         <div className="logo-row">
                             <img
                                 className="signUp-logo"
-                                src={require(`../../images/handy_logo_white.svg`)}
+                                src={require(`images/handy_logo_white.svg`)}
                                 alt="handy_logo" />
                         </div>
                         <div className="join-today">{translation.h1[this.props.locale]}</div>
