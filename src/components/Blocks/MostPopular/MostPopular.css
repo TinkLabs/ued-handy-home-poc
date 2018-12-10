@@ -1,0 +1,15 @@
+.mostPopular {
+    margin: 1rem;
+}
+
+.popularSpots {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+.popularSpots > div {
+    margin-right: 5px;
+}
+.popularSpots > div:last-child {
+    margin-right: 0;
+}

@@ -1,14 +1,14 @@
 import * as React from "react";
 import { connect } from 'react-redux';
 import mixpanel from 'utils/mixpanel';
-import VisibilitySensor from "react-visibility-sensor";
+// import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
-import LanguageBanner from "components/languageBanner/languageBanner";
-import MainPosterBanner from "components/mainPosterBanner/mainPosterBanner";
-import MustDoBanner from "components/mustDoBanner/mustDoBanner";
-import PromotionBanner from "components/promotionBanner/promotionBanner";
-import SignUp from "components/signUp/signUp";
+import LanguageBanner from "components/LanguageBanner/LanguageBanner";
+import MostPopular from "components/Blocks/MostPopular/MostPopular";
+import District from "components/Blocks/District/District";
+// import PromotionBanner from "components/PromotionBanner/PromotionBanner";
+import SignUp from "components/SignUp/SignUp";
 
 import {
 	setGlobalProperties,
@@ -34,7 +34,8 @@ class PureHomePage extends React.Component {
 
 		this.state = {
 			userPreference: [],
-			imgLoaded: false,
+			// imgLoaded: false,
+			imgLoaded: true,
 			mainBannerPkg: [],
 			promotions: [],
 			hiDotComURL: process.env.REACT_APP_HI_REDIRECT,
@@ -72,8 +73,8 @@ class PureHomePage extends React.Component {
 		} else {
 			// default hotel for 1st render
 			gp = {
-				"hotel_id": "2",
-				"deviceLocale": "zh_CN",
+				"hotel_id": "0",
+				"deviceLocale": "en_US",
 			};
 		}
 		this.props.setGlobalProperties(gp);
@@ -163,11 +164,11 @@ class PureHomePage extends React.Component {
 				path: `url(${ADPath})`,
 			})
 		});
-		const hiDotComBanner = "url(".concat(require("images/hidotcom.png")).concat(")");
+		// const hiDotComBanner = "url(".concat(require("images/hidotcom.png")).concat(")");
 		updates.imgLoaded = true;
 		updates.mainBannerPkg = mainBannerPkg;
 		updates.promotions = promotions;
-		updates.hiDotComBanner = hiDotComBanner;
+		// updates.hiDotComBanner = hiDotComBanner;
 		this.setState({
 			...updates,
 		});
@@ -179,41 +180,53 @@ class PureHomePage extends React.Component {
 		if (this.state.imgLoaded) {
 			return (
 				<div className="homePage">
+					{/* lang banner */}
 					<LanguageBanner
 						availableLanguage={this.props.availableLanguage}
 						displayLanguage={this.props.displayLanguage}
 						onClick={this.onSelectLang}
 					/>
-					<MainPosterBanner
-						tracking
-						bannerInfo={
-							this.state.mainBannerPkg.find(b => b.locale === this.props.displayLanguage)
-						}
-					/>
-					<MustDoBanner
+					{/* most popular */}
+					<MostPopular
 						displayLanguage={this.props.displayLanguage}
-						content={this.props.content}
+						content={this.props.content[this.props.displayLanguage].mostPopular}
 					/>
+					{/* each disrtrict */}
 					{
-						this.state.promotions
-							.filter(p => p.locale === this.props.displayLanguage)
-							.map(p => {
-								return (
-									<PromotionBanner
-										key={p.ad_id}
-										id={p.ad_id}
-										availableLanguage={this.props.availableLanguage} // for fetching google ads
-										displayLanguage={this.props.displayLanguage}
-										adInfo={p}
-									/>
-								)
-							})
+						this.props.content[this.props.displayLanguage].districts.map((districtContent, i) => {
+							const comp = (
+								<District
+									key={i}
+									availableLanguage={this.props.availableLanguage}
+									displayLanguage={this.props.displayLanguage}
+									districtContent={districtContent}
+								/>
+							)
+							const ad = (i === 1) ?
+								<div style={{
+									margin: "1rem",
+									width: "320px",
+									height: "100px",
+									backgroundColor: "grey",
+									display: "flex",
+									flexDirection: "row",
+									justifyContent: "center",
+									alignItems: "center"
+								}}>
+									AD
+							</div>
+								: null
+							return (
+								[].concat(comp).concat(ad)
+							)
+
+						})
 					}
 					<SignUp
 						locale={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
 					/>
-					<VisibilitySensor
+					{/* <VisibilitySensor
 						onChange={(isVisible) => {
 							if (isVisible) {
 								mixpanel().track("Screen View", {
@@ -224,10 +237,10 @@ class PureHomePage extends React.Component {
 						}}
 					>
 						<div style={{ height: "1px", opacity: "0" }} />
-					</VisibilitySensor>
-					<button onClick={this.changeHotel}>81</button>
+					</VisibilitySensor> */}
+					{/* <button onClick={this.changeHotel}>81</button>
 					<button onClick={this.changeHotel}>375</button>
-					<button onClick={this.changeHotel}>1357</button>
+					<button onClick={this.changeHotel}>1357</button> */}
 				</div>
 			)
 		}

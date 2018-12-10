@@ -1,0 +1,12 @@
+.mustDoBanner {
+  width: 100vw;
+  /* padding: 0.2rem 0; */
+  padding-bottom: 1rem;
+}
+.sliderContainer {
+  margin: 0 0 1rem 0;
+}
+.slick-track {
+  margin-bottom: 4px;
+  /* padding-left: 1px; */
+}

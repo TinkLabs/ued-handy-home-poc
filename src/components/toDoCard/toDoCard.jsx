@@ -4,6 +4,19 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
+import PropTypes from 'prop-types';
+const IProps = {
+    // link & tracker
+    iLink:PropTypes.string,
+    onClickMixpanel: PropTypes.func,
+    // img block
+    image: PropTypes.string,
+    // info block
+    title: PropTypes.string,
+    description: PropTypes.string,
+    transportType: PropTypes.string,
+}
+
 const styles = {
     card: {
         width: "125px",
@@ -21,7 +34,10 @@ class ToDoCard extends React.Component {
     render() {
         const { classes } = this.props;
         const image = require(`images/${this.props.image}`);
-        const etaIcon = require(`images/eta_${this.props.transportType}.svg`);
+        let etaIcon = "";
+        if (this.props.transportType) {
+            etaIcon = require(`images/eta_${this.props.transportType}.svg`);
+        }
         return (
             <a
                 className="toDoCardATag"
@@ -33,24 +49,26 @@ class ToDoCard extends React.Component {
                         <CardMedia
                             className={classes.media}
                             image={image}
-                            alt="food"
+                            alt="article"
                         />
                         <CardContent className={classes.content}>
                             <div className="articleInfo">
                                 <div className="articleTitle">{this.props.title}</div>
-                                <div>
-                                    <div className="placeType">{this.props.placeType}</div>
-                                    <div className="transportTime">
-                                        <img
-                                            src={etaIcon}
-                                            alt="transport"
-                                            className="transportType"
-                                        />
-                                        <span>
-                                            {this.props.transportTime}
-                                        </span>
-                                    </div>
-                                </div>
+                                {
+                                    (this.props.transportType) ?
+
+                                        <div className="transportTime">
+                                            <img
+                                                src={etaIcon}
+                                                alt="transport"
+                                                className="transportType"
+                                            />
+                                            <span>
+                                                {this.props.transportTime}
+                                            </span>
+                                        </div> :
+                                        <div className="placeType">{this.props.description}</div>
+                                }
                             </div>
                         </CardContent>
                     </div>
@@ -59,5 +77,7 @@ class ToDoCard extends React.Component {
         )
     }
 }
+
+ToDoCard.propsTypes = IProps;
 
 export default withStyles(styles)(ToDoCard);

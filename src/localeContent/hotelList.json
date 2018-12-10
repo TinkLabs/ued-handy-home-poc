@@ -5,12 +5,12 @@
         "availableLanguage": 
             [
                 {
-                    "full": "English",
-                    "short": "en_US"
-                },
-                {
                     "full": "简体中文",
                     "short": "zh_CN"
+                },
+                {
+                    "full": "English",
+                    "short": "en_US"
                 },
                 {
                     "full": "繁體中文",
@@ -24,88 +24,12 @@
         "availableLanguage": 
             [
                 {
-                    "full": "English",
-                    "short": "en_US"
-                },
-                {
                     "full": "简体中文",
                     "short": "zh_CN"
                 },
                 {
-                    "full": "繁體中文",
-                    "short": "zh_TW"
-                }
-            ]
-    },
-    {
-        "hotel": "SGP - Concorde Hotel",
-        "hotel_ID": "81",
-        "availableLanguage": 
-            [
-                {
                     "full": "English",
                     "short": "en_US"
-                },
-                {
-                    "full": "简体中文",
-                    "short": "zh_CN"
-                },
-                {
-                    "full": "繁體中文",
-                    "short": "zh_TW"
-                }
-            ]
-    },
-    {
-        "hotel": "SGP - demo 250",
-        "hotel_ID": "250",
-        "availableLanguage": 
-            [
-                {
-                    "full": "English",
-                    "short": "en_US"
-                },
-                {
-                    "full": "简体中文",
-                    "short": "zh_CN"
-                },
-                {
-                    "full": "繁體中文",
-                    "short": "zh_TW"
-                }
-            ]
-    },
-    {
-        "hotel": "SGP - Holiday Inn Express Clarke Quay",
-        "hotel_ID": "357",
-        "availableLanguage": 
-            [
-                {
-                    "full": "English",
-                    "short": "en_US"
-                },
-                {
-                    "full": "简体中文",
-                    "short": "zh_CN"
-                },
-                {
-                    "full": "繁體中文",
-                    "short": "zh_TW"
-                }
-            ]
-    },
-    {
-        "hotel": "SGP - Furama City Centre",
-        "hotel_ID": "1357",
-        "availableLanguage": 
-            [
-                {
-                    "full": "English",
-                    "short": "en_US"
-                },
-                {
-                    "full": "简体中文",
-                    "short": "zh_CN"
                 },
                 {
                     "full": "繁體中文",

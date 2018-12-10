@@ -1,0 +1,27 @@
+.toolTips {
+  margin: 0 0 0.7rem 0;
+  height: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+}
+.toolTips-LHS {
+/*  */
+}
+.toolTips-RHS {
+  font-size: 0.8rem;
+  color: grey;
+  text-decoration: none;
+}
+.toolTips-icon {
+  display: block;
+  height: 13px;
+  fill: grey;
+}
+.toolTips-eta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
