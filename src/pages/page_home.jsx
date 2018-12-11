@@ -44,12 +44,14 @@ class PureHomePage extends React.Component {
 
 		this.lastPosition = [];
 		this.onSelectLang = this.onSelectLang.bind(this);
-		this.loadImgResource = this.loadImgResource.bind(this);
 		this.handleScroll = this.handleScroll.bind(this);
 		this.getCookies = this.getCookies.bind(this);
 		this.setCookies = this.setCookies.bind(this);
+		// render component
+		this.renderDistrict = this.renderDistrict.bind(this);
 		// demo
 		this.changeHotel = this.changeHotel.bind(this);
+		this.autoCopy = this.autoCopy.bind(this);
 	}
 	componentDidMount() {
 		// add scrollspy
@@ -90,12 +92,6 @@ class PureHomePage extends React.Component {
 			this.props.getContent(nextProps.hotel_ID);
 			return false;
 		}
-		// hotel specific content is loaded in nextProps, now load img
-		if (this.props.loaded !== nextProps.loaded) {
-			this.loadImgResource(nextProps);
-			return false;
-		}
-
 		/*
 		 *	Change lang, target lang loaded, nth special, go on.
 		 */
@@ -141,40 +137,42 @@ class PureHomePage extends React.Component {
 		localStorage.setItem('homePageLocale', locale);
 		this.props.setDisplayLanguage(locale);
 	}
-	loadImgResource(props = this.props) {
-		/*
-		 *	Load all hotel- and locale- specific img to state.
-		 *	Img will be external call when BE is ready,
-		 *	this part will be used to load default img
-		 */
-		const updates = {};
-		const hotel_ID = props.hotel_ID;
-		const content = props.content;
-		const mainBannerPkg = [];
-		const promotions = [];
-		props.availableLanguage.forEach(locale => {
-			const bannerPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].mainPosterBanner.image}`);
-			mainBannerPkg.push({
-				...content[locale.short].mainPosterBanner,
-				path: `url(${bannerPath})`,
-			});
-			const ADPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
-			promotions.push({
-				...content[locale.short].ADBlock[0],
-				path: `url(${ADPath})`,
-			})
-		});
-		// const hiDotComBanner = "url(".concat(require("images/hidotcom.png")).concat(")");
-		updates.imgLoaded = true;
-		updates.mainBannerPkg = mainBannerPkg;
-		updates.promotions = promotions;
-		// updates.hiDotComBanner = hiDotComBanner;
-		this.setState({
-			...updates,
-		});
-	}
 	changeHotel(e) {
 		this.props.setGlobalProperties({ "hotel_id": e.currentTarget.innerHTML, "deviceLocale": this.props.displayLanguage });
+	}
+	autoCopy(e) {
+		const s = e.currentTarget.innerHTML;
+		const id = s.match(/(?<=#)(\d+)/g)[0];
+		console.log(id);
+		window.execCommand('copy', true, id);
+	}
+	renderDistrict() {
+		const comp = [];
+		this.props.content[this.props.displayLanguage].districts.forEach((districtContent, i) => {
+			comp.push(<District
+				key={i}
+				availableLanguage={this.props.availableLanguage}
+				displayLanguage={this.props.displayLanguage}
+				districtContent={districtContent}
+			/>);
+			if (i === 1) {
+				comp.push(<div
+					key={`ad_${i}`}
+					style={{
+						margin: "1rem -0 1rem -0",
+						width: "100vw",
+						height: "100px",
+						backgroundColor: "grey",
+						display: "flex",
+						flexDirection: "row",
+						justifyContent: "center",
+						alignItems: "center"
+					}}>
+					AD
+					</div>)
+			}
+		});
+		return comp;
 	}
 	render() {
 		if (this.state.imgLoaded) {
@@ -193,34 +191,7 @@ class PureHomePage extends React.Component {
 					/>
 					{/* each disrtrict */}
 					{
-						this.props.content[this.props.displayLanguage].districts.map((districtContent, i) => {
-							const comp = (
-								<District
-									key={i}
-									availableLanguage={this.props.availableLanguage}
-									displayLanguage={this.props.displayLanguage}
-									districtContent={districtContent}
-								/>
-							)
-							const ad = (i === 1) ?
-								<div style={{
-									margin: "1rem",
-									width: "320px",
-									height: "100px",
-									backgroundColor: "grey",
-									display: "flex",
-									flexDirection: "row",
-									justifyContent: "center",
-									alignItems: "center"
-								}}>
-									AD
-							</div>
-								: null
-							return (
-								[].concat(comp).concat(ad)
-							)
-
-						})
+						this.renderDistrict()
 					}
 					<SignUp
 						locale={this.props.displayLanguage}
@@ -238,6 +209,9 @@ class PureHomePage extends React.Component {
 					>
 						<div style={{ height: "1px", opacity: "0" }} />
 					</VisibilitySensor> */}
+					<button onClick={this.changeHotel}>0</button>
+					<button onClick={this.changeHotel}>2</button>
+					<div onClick={this.autoCopy}>asdfgr#1234</div>
 					{/* <button onClick={this.changeHotel}>81</button>
 					<button onClick={this.changeHotel}>375</button>
 					<button onClick={this.changeHotel}>1357</button> */}

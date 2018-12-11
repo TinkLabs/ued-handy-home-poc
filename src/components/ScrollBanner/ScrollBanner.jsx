@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 const IProps = {
     sliderSettings: PropTypes.object,
     content: PropTypes.array,
+    displayLanguage: PropTypes.string,
 }
 
 export default class ScrollBanner extends React.Component {
@@ -62,7 +63,7 @@ export default class ScrollBanner extends React.Component {
                                 title={fa.name}
                                 iLink={fa.iLink}
                                 description={fa.description}
-                                image={fa.image}
+                                image={require(`images/${fa.image}`)}
                                 onClickMixpanel={() => {
                                     // mixpanel().track("Listing Banner Click", {
                                     //     content_title: fa.title,

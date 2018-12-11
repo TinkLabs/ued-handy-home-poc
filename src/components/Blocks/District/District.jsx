@@ -6,9 +6,9 @@ import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
 import ScrollBanner from "components/ScrollBanner/ScrollBanner";
 
 const IProps = {
-    toolTips: PropTypes.object,
-    toDo: PropTypes.object,
-    banner: PropTypes.object,
+    availableLanguage: PropTypes.array,
+    displayLanguage: PropTypes.string,
+    districtContent: PropTypes.object,
 }
 
 export default class District extends React.Component {
@@ -28,7 +28,7 @@ export default class District extends React.Component {
                         ...this.props.districtContent.mainSpot,
                         path: `url(${imagePath})`,
                         styles: {
-                            marginBottom: "0.5rem",
+                            marginBottom: "1rem",
                         }
                     }}
                 />
@@ -38,6 +38,7 @@ export default class District extends React.Component {
                     }}
                     // title, iLink, type, time, img, tracker
                     content={this.props.districtContent.otherSpot}
+                    displayLanguage={this.props.displayLanguage}
                 />
                 <div
                     className="seeMoreOn"

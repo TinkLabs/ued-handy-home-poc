@@ -2,66 +2,307 @@
     "en_US": {
         "locale": "en_US",
         "hotel_ID": "2",
-        "mainPosterBanner": {
+        "mostPopular": {
             "locale": "en_US",
-            "iLink": "dealcatalog:7",
-            "image": "top_banner_en_US.jpg",
-            "item": "USS",
-            "item_id": "7",
-            "item_type": "attractions",
-            "item_position": "1"
+            "events": [
+                {
+                    "type": "shop",
+                    "subtext": "OffWhite",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_shop.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "1"
+                    }
+                },
+                {
+                    "type": "eat",
+                    "subtext": "Beef Noodles",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_eat.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "2"
+                    }
+                },
+                {
+                    "type": "do",
+                    "subtext": "Visit the Peak",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_do.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "3"
+                    }
+                }
+            ],
+            "banner": {
+                "title": "Best Things to do at Hong Kong",
+                "subTitle": "Explore city's life here with handy’s recommendation list.",
+                "image": "en_US/best_places_to_go_en_US.jpg",
+                "tracker": {}
+            },
+            "seeMore": {
+                "text": "See More",
+                "iLink": "dealcatalog:7",
+                "tracker": {
+                    "item": "USS",
+                    "item_id": "7",
+                    "item_type": "attractions",
+                    "item_position": "3"
+                }
+            }
         },
-        "eatLikeALocal": [
+        "districts": [
             {
-                "title": "Best Chicken Rice",
-                "iLink": "article:10941",
-                "placeType": "Hawker Centre",
-                "transportType": "walk",
-                "transportTime": "2 min from hotel",
-                "image": "article1/drawable-hdpi/straight.jpg",
-                "content_id": "10941",
-                "content_type": "article",
-                "content_locale": "en_US",
-                "content_position": "1"
+                "district": "#2 Central",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11 mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "en_US/place_pmq_en_US.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "5 Local Drinks",
-                "iLink": "article:10036",
-                "placeType": "Bars & Beverages",
-                "transportType": "walk",
-                "transportTime": "2 min from hotel",
-                "image": "article2/drawable-hdpi/straight.jpg",
-                "content_id": "10036",
-                "content_type": "article",
-                "content_locale": "en_US",
-                "content_position": "2"
+                "district": "Causeway Bay",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "en_US/place_pmq_en_US.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "Best Local Cafes",
-                "iLink": "article:10852",
-                "placeType": "Coffee Shop",
-                "transportType": "walk",
-                "transportTime": "2 min from hotel",
-                "image": "article3/drawable-hdpi/straight.jpg",
-                "content_id": "10852",
-                "content_type": "article",
-                "content_locale": "en_US",
-                "content_position": "3"
+                "district": "Sai Ying Pun",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "en_US/place_pmq_en_US.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Tsim Sha Tsui",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "en_US/place_pmq_en_US.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             }
         ],
         "ADBlock": [
             {
-                "locale": "en_US",
                 "ad_id": 1,
-                "iLink": "xdeallanding:1",
+                "locale": "en_US",
                 "name": "Gardens by the Bay",
                 "image": "ad_en_US.png",
-                "campaignid": "2874",
-                "campaignname": "Gardens By the Bay - June '16",
-                
-                "bannername": "home_sgp_gbtb",
-                "screen name": "Home",
-                "position": "1",
+                "iLink": "xdeallanding:1",
+                "tracker": {
+                    "campaignid": "2874",
+                    "campaignname": "Gardens By the Bay - June '16",
+                    "bannername": "home_sgp_gbtb",
+                    "screen name": "Home",
+                    "position": "1"
+                },
                 "ADTicket": [
                     {
                         "ad_id": "1",
@@ -71,9 +312,11 @@
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
                         "salesRecord": "63K+ Sold",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "108"
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "108"
+                        }
                     },
                     {
                         "ad_id": "1",
@@ -83,9 +326,11 @@
                         "sellingPrice": "SGD 59",
                         "originalPrice": "62",
                         "salesRecord": "1K+ Sold",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2538"
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2538"
+                        }
                     },
                     {
                         "ad_id": "1",
@@ -95,9 +340,11 @@
                         "sellingPrice": "SGD 28",
                         "originalPrice": "30",
                         "salesRecord": "795 Sold",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2541"
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2541"
+                        }
                     }
                 ]
             }
@@ -106,101 +353,349 @@
     "zh_CN": {
         "locale": "zh_CN",
         "hotel_ID": "2",
-        "mainPosterBanner": {
+        "mostPopular": {
             "locale": "zh_CN",
-            "iLink": "dealcatalog:7",
-            "image": "top_banner_zh_CN.jpg",
-            "item": "USS",
-            "item_id": "7",
-            "item_type": "attractions",
-            "item_position": "1"
+            "events": [
+                {
+                    "type": "shop",
+                    "subtext": "OffWhite",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_shop.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "1"
+                    }
+                },
+                {
+                    "type": "eat",
+                    "subtext": "Beef Noodles",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_eat.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "2"
+                    }
+                },
+                {
+                    "type": "do",
+                    "subtext": "Visit the Peak",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_do.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "3"
+                    }
+                }
+            ],
+            "banner": {
+                "title": "Best Things to do at Hong Kong",
+                "subTitle": "Explore city's life here with handy’s recommendation list.",
+                "image": "zh_CN/best_places_to_go_zh_CN.jpg",
+                "tracker": {}
+            },
+            "seeMore": {
+                "text": "See More",
+                "iLink": "dealcatalog:7",
+                "tracker": {
+                    "item": "USS",
+                    "item_id": "7",
+                    "item_type": "attractions",
+                    "item_position": "3"
+                }
+            }
         },
-        "eatLikeALocal": [
+        "districts": [
             {
-                "title": "必食大排档海南鸡饭",
-                "iLink": "article:10941",
-                "placeType": "美食中心",
-                "transportType": "walk",
-                "transportTime": "距离酒店 13 分钟",
-                "image": "article1/drawable-hdpi/straight.jpg",
-                "content_id": "10941",
-                "content_type": "article",
-                "content_locale": "zh_CN",
-                "content_position": "1"
+                "district": "#2 zh_CN central",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11 mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_CN/place_pmq_zh_CN.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_CN",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "五家地道饮料",
-                "iLink": "article:10036",
-                "placeType": "酒吧和饮料",
-                "transportType": "walk",
-                "transportTime": "距离酒店 5 分钟",
-                "image": "article2/drawable-hdpi/straight.jpg",
-                "content_id": "10036",
-                "content_type": "article",
-                "content_locale": "zh_CN",
-                "content_position": "2"
+                "district": "Causeway Bay",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_CN/place_pmq_zh_CN.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_CN",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "特色咖啡店",
-                "iLink": "article:10852",
-                "placeType": "咖啡店",
-                "transportType": "walk",
-                "transportTime": "距离酒店 13 分钟",
-                "image": "article3/drawable-hdpi/straight.jpg",
-                "content_id": "10852",
-                "content_type": "article",
-                "content_locale": "zh_CN",
-                "content_position": "3"
+                "district": "Sai Ying Pun",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_CN/place_pmq_zh_CN.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_CN",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Tsim Sha Tsui",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_CN/place_pmq_zh_CN.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_CN",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_CN",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             }
         ],
         "ADBlock": [
             {
-                "locale": "zh_CN",
                 "ad_id": 1,
-                "iLink": "xdeallanding:1",
+                "locale": "zh_CN",
                 "name": "Gardens by the Bay",
                 "image": "ad_zh_CN.png",
-                "campaignid": "2874",
-                "campaignname": "Gardens By the Bay - June '16",
-                "bannername": "home_sgp_gbtb",
-                "screen name": "Home",
-                "position": "1",
+                "iLink": "xdeallanding:1",
+                "tracker": {
+                    "campaignid": "2874",
+                    "campaignname": "Gardens By the Bay - June '16",
+                    "bannername": "home_sgp_gbtb",
+                    "screen name": "Home",
+                    "position": "1"
+                },
                 "ADTicket": [
                     {
                         "ad_id": "1",
                         "ticket_ID": "1",
                         "iLink": "ticket:108",
-                        "dealName": "滨海湾花园一日票",
+                        "dealName": "Gardens by the Bay 1 Day Ticket",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K+ 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "108"
+                        "salesRecord": "63K+ Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "108"
+                        }
                     },
                     {
                         "ad_id": "1",
                         "ticket_ID": "2",
                         "iLink": "ticket:2538",
-                        "dealName": "夜游滨海湾花园 (含酒店接送)",
+                        "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                         "sellingPrice": "SGD 59",
                         "originalPrice": "62",
-                        "salesRecord": "1K+ 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2538"
+                        "salesRecord": "1K+ Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2538"
+                        }
                     },
                     {
                         "ad_id": "1",
                         "ticket_ID": "3",
                         "iLink": "ticket:2541",
-                        "dealName": "滨海湾花园 (含酒店接送)",
+                        "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                         "sellingPrice": "SGD 28",
                         "originalPrice": "30",
-                        "salesRecord": "795 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2541"
+                        "salesRecord": "795 Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2541"
+                        }
                     }
                 ]
             }
@@ -209,101 +704,349 @@
     "zh_TW": {
         "locale": "zh_TW",
         "hotel_ID": "2",
-        "mainPosterBanner": {
+        "mostPopular": {
             "locale": "zh_TW",
-            "iLink": "dealcatalog:7",
-            "image": "top_banner_zh_TW.jpg",
-            "item": "USS",
-            "item_id": "7",
-            "item_type": "attractions",
-            "item_position": "1"
+            "events": [
+                {
+                    "type": "shop",
+                    "subtext": "OffWhite",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_shop.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "1"
+                    }
+                },
+                {
+                    "type": "eat",
+                    "subtext": "Beef Noodles",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_eat.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "2"
+                    }
+                },
+                {
+                    "type": "do",
+                    "subtext": "Visit the Peak",
+                    "iLink": "dealcatalog:7",
+                    "image": "most_popular_do.jpg",
+                    "tracker": {
+                        "item": "USS",
+                        "item_id": "7",
+                        "item_type": "attractions",
+                        "item_position": "3"
+                    }
+                }
+            ],
+            "banner": {
+                "title": "Best Things to do at Hong Kong",
+                "subTitle": "Explore city's life here with handy’s recommendation list.",
+                "image": "zh_TW/best_places_to_go_zh_TW.jpg",
+                "tracker": {}
+            },
+            "seeMore": {
+                "text": "See More",
+                "iLink": "dealcatalog:7",
+                "tracker": {
+                    "item": "USS",
+                    "item_id": "7",
+                    "item_type": "attractions",
+                    "item_position": "3"
+                }
+            }
         },
-        "eatLikeALocal": [
+        "districts": [
             {
-                "title": "必食大排檔海南雞飯",
-                "iLink": "article:10941",
-                "placeType": "美食中心",
-                "transportType": "walk",
-                "transportTime": "距離酒店 13 分鐘",
-                "image": "article1/drawable-hdpi/straight.jpg",
-                "content_id": "10941",
-                "content_type": "article",
-                "content_locale": "zh_TW",
-                "content_position": "1"
+                "district": "#2 zh_TW Central",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11 mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_TW/place_pmq_zh_TW.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_TW",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "五家地道飲料",
-                "iLink": "article:10036",
-                "placeType": "酒吧和飲料",
-                "transportType": "walk",
-                "transportTime": "距離酒店 5 分鐘",
-                "image": "article2/drawable-hdpi/straight.jpg",
-                "content_id": "10036",
-                "content_type": "article",
-                "content_locale": "zh_TW",
-                "content_position": "2"
+                "district": "Causeway Bay",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_TW/place_pmq_zh_TW.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_TW",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             },
             {
-                "title": "特色咖啡店",
-                "iLink": "article:10852",
-                "placeType": "咖啡店",
-                "transportType": "walk",
-                "transportTime": "距離酒店 13 分鐘",
-                "image": "article3/drawable-hdpi/straight.jpg",
-                "content_id": "10852",
-                "content_type": "article",
-                "content_locale": "zh_TW",
-                "content_position": "3"
+                "district": "Sai Ying Pun",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_TW/place_pmq_zh_TW.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_TW",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "3"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Tsim Sha Tsui",
+                "eta": {
+                    "transport": "train",
+                    "duration": "11mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" local artist hub",
+                    "image": "zh_TW/place_pmq_zh_TW.jpg",
+                    "iLink": "article:10941",
+                    "tracker": {
+                        "content_id": "10941",
+                        "content_type": "article",
+                        "content_locale": "zh_TW",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "1"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "3"
+                        }
+                    }
+                ]
             }
         ],
         "ADBlock": [
             {
-                "locale": "zh_TW",
                 "ad_id": 1,
-                "iLink": "xdeallanding:1",
+                "locale": "zh_TW",
                 "name": "Gardens by the Bay",
                 "image": "ad_zh_TW.png",
-                "campaignid": "2874",
-                "campaignname": "Gardens By the Bay - June '16",
-                "bannername": "home_sgp_gbtb",
-                "screen name": "Home",
-                "position": "1",
+                "iLink": "xdeallanding:1",
+                "tracker": {
+                    "campaignid": "2874",
+                    "campaignname": "Gardens By the Bay - June '16",
+                    "bannername": "home_sgp_gbtb",
+                    "screen name": "Home",
+                    "position": "1"
+                },
                 "ADTicket": [
                     {
                         "ad_id": "1",
                         "ticket_ID": "1",
                         "iLink": "ticket:108",
-                        "dealName": "濱海灣花園一日票",
+                        "dealName": "Gardens by the Bay 1 Day Ticket",
                         "sellingPrice": "SGD 23",
                         "originalPrice": "28",
-                        "salesRecord": "63K+ 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "108"
+                        "salesRecord": "63K+ Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "108"
+                        }
                     },
                     {
                         "ad_id": "1",
                         "ticket_ID": "2",
                         "iLink": "ticket:2538",
-                        "dealName": "夜遊濱海灣花園 (包酒店接送)",
+                        "dealName": "Singapore 3in1 Night Tour : Gardens By the Bay",
                         "sellingPrice": "SGD 59",
                         "originalPrice": "62",
-                        "salesRecord": "1K+ 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2538"
+                        "salesRecord": "1K+ Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2538"
+                        }
                     },
                     {
                         "ad_id": "1",
                         "ticket_ID": "3",
                         "iLink": "ticket:2541",
-                        "dealName": "濱海灣花園 (包酒店接送)",
+                        "dealName": "Gardens By The Bay Ticket including Hotel Pickup",
                         "sellingPrice": "SGD 28",
                         "originalPrice": "30",
-                        "salesRecord": "795 已出售",
-                        "item": "Gardens by the Bay",
-                        "item_type": "deals",
-                        "item_id": "2541"
+                        "salesRecord": "795 Sold",
+                        "tracker": {
+                            "item": "Gardens by the Bay",
+                            "item_type": "deals",
+                            "item_id": "2541"
+                        }
                     }
                 ]
             }

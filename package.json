@@ -45,6 +45,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://handy-staging-test.s3.amazonaws.com/react-build",
+  "homepage": "https://handy-staging-test.s3.amazonaws.com/test-handy-home-CHN-HKG",
   "devDependencies": {}
 }

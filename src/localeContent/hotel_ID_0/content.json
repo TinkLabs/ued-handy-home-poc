@@ -45,7 +45,7 @@
             "banner": {
                 "title": "Best Things to do at Hong Kong",
                 "subTitle": "Explore city's life here with handy’s recommendation list.",
-                "image": "best_places_to_go_en_US.jpg",
+                "image": "en_US/best_places_to_go_en_US.jpg",
                 "tracker": {}
             },
             "seeMore": {
@@ -69,7 +69,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -82,7 +82,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -94,7 +94,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -106,7 +106,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -126,7 +126,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -139,7 +139,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -151,7 +151,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -163,7 +163,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -183,7 +183,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -196,7 +196,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -208,7 +208,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -220,7 +220,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -240,7 +240,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -253,7 +253,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -265,7 +265,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -277,7 +277,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -396,7 +396,7 @@
             "banner": {
                 "title": "Best Things to do at Hong Kong",
                 "subTitle": "Explore city's life here with handy’s recommendation list.",
-                "image": "best_places_to_go_zh_CN.jpg",
+                "image": "zh_CN/best_places_to_go_zh_CN.jpg",
                 "tracker": {}
             },
             "seeMore": {
@@ -420,7 +420,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -433,7 +433,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -445,7 +445,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -457,7 +457,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -477,7 +477,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -490,7 +490,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -502,7 +502,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -514,7 +514,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -534,7 +534,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -547,7 +547,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -559,7 +559,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -571,7 +571,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -591,7 +591,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -604,7 +604,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -616,7 +616,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -628,7 +628,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -747,7 +747,7 @@
             "banner": {
                 "title": "Best Things to do at Hong Kong",
                 "subTitle": "Explore city's life here with handy’s recommendation list.",
-                "image": "best_places_to_go_zh_TW.jpg",
+                "image": "zh_TW/best_places_to_go_zh_TW.jpg",
                 "tracker": {}
             },
             "seeMore": {
@@ -771,7 +771,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -784,7 +784,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -796,7 +796,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -808,7 +808,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -828,7 +828,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -841,7 +841,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -853,7 +853,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -865,7 +865,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -885,7 +885,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -898,7 +898,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -910,7 +910,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -922,7 +922,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -942,7 +942,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "pmq.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -955,7 +955,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "ifc_mall.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -967,7 +967,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "tai_kwun.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -979,7 +979,7 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "lan_fong_yuen.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",

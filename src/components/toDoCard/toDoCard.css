@@ -1,7 +1,6 @@
 .toDoCardATag {
     text-decoration: none;
 }
-
 .toDoCard {
     display: flex;
     flex-direction: column;
@@ -13,6 +12,7 @@
 }.toDoCard > div:last-child {
     padding-bottom: 0;
 }
+
 .toDoCard .articleImage {
     width: 125px;
     height: 125px;
@@ -26,15 +26,16 @@
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    height: 85px;
-    padding: 0.7rem 0.5rem;
+    height: 65px;
+    padding: 1rem 0.5rem;
 }
 .articleInfo .articleTitle {
     color: black;
     font-size: 1rem;
     line-height: 1.5;
-    height: 3rem;
+    height: 2rem;
 }
+
 .articleInfo .transportTime {
     padding-top: 0.4rem;
     display: flex;
@@ -42,10 +43,10 @@
     align-items: flex-end;
     height: 0.7rem;
 }
-.articleInfo .placeType {
+.articleInfo .description {
     color: grey;
     font-size: 0.7rem;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 .articleInfo .transportTime {
     color: grey;

@@ -40,6 +40,9 @@ class MostPopular extends React.Component {
                     // iLink, tracker, text
                     RHS={this.props.content.seeMore}
                     tracker={this.props.content.seeMore.tracker}
+                    styles={{
+                        marginBottom: "0.5rem",
+                    }}
                 />
                 <div>
                     <div className="popularSpots">
@@ -52,7 +55,7 @@ class MostPopular extends React.Component {
                                         title="popular places"
                                     />
                                 </Card>
-                        ))
+                            ))
                         }
                     </div>
                 </div>
@@ -63,7 +66,9 @@ class MostPopular extends React.Component {
                         path: `url(${bannerPath})`,
                         styles: {
                             height: "84px",
-                            borderRadius: "3px"
+                            borderRadius: 0,
+                            marginLeft: "-1rem",
+                            marginRight: "-1rem",
                         }
                     }}
                 />

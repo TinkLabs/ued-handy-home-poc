@@ -20,6 +20,7 @@ const IProps = {
 const styles = {
     card: {
         width: "125px",
+        marginLeft: "1px",
     },
     media: {
         width: "125px",
@@ -33,7 +34,6 @@ const styles = {
 class ToDoCard extends React.Component {
     render() {
         const { classes } = this.props;
-        const image = require(`images/${this.props.image}`);
         let etaIcon = "";
         if (this.props.transportType) {
             etaIcon = require(`images/eta_${this.props.transportType}.svg`);
@@ -48,7 +48,7 @@ class ToDoCard extends React.Component {
                     <div className="toDoCard">
                         <CardMedia
                             className={classes.media}
-                            image={image}
+                            image={this.props.image}
                             alt="article"
                         />
                         <CardContent className={classes.content}>
@@ -67,7 +67,7 @@ class ToDoCard extends React.Component {
                                                 {this.props.transportTime}
                                             </span>
                                         </div> :
-                                        <div className="placeType">{this.props.description}</div>
+                                        <div className="description">{this.props.description}</div>
                                 }
                             </div>
                         </CardContent>

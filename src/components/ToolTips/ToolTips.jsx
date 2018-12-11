@@ -50,7 +50,10 @@ export default class ToolTips extends React.Component {
     }
     render() {
         return (
-            <div className="toolTips">
+            <div
+                className="toolTips"
+                style={this.props.styles}
+            >
                 <div className="toolTips-LHS">
                     {this.props.LHS}
                 </div>
