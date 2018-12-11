@@ -4,11 +4,11 @@ import mixpanel from 'utils/mixpanel';
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
-import LanguageBanner from "components/languageBanner/languageBanner";
-import MainPosterBanner from "components/mainPosterBanner/mainPosterBanner";
-import MustDoBanner from "components/mustDoBanner/mustDoBanner";
-import PromotionBanner from "components/promotionBanner/promotionBanner";
-import SignUp from "components/signUp/signUp";
+import LanguageBanner from "components/LanguageBanner/LanguageBanner";
+import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
+import MustDoBanner from "components/MustDoBanner/MustDoBanner";
+import PromotionBanner from "components/PromotionBanner/PromotionBanner";
+import SignUp from "components/SignUp/SignUp";
 
 import {
 	setGlobalProperties,

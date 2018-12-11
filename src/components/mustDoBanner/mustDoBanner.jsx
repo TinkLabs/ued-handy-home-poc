@@ -1,7 +1,7 @@
 import * as React from "react";
 import Slider from "react-slick";
 import mixpanel from 'utils/mixpanel';
-import ToDoCard from "components/toDoCard/toDoCard";
+import ToDoCard from "components/ToDoCard/ToDoCard";
 import VisibilitySensor from "react-visibility-sensor";
 
 export default class MustDoBanner extends React.Component {

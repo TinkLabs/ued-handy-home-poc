@@ -41,18 +41,18 @@
   padding-bottom: 1rem;
 }
 
-@import "./components/languageBanner/languageBanner.css";
-@import "./components/languageButton/languageButton.css";
-@import "./components/mainPosterBanner/mainPosterBanner.css";
-@import "./components/mustDoBanner/mustDoBanner.css";
-@import "./components/toDoCard/toDoCard.css";
-@import "./components/promotionBanner/promotionBanner.css";
-@import "./components/promotionTicket/promotionTicket.css";
-@import "./components/loadingAnimate/loadingAnimate.css";
-@import "./components/signUp/signUp.css";
-@import "./components/signUp/redirectBanner.css";
-@import "./components/popUp/popUp.css";
-@import "./components/textBox/textBox.css";
+@import "./components/LanguageBanner/LanguageBanner.css";
+@import "./components/LanguageButton/LanguageButton.css";
+@import "./components/MainPosterBanner/MainPosterBanner.css";
+@import "./components/MustDoBanner/MustDoBanner.css";
+@import "./components/ToDoCard/ToDoCard.css";
+@import "./components/PromotionBanner/PromotionBanner.css";
+@import "./components/PromotionTicket/PromotionTicket.css";
+@import "./components/LoadingAnimate/LoadingAnimate.css";
+@import "./components/SignUp/SignUp.css";
+@import "./components/SignUp/RedirectBanner.css";
+@import "./components/PopUp/PopUp.css";
+@import "./components/TextBox/TextBox.css";
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
