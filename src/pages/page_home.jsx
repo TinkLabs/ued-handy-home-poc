@@ -209,10 +209,10 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
-					<SignUp
+					{/* <SignUp
 						locale={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
-					/>
+					/> */}
 					<VisibilitySensor
 						onChange={(isVisible) => {
 							if (isVisible) {
