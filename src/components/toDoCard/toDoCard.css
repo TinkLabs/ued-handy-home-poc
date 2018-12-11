@@ -26,14 +26,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    height: 65px;
-    padding: 1rem 0.5rem;
+    height: 75px;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 .articleInfo .articleTitle {
     color: black;
     font-size: 1rem;
-    line-height: 1.5;
-    height: 2rem;
+    line-height: 1.3;
+    /* height: 2rem; */
 }
 
 .articleInfo .transportTime {
@@ -47,6 +47,7 @@
     color: grey;
     font-size: 0.7rem;
     line-height: 1.5;
+    margin-top: 5px;
 }
 .articleInfo .transportTime {
     color: grey;

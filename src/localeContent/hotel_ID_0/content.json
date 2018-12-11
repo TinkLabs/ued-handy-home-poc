@@ -114,6 +114,18 @@
                             "content_locale": "en_US",
                             "content_position": "3"
                         }
+                    },
+                    {
+                        "name": "Shake Shack",
+                        "description": "Hottest made to order burger chain",
+                        "image": "en_US/place_shack_shack_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
+                        }
                     }
                 ]
             },
@@ -124,8 +136,8 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Fashion Walk",
+                    "description": "A unique fusion of indoor & outdoor space",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
@@ -137,8 +149,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Times Square Mall",
+                        "description": "Trendy X'mas Shopping",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -149,7 +161,7 @@
                         }
                     },
                     {
-                        "name": "Tai Kwun",
+                        "name": "Yee Shun Milk Company",
                         "description": "Heritage & Art Centre",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
@@ -161,8 +173,8 @@
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Elephant Grounds",
+                        "description": "Specialty coffee with comfort foods",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -433,7 +445,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -445,7 +457,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -457,13 +469,25 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
                             "content_locale": "zh_CN",
                             "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Shake Shack",
+                        "description": "Hottest made to order burger chain",
+                        "image": "zh_CN/place_shack_shack_zh_CN.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
                         }
                     }
                 ]
@@ -771,7 +795,7 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "en_US/place_pmq_en_US.jpg",
+                    "image": "zh_TW/place_pmq_zh_TW.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
@@ -784,7 +808,7 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "en_US/place_ifc_mall_en_US.jpg",
+                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -796,7 +820,7 @@
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "en_US/place_tai_kwun_en_US.jpg",
+                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -808,13 +832,25 @@
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
                             "content_locale": "zh_TW",
                             "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Shake Shack",
+                        "description": "Hottest made to order burger chain",
+                        "image": "zh_TW/place_shack_shack_zh_TW.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "zh_TW",
+                            "content_position": "4"
                         }
                     }
                 ]
