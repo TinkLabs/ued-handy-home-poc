@@ -44,7 +44,7 @@ export default class PromotionBanner extends React.Component {
         const localeArray = this.props.availableLanguage.map(lang => lang.short.toLowerCase());
         return (
             <div>
-                <div className="gptAD">
+                {/* <div className="gptAD">
                     {
                         (this.state.adReady) ?
                         null :
@@ -61,7 +61,7 @@ export default class PromotionBanner extends React.Component {
                         onSlotOnload={this.localeADReady}
                         onClick={this.onClickADBanner}
                     />
-                </div>
+                </div> */}
                 <div className="tickets">
                     {
                         this.props.adInfo.ADTicket.map((ticketInfo, i) => (
