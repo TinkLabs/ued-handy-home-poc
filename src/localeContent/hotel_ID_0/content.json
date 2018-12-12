@@ -137,7 +137,7 @@
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
-                    "description": "A unique fusion of indoor & outdoor space",
+                    "description": "Unique fusion of dining, fashion & lifestyle",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
@@ -183,6 +183,18 @@
                             "content_locale": "en_US",
                             "content_position": "3"
                         }
+                    },
+                    {
+                        "name": "Wing Kee Noodle",
+                        "description": "Hong Kong style cart noodle",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
                     }
                 ]
             },
@@ -193,8 +205,8 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Instagram Pier",
+                    "description": "Best Views of the Sunset",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
@@ -206,8 +218,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Sai Wan Swimming Shed",
+                        "description": "Hidden Photography Spots",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -218,8 +230,8 @@
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Kwan Kee Claypot Rice",
+                        "description": "Must-Try Claypot Rice",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -230,8 +242,20 @@
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Winston's Coffee",
+                        "description": "Aussie-style coffee shop",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Metropolitain",
+                        "description": "Casual french bistro",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -250,8 +274,8 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Harbour City",
+                    "description": "Premier shopping destination",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
@@ -263,8 +287,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Arabica Coffee",
+                        "description": "Cafe inside the Star Ferry Pier",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -275,8 +299,8 @@
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Macau Restaurant",
+                        "description": "For Egg Tart Connoisseurs",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -287,8 +311,20 @@
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Peninsula Lights",
+                        "description": "Christmas lights",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Airport Express",
+                        "description": "Easiest way to get to HK Airport",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
@@ -424,7 +460,7 @@
         },
         "districts": [
             {
-                "district": "zh_CN Central",
+                "district": "Central",
                 "eta": {
                     "transport": "train",
                     "duration": "11 mins"
@@ -437,7 +473,7 @@
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_CN",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
@@ -445,43 +481,43 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "zh_CN/place_ifc_mall_zh_CN.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "zh_CN/place_tai_kwun_zh_CN.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "zh_CN/place_lan_fong_yuen_zh_CN.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     },
                     {
                         "name": "Shake Shack",
                         "description": "Hottest made to order burger chain",
-                        "image": "zh_CN/place_shack_shack_zh_CN.jpg",
+                        "image": "en_US/place_shack_shack_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
@@ -499,51 +535,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Fashion Walk",
+                    "description": "Unique fusion of dining, fashion & lifestyle",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_CN",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Times Square Mall",
+                        "description": "Trendy X'mas Shopping",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
+                        "name": "Yee Shun Milk Company",
                         "description": "Heritage & Art Centre",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Elephant Grounds",
+                        "description": "Specialty coffee with comfort foods",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Wing Kee Noodle",
+                        "description": "Hong Kong style cart noodle",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
@@ -556,51 +604,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Instagram Pier",
+                    "description": "Best Views of the Sunset",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_CN",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Sai Wan Swimming Shed",
+                        "description": "Hidden Photography Spots",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Kwan Kee Claypot Rice",
+                        "description": "Must-Try Claypot Rice",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Winston's Coffee",
+                        "description": "Aussie-style coffee shop",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Metropolitain",
+                        "description": "Casual french bistro",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
@@ -613,51 +673,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Harbour City",
+                    "description": "Premier shopping destination",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_CN",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Arabica Coffee",
+                        "description": "Cafe inside the Star Ferry Pier",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Macau Restaurant",
+                        "description": "For Egg Tart Connoisseurs",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Peninsula Lights",
+                        "description": "Christmas lights",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_CN",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Airport Express",
+                        "description": "Easiest way to get to HK Airport",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
@@ -787,7 +859,7 @@
         },
         "districts": [
             {
-                "district": "zh_TW Central",
+                "district": "Central",
                 "eta": {
                     "transport": "train",
                     "duration": "11 mins"
@@ -795,12 +867,12 @@
                 "mainSpot": {
                     "name": "PMQ",
                     "description": "\"Police Married Quarters\" local artist hub",
-                    "image": "zh_TW/place_pmq_zh_TW.jpg",
+                    "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_TW",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
@@ -808,48 +880,48 @@
                     {
                         "name": "IFC Mall",
                         "description": "A Luxurious Shopping Experience",
-                        "image": "zh_TW/place_ifc_mall_zh_TW.jpg",
+                        "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
                         "name": "Tai Kwun",
                         "description": "Heritage & Art Centre",
-                        "image": "zh_TW/place_tai_kwun_zh_TW.jpg",
+                        "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
                         "name": "Lan Fong Yuen",
                         "description": "Best Cha Chaan Teng",
-                        "image": "zh_TW/place_lan_fong_yuen_zh_TW.jpg",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     },
                     {
                         "name": "Shake Shack",
                         "description": "Hottest made to order burger chain",
-                        "image": "zh_TW/place_shack_shack_zh_TW.jpg",
+                        "image": "en_US/place_shack_shack_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "4"
                         }
                     }
@@ -862,51 +934,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Fashion Walk",
+                    "description": "Unique fusion of dining, fashion & lifestyle",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_TW",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Times Square Mall",
+                        "description": "Trendy X'mas Shopping",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
+                        "name": "Yee Shun Milk Company",
                         "description": "Heritage & Art Centre",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Elephant Grounds",
+                        "description": "Specialty coffee with comfort foods",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Wing Kee Noodle",
+                        "description": "Hong Kong style cart noodle",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
@@ -919,51 +1003,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Instagram Pier",
+                    "description": "Best Views of the Sunset",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_TW",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Sai Wan Swimming Shed",
+                        "description": "Hidden Photography Spots",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Kwan Kee Claypot Rice",
+                        "description": "Must-Try Claypot Rice",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Winston's Coffee",
+                        "description": "Aussie-style coffee shop",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Metropolitain",
+                        "description": "Casual french bistro",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
@@ -976,51 +1072,63 @@
                     "duration": "11mins"
                 },
                 "mainSpot": {
-                    "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "name": "Harbour City",
+                    "description": "Premier shopping destination",
                     "image": "en_US/place_pmq_en_US.jpg",
                     "iLink": "article:10941",
                     "tracker": {
                         "content_id": "10941",
                         "content_type": "article",
-                        "content_locale": "zh_TW",
+                        "content_locale": "en_US",
                         "content_position": "1"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "IFC Mall",
-                        "description": "A Luxurious Shopping Experience",
+                        "name": "Arabica Coffee",
+                        "description": "Cafe inside the Star Ferry Pier",
                         "image": "en_US/place_ifc_mall_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "1"
                         }
                     },
                     {
-                        "name": "Tai Kwun",
-                        "description": "Heritage & Art Centre",
+                        "name": "Macau Restaurant",
+                        "description": "For Egg Tart Connoisseurs",
                         "image": "en_US/place_tai_kwun_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
                             "content_position": "2"
                         }
                     },
                     {
-                        "name": "Lan Fong Yuen",
-                        "description": "Best Cha Chaan Teng",
+                        "name": "Peninsula Lights",
+                        "description": "Christmas lights",
                         "image": "en_US/place_lan_fong_yuen_en_US.jpg",
                         "iLink": "article:10941",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
-                            "content_locale": "zh_TW",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Airport Express",
+                        "description": "Easiest way to get to HK Airport",
+                        "image": "en_US/place_lan_fong_yuen_en_US.jpg",
+                        "iLink": "article:10941",
+                        "tracker": {
+                            "content_id": "10941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
                             "content_position": "3"
                         }
                     }
