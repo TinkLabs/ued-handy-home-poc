@@ -87,13 +87,13 @@ class PureHomePage extends React.Component {
 		 */
 		if (this.props.hotel_ID !== nextProps.hotel_ID) {
 			this.props.getContent(nextProps.hotel_ID);
-			return false;
-		}
-		// hotel specific content is loaded in nextProps, now load img
-		if (this.props.loaded !== nextProps.loaded) {
 			this.loadImgResource(nextProps);
 			return false;
 		}
+		// hotel specific content is loaded in nextProps, now load img
+		// if (this.props.loaded !== nextProps.loaded) {
+		// 	return false;
+		// }
 
 		/*
 		 *	Change lang, target lang loaded, nth special, go on.
@@ -157,7 +157,8 @@ class PureHomePage extends React.Component {
 				...content[locale.short].mainPosterBanner,
 				path: `url(${bannerPath})`,
 			});
-			const ADPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
+			// const ADPath = require(`localeContent/hotel_ID_${hotel_ID}/${locale.short}/${content[locale.short].ADBlock[0].image}`);
+			const ADPath = "";
 			promotions.push({
 				...content[locale.short].ADBlock[0],
 				path: `url(${ADPath})`,
@@ -225,9 +226,9 @@ class PureHomePage extends React.Component {
 					>
 						<div style={{ height: "1px", opacity: "0" }} />
 					</VisibilitySensor>
-					{/* <button onClick={this.changeHotel}>81</button>
+					<button onClick={this.changeHotel}>81</button>
 					<button onClick={this.changeHotel}>375</button>
-					<button onClick={this.changeHotel}>1357</button> */}
+					<button onClick={this.changeHotel}>1357</button>
 				</div>
 			)
 		}
