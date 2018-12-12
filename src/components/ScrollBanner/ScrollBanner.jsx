@@ -23,7 +23,7 @@ export default class ScrollBanner extends React.Component {
                 infinite: false,
                 speed: 500,
                 slidesToShow: 2.5,
-                slidesToScroll: 2,
+                slidesToScroll: 2.5,
             },
             articles: [],
         }
@@ -73,6 +73,7 @@ export default class ScrollBanner extends React.Component {
                                     //     content_position: fa.tracker.content_position,
                                     // });
                                 }}
+                                tag={fa.tag}
                             />
                         </VisibilitySensor>
                     ))}

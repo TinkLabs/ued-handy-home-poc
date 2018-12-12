@@ -4,10 +4,12 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
+import ImageTag from "components/ImageTag/ImageTag";
+
 import PropTypes from 'prop-types';
 const IProps = {
     // link & tracker
-    iLink:PropTypes.string,
+    iLink: PropTypes.string,
     onClickMixpanel: PropTypes.func,
     // img block
     image: PropTypes.string,
@@ -21,6 +23,7 @@ const styles = {
     card: {
         width: "125px",
         marginLeft: "1px",
+        position: "relative",
     },
     media: {
         width: "125px",
@@ -32,6 +35,31 @@ const styles = {
 };
 
 class ToDoCard extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.renderTag = this.renderTag.bind(this);
+    }
+    renderTag() {
+        const tag = this.props.tag;
+        if (typeof (tag) !== "undefined") {
+            if (tag.trim().length > 0) {
+                return (
+                    <ImageTag
+                        text={tag.toUpperCase()}
+                        style={{
+                            position: "absolute",
+                            fontSize: "10px",
+                            lineHeight: "1.5",
+                            top: "6px",
+                            left: "10px",
+                        }}
+                    />
+                )
+            }
+        }
+        return null;
+    }
     render() {
         const { classes } = this.props;
         let etaIcon = "";
@@ -45,6 +73,9 @@ class ToDoCard extends React.Component {
                 onClick={this.props.onClickMixpanel}
             >
                 <Card className={classes.card}>
+                    {
+                        this.renderTag()
+                    }
                     <div className="toDoCard">
                         <CardMedia
                             className={classes.media}

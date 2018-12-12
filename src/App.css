@@ -44,6 +44,7 @@
 @import "./components/Blocks/MostPopular/MostPopular.css";
 @import "./components/Blocks/District/District.css";
 
+@import "./components/ImageTag/ImageTag.css";
 
 @import "./components/LanguageBanner/LanguageBanner.css";
 @import "./components/LanguageButton/LanguageButton.css";
