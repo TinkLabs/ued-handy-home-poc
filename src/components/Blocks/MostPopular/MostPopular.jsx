@@ -20,7 +20,6 @@ const styles = theme => ({
         borderRadius: "3px",
     },
     media: {
-        // paddingTop: '56.25%', // 16:9
         height: "150px",
     },
     actions: {
@@ -38,8 +37,8 @@ class MostPopular extends React.Component {
                     // string
                     LHS="Most Popular"
                     // iLink, tracker, text
-                    RHS={this.props.content.seeMore}
-                    tracker={this.props.content.seeMore.tracker}
+                    RHS={this.props.content.popularSeeMore}
+                    tracker={this.props.content.popularSeeMore.tracker}
                     styles={{
                         marginBottom: "0.5rem",
                     }}
@@ -54,6 +53,10 @@ class MostPopular extends React.Component {
                                         image={require(`images/${e.image}`)}
                                         title="popular places"
                                     />
+                                    <div className="popular-spot-text">
+                                        <div className="popular-spot-name">{e.name}</div>
+                                        <div className="popular-spot-desc">{e.subtext}</div>
+                                    </div>
                                 </Card>
                             ))
                         }

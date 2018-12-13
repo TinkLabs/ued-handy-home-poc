@@ -11,6 +11,7 @@ export default class MainPosterBanner extends React.Component {
         }
         return (
             <a
+                className="main-poster-banner-wrapper"
                 href={banner.iLink}
                 onClick={() => {
                     // if (this.props.tracking) {
@@ -27,6 +28,10 @@ export default class MainPosterBanner extends React.Component {
                     className="mainPosterBanner"
                     style={topBannerStyle}
                 />
+                {
+                    (this.props.children) ?
+                    this.props.children : null
+                }
             </a>
         )
     }

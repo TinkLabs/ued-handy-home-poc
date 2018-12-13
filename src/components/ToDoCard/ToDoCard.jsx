@@ -49,8 +49,9 @@ class ToDoCard extends React.Component {
                         text={tag.toUpperCase()}
                         style={{
                             position: "absolute",
-                            fontSize: "10px",
-                            lineHeight: "1.5",
+                            fontSize: "9px",
+                            lineHeight: "1.2",
+                            paddingTop: "1px",
                             top: "6px",
                             left: "10px",
                         }}

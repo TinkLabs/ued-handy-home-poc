@@ -27,11 +27,13 @@ export default class District extends React.Component {
                     bannerInfo={{
                         ...this.props.districtContent.mainSpot,
                         path: `url(${imagePath})`,
-                        styles: {
-                            marginBottom: "1rem",
-                        }
                     }}
-                />
+                >
+                    <div className="district-banner">
+                        <div className="district-banner-name">{this.props.districtContent.mainSpot.name}</div>
+                        <div className="district-banner-desc">{this.props.districtContent.mainSpot.description}</div>
+                    </div>
+                </MainPosterBanner>
                 <ScrollBanner
                     sliderSettings={{
                         slidesToShow: 2.5,
