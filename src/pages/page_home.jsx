@@ -4,11 +4,11 @@ import mixpanel from 'utils/mixpanel';
 import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
-import LanguageBanner from "components/LanguageBanner/LanguageBanner";
-import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
-import MustDoBanner from "components/MustDoBanner/MustDoBanner";
-import PromotionBanner from "components/PromotionBanner/PromotionBanner";
-import SignUp from "components/SignUp/SignUp";
+import LanguageBanner from "components/languageBanner/languageBanner";
+import MainPosterBanner from "components/mainPosterBanner/mainPosterBanner";
+import MustDoBanner from "components/mustDoBanner/mustDoBanner";
+import PromotionBanner from "components/promotionBanner/promotionBanner";
+import SignUp from "components/signUp/signUp";
 
 import {
 	setGlobalProperties,
@@ -210,10 +210,11 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
-					{/* <SignUp
+					<SignUp
 						locale={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
-					/> */}
+						bg={require(`images/hi_dot_com_prelaunch.jpg`)}
+					/>
 					<VisibilitySensor
 						onChange={(isVisible) => {
 							if (isVisible) {

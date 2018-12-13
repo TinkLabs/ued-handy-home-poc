@@ -2,7 +2,7 @@ import * as React from "react";
 import mixpanel from 'utils/mixpanel';
 
 import logo from "images/lang.svg";
-import LanguageButton from "components/LanguageButton/LanguageButton";
+import LanguageButton from "components/languageButton/languageButton";
 
 export default class LanguageBanner extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import * as React from "react";
-import LoadingAnimate from "components/LoadingAnimate/LoadingAnimate";
-import PromotionTicket from "components/PromotionTicket/PromotionTicket";
+import LoadingAnimate from "components/loadingAnimate/loadingAnimate";
+import PromotionTicket from "components/promotionTicket/promotionTicket";
 import GPTAD from "components/gptAD/gptAD"
 import mixpanel from 'utils/mixpanel';
 
