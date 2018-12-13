@@ -5,10 +5,6 @@
     display: flex;
     flex-direction: column;
     width: 125px;
-    /* border: 0.5px solid rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-bottom: 0.5rem; */
 }.toDoCard > div:last-child {
     padding-bottom: 0;
 }
@@ -27,15 +23,16 @@
     align-items: flex-start;
     text-align: left;
     height: 75px;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.6rem 0.5rem 0.5rem 0.5rem;
 }
 .articleInfo .articleTitle {
     color: black;
     font-size: 1rem;
     line-height: 1.3;
     height: 2rem;
+    margin: 0;
+    hyphens: auto;
 }
-
 .articleInfo .transportTime {
     padding-top: 0.4rem;
     display: flex;

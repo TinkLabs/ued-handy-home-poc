@@ -71,3 +71,20 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+textarea {
+  resize: none;
+  outline: none;
+  letter-spacing: normal;
+  text-rendering: auto;
+  text-transform: none;
+  font-family: Roboto-Medium;
+  overflow: hidden !important;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+textarea:disabled {
+  background-color: white;
+}

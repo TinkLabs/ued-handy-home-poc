@@ -85,10 +85,9 @@ class ToDoCard extends React.Component {
                         />
                         <CardContent className={classes.content}>
                             <div className="articleInfo">
-                                <div className="articleTitle">{this.props.title}</div>
+                                <p className="articleTitle">{this.props.title}</p>
                                 {
                                     (this.props.transportType) ?
-
                                         <div className="transportTime">
                                             <img
                                                 src={etaIcon}
@@ -99,7 +98,9 @@ class ToDoCard extends React.Component {
                                                 {this.props.transportTime}
                                             </span>
                                         </div> :
-                                        <div className="description">{this.props.description}</div>
+                                        <div className="description">
+                                            {this.props.description}
+                                        </div>
                                 }
                             </div>
                         </CardContent>
