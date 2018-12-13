@@ -209,9 +209,6 @@ class PureHomePage extends React.Component {
 					>
 						<div style={{ height: "1px", opacity: "0" }} />
 					</VisibilitySensor> */}
-					<button onClick={this.changeHotel}>0</button>
-					<button onClick={this.changeHotel}>2</button>
-					<div onClick={this.autoCopy}>asdfgr#1234</div>
 					{/* <button onClick={this.changeHotel}>81</button>
 					<button onClick={this.changeHotel}>375</button>
 					<button onClick={this.changeHotel}>1357</button> */}
