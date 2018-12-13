@@ -1,7 +1,7 @@
 {
     "en_US": {
         "locale": "en_US",
-        "hotel_ID": "2",
+        "hotel_ID": "3461",
         "mostPopular": {
             "locale": "en_US",
             "events": [
@@ -65,7 +65,7 @@
                 "district": "Central",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "34 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -146,7 +146,7 @@
                 "district": "Causeway Bay",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "44 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -225,7 +225,7 @@
                 "district": "Sai Ying Pun",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "43 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -305,7 +305,7 @@
                 "district": "Tsim Sha Tsui",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "25 mins"
                 },
                 "mainSpot": {
                     "name": "Harbour City",
@@ -348,7 +348,7 @@
                         "name": "Peninsula Lights",
                         "description": "Christmas lights",
                         "image": "place_peninsula_lights.jpg",
-                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
+                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
@@ -375,7 +375,7 @@
     },
     "zh_CN": {
         "locale": "zh_CN",
-        "hotel_ID": "2",
+        "hotel_ID": "3461",
         "mostPopular": {
             "locale": "zh_CN",
             "events": [
@@ -439,7 +439,7 @@
                 "district": "Central",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "34 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -520,7 +520,7 @@
                 "district": "Causeway Bay",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "44 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -599,7 +599,7 @@
                 "district": "Sai Ying Pun",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "43 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -679,7 +679,7 @@
                 "district": "Tsim Sha Tsui",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "25 mins"
                 },
                 "mainSpot": {
                     "name": "Harbour City",
@@ -722,7 +722,7 @@
                         "name": "Peninsula Lights",
                         "description": "Christmas lights",
                         "image": "place_peninsula_lights.jpg",
-                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
+                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
@@ -749,7 +749,7 @@
     },
     "zh_TW": {
         "locale": "zh_TW",
-        "hotel_ID": "2",
+        "hotel_ID": "3461",
         "mostPopular": {
             "locale": "zh_TW",
             "events": [
@@ -813,7 +813,7 @@
                 "district": "Central",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "34 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -894,7 +894,7 @@
                 "district": "Causeway Bay",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "44 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -973,7 +973,7 @@
                 "district": "Sai Ying Pun",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "43 mins"
                 },
                 "seeMoreOn": {
                     "text": "See More On",
@@ -1053,7 +1053,7 @@
                 "district": "Tsim Sha Tsui",
                 "eta": {
                     "transport": "train",
-                    "duration": "2 mins"
+                    "duration": "25 mins"
                 },
                 "mainSpot": {
                     "name": "Harbour City",
@@ -1096,7 +1096,7 @@
                         "name": "Peninsula Lights",
                         "description": "Christmas lights",
                         "image": "place_peninsula_lights.jpg",
-                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
+                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
                             "content_id": "10941",
                             "content_type": "article",
