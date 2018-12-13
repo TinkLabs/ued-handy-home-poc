@@ -196,6 +196,7 @@ class PureHomePage extends React.Component {
 					<SignUp
 						locale={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
+						bg={require(`images/hi_dot_com_pre_launch_bg.jpg`)}
 					/>
 					{/* <VisibilitySensor
 						onChange={(isVisible) => {

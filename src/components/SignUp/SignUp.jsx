@@ -117,16 +117,21 @@ class PureSignUp extends React.Component {
                     onSubmit={this.handleSubmit}
                     onError={this.handleInvalid}
                 > */}
-                    <div className="signUp-container signUp-bg">
-                        <div className="logo-row">
+                <div className="signUp-container">
+                    <a
+                        href={this.props.redirectURL}
+                    >
+                        <img src={this.props.bg} alt="sign-up" />
+                    </a>
+                    {/* <div className="logo-row">
                             <img
                                 className="signUp-logo"
                                 src={require(`images/handy_logo_white.svg`)}
                                 alt="handy_logo" />
                         </div>
                         <div className="join-today">{translation.h1[this.props.locale]}</div>
-                        <div className="more-services">{translation.h2[this.props.locale]}</div>
-                        {/* <SignUpTextBox
+                        <div className="more-services">{translation.h2[this.props.locale]}</div> */}
+                    {/* <SignUpTextBox
                             show={false}
                             label="Email address"
                             className="signUp-input"
@@ -139,13 +144,13 @@ class PureSignUp extends React.Component {
                             validators={['required', 'isEmail']}
                             errorMessages={['this field is required', 'email is not valid']}
                         /> */}
-                        <a
+                    {/* <a
                             className="signUp-joinNow"
                             href={this.props.redirectURL}
                         >
                         <span>{translation.btn[this.props.locale]}</span>
-                        </a>
-                    </div>
+                        </a> */}
+                </div>
                 {/* </ValidatorForm> */}
                 {/* <PopUp
                     position={{
