@@ -21,6 +21,7 @@ export default class District extends React.Component {
                     LHS={this.props.districtContent.district}
                     // text, icon
                     RHS={this.props.districtContent.eta}
+                    displayLanguage={this.props.displayLanguage}
                 />
                 <MainPosterBanner
                     // img-path, styles, trackers, iLink

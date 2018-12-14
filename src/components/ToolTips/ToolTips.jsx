@@ -31,7 +31,24 @@ export default class ToolTips extends React.Component {
             )
         } else if (this.props.RHS.transport) {
             const iconPath = require(`images/eta_${this.props.RHS.transport}.svg`);
-            const etaText = `${this.props.RHS.duration} from hotel`
+            let etaText = "";
+            switch(this.props.displayLanguage) {
+                case "en_US": {
+                    etaText = `${this.props.RHS.duration} from hotel`;
+                    break;
+                }
+                case "zh_CN": {
+                    etaText = `距离酒店 ${this.props.RHS.duration} 分钟`;
+                    break;
+                }
+                case "zh_TW": {
+                    etaText = `距離酒店 ${this.props.RHS.duration} 分鐘`;
+                    break;
+                }
+                default: {
+                    break
+                }
+            }
             return (
                 <div
                     className="toolTips-RHS toolTips-eta"

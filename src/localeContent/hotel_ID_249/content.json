@@ -8,7 +8,7 @@
                 {
                     "type": "Shop",
                     "name": "Off-White",
-                    "subtext": "Hippest brand",
+                    "subtext": "Hippest Brand",
                     "iLink": "https://goo.gl/maps/jMhEixBPPet",
                     "image": "most_popular_shop.jpg",
                     "tracker": {
@@ -46,7 +46,7 @@
                 }
             ],
             "banner": {
-                "title": "Best places to go at Hong Kong",
+                "title": "Best places to go in Hong Kong",
                 "subTitle": "Explore city's life here with handy’s recommendation list.",
                 "image": "en_US/best_places_to_go_en_US.jpg",
                 "tracker": {}
@@ -79,7 +79,7 @@
                 },
                 "mainSpot": {
                     "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "description": "\"Police Married Quarters\" Local Artist Hub",
                     "image": "place_pmq.jpg",
                     "iLink": "article:59",
                     "tracker": {
@@ -130,7 +130,7 @@
                     },
                     {
                         "name": "Shake Shack",
-                        "description": "Hottest made to order burger chain",
+                        "description": "Hottest Made to Order Burger Chain",
                         "image": "place_shack_shack.jpg",
                         "iLink": "article:26852",
                         "tracker": {
@@ -160,7 +160,7 @@
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
-                    "description": "Unique fusion of dining, fashion & lifestyle",
+                    "description": "Unique Fusion of Dining, Fashion & Lifestyle",
                     "image": "place_fashion_walk.jpg",
                     "iLink": "article:10641",
                     "tracker": {
@@ -185,7 +185,7 @@
                     },
                     {
                         "name": "Yee Shun Milk Company",
-                        "description": "Heritage & Art Centre",
+                        "description": "HK Style Dessert Shop",
                         "image": "place_yee_shun_milk_company.jpg",
                         "iLink": "https://goo.gl/maps/EjJKXc2pL1D2",
                         "tracker": {
@@ -197,7 +197,7 @@
                     },
                     {
                         "name": "Elephant Grounds",
-                        "description": "Specialty coffee with comfort foods",
+                        "description": "Specialty Coffee With Comfort Foods",
                         "image": "place_elephant_grounds.jpg",
                         "iLink": "article:23976",
                         "tracker": {
@@ -209,7 +209,7 @@
                     },
                     {
                         "name": "Wing Kee Noodle",
-                        "description": "Hong Kong style cart noodle",
+                        "description": "Hong Kong Style Cart Noodle",
                         "image": "place_wing_kee_noodle.jpg",
                         "iLink": "https://goo.gl/maps/GSafwMCZbjw",
                         "tracker": {
@@ -251,8 +251,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "Sai Wan Swimming Shed",
-                        "description": "Hidden Photography Spots",
+                        "name": "Swimming Shed",
+                        "description": "Hidden Photography Spot in Sai Wan",
                         "image": "place_sai_wan_swimming_shed.jpg",
                         "iLink": "https://goo.gl/maps/7PB1y9sSygL2",
                         "tag": "INSTAWORTHY",
@@ -277,7 +277,7 @@
                     },
                     {
                         "name": "Winston's Coffee",
-                        "description": "Aussie-style coffee shop",
+                        "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
                         "tracker": {
@@ -289,7 +289,7 @@
                     },
                     {
                         "name": "Metropolitain",
-                        "description": "Casual french bistro",
+                        "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
                         "iLink": "",
                         "tracker": {
@@ -309,7 +309,7 @@
                 },
                 "mainSpot": {
                     "name": "Harbour City",
-                    "description": "Premier shopping destination",
+                    "description": "Premier Shopping Destination",
                     "image": "place_harbour_city.jpg",
                     "iLink": "article:10944",
                     "tracker": {
@@ -322,7 +322,7 @@
                 "otherSpot": [
                     {
                         "name": "Arabica Coffee",
-                        "description": "Cafe inside the Star Ferry Pier",
+                        "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
                         "tracker": {
@@ -346,7 +346,7 @@
                     },
                     {
                         "name": "Peninsula Lights",
-                        "description": "Christmas lights",
+                        "description": "Striking Festive Displays",
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
@@ -358,7 +358,7 @@
                     },
                     {
                         "name": "Airport Express",
-                        "description": "Easiest way to get to HK Airport",
+                        "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
                         "iLink": "ticket:0",
                         "tag": "popular",
@@ -382,7 +382,7 @@
                 {
                     "type": "Shop",
                     "name": "Off-White",
-                    "subtext": "Hippest brand",
+                    "subtext": "Hippest Brand",
                     "iLink": "https://goo.gl/maps/jMhEixBPPet",
                     "image": "most_popular_shop.jpg",
                     "tracker": {
@@ -453,7 +453,7 @@
                 },
                 "mainSpot": {
                     "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "description": "\"Police Married Quarters\" Local Artist Hub",
                     "image": "place_pmq.jpg",
                     "iLink": "article:59",
                     "tracker": {
@@ -504,7 +504,7 @@
                     },
                     {
                         "name": "Shake Shack",
-                        "description": "Hottest made to order burger chain",
+                        "description": "Hottest Made to Order Burger Chain",
                         "image": "place_shack_shack.jpg",
                         "iLink": "article:26852",
                         "tracker": {
@@ -534,7 +534,7 @@
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
-                    "description": "Unique fusion of dining, fashion & lifestyle",
+                    "description": "Unique Fusion of Dining, Fashion & Lifestyle",
                     "image": "place_fashion_walk.jpg",
                     "iLink": "article:10641",
                     "tracker": {
@@ -559,7 +559,7 @@
                     },
                     {
                         "name": "Yee Shun Milk Company",
-                        "description": "Heritage & Art Centre",
+                        "description": "HK Style Dessert Shop",
                         "image": "place_yee_shun_milk_company.jpg",
                         "iLink": "https://goo.gl/maps/EjJKXc2pL1D2",
                         "tracker": {
@@ -571,7 +571,7 @@
                     },
                     {
                         "name": "Elephant Grounds",
-                        "description": "Specialty coffee with comfort foods",
+                        "description": "Specialty Coffee With Comfort Foods",
                         "image": "place_elephant_grounds.jpg",
                         "iLink": "article:23976",
                         "tracker": {
@@ -583,7 +583,7 @@
                     },
                     {
                         "name": "Wing Kee Noodle",
-                        "description": "Hong Kong style cart noodle",
+                        "description": "Hong Kong Style Cart Noodle",
                         "image": "place_wing_kee_noodle.jpg",
                         "iLink": "https://goo.gl/maps/GSafwMCZbjw",
                         "tracker": {
@@ -625,8 +625,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "Sai Wan Swimming Shed",
-                        "description": "Hidden Photography Spots",
+                        "name": "Swimming Shed",
+                        "description": "Hidden Photography Spot in Sai Wan",
                         "image": "place_sai_wan_swimming_shed.jpg",
                         "iLink": "https://goo.gl/maps/7PB1y9sSygL2",
                         "tag": "INSTAWORTHY",
@@ -651,7 +651,7 @@
                     },
                     {
                         "name": "Winston's Coffee",
-                        "description": "Aussie-style coffee shop",
+                        "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
                         "tracker": {
@@ -663,7 +663,7 @@
                     },
                     {
                         "name": "Metropolitain",
-                        "description": "Casual french bistro",
+                        "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
                         "iLink": "",
                         "tracker": {
@@ -683,7 +683,7 @@
                 },
                 "mainSpot": {
                     "name": "Harbour City",
-                    "description": "Premier shopping destination",
+                    "description": "Premier Shopping Destination",
                     "image": "place_harbour_city.jpg",
                     "iLink": "article:10944",
                     "tracker": {
@@ -696,7 +696,7 @@
                 "otherSpot": [
                     {
                         "name": "Arabica Coffee",
-                        "description": "Cafe inside the Star Ferry Pier",
+                        "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
                         "tracker": {
@@ -720,7 +720,7 @@
                     },
                     {
                         "name": "Peninsula Lights",
-                        "description": "Christmas lights",
+                        "description": "Striking Festive Displays",
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
@@ -732,7 +732,7 @@
                     },
                     {
                         "name": "Airport Express",
-                        "description": "Easiest way to get to HK Airport",
+                        "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
                         "iLink": "ticket:0",
                         "tag": "popular",
@@ -756,7 +756,7 @@
                 {
                     "type": "Shop",
                     "name": "Off-White",
-                    "subtext": "Hippest brand",
+                    "subtext": "Hippest Brand",
                     "iLink": "https://goo.gl/maps/jMhEixBPPet",
                     "image": "most_popular_shop.jpg",
                     "tracker": {
@@ -827,7 +827,7 @@
                 },
                 "mainSpot": {
                     "name": "PMQ",
-                    "description": "\"Police Married Quarters\" local artist hub",
+                    "description": "\"Police Married Quarters\" Local Artist Hub",
                     "image": "place_pmq.jpg",
                     "iLink": "article:59",
                     "tracker": {
@@ -878,7 +878,7 @@
                     },
                     {
                         "name": "Shake Shack",
-                        "description": "Hottest made to order burger chain",
+                        "description": "Hottest Made to Order Burger Chain",
                         "image": "place_shack_shack.jpg",
                         "iLink": "article:26852",
                         "tracker": {
@@ -908,7 +908,7 @@
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
-                    "description": "Unique fusion of dining, fashion & lifestyle",
+                    "description": "Unique Fusion of Dining, Fashion & Lifestyle",
                     "image": "place_fashion_walk.jpg",
                     "iLink": "article:10641",
                     "tracker": {
@@ -933,7 +933,7 @@
                     },
                     {
                         "name": "Yee Shun Milk Company",
-                        "description": "Heritage & Art Centre",
+                        "description": "HK Style Dessert Shop",
                         "image": "place_yee_shun_milk_company.jpg",
                         "iLink": "https://goo.gl/maps/EjJKXc2pL1D2",
                         "tracker": {
@@ -945,7 +945,7 @@
                     },
                     {
                         "name": "Elephant Grounds",
-                        "description": "Specialty coffee with comfort foods",
+                        "description": "Specialty Coffee With Comfort Foods",
                         "image": "place_elephant_grounds.jpg",
                         "iLink": "article:23976",
                         "tracker": {
@@ -957,7 +957,7 @@
                     },
                     {
                         "name": "Wing Kee Noodle",
-                        "description": "Hong Kong style cart noodle",
+                        "description": "Hong Kong Style Cart Noodle",
                         "image": "place_wing_kee_noodle.jpg",
                         "iLink": "https://goo.gl/maps/GSafwMCZbjw",
                         "tracker": {
@@ -999,8 +999,8 @@
                 },
                 "otherSpot": [
                     {
-                        "name": "Sai Wan Swimming Shed",
-                        "description": "Hidden Photography Spots",
+                        "name": "Swimming Shed",
+                        "description": "Hidden Photography Spot in Sai Wan",
                         "image": "place_sai_wan_swimming_shed.jpg",
                         "iLink": "https://goo.gl/maps/7PB1y9sSygL2",
                         "tag": "INSTAWORTHY",
@@ -1025,7 +1025,7 @@
                     },
                     {
                         "name": "Winston's Coffee",
-                        "description": "Aussie-style coffee shop",
+                        "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
                         "tracker": {
@@ -1037,7 +1037,7 @@
                     },
                     {
                         "name": "Metropolitain",
-                        "description": "Casual french bistro",
+                        "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
                         "iLink": "",
                         "tracker": {
@@ -1057,7 +1057,7 @@
                 },
                 "mainSpot": {
                     "name": "Harbour City",
-                    "description": "Premier shopping destination",
+                    "description": "Premier Shopping Destination",
                     "image": "place_harbour_city.jpg",
                     "iLink": "article:10944",
                     "tracker": {
@@ -1070,7 +1070,7 @@
                 "otherSpot": [
                     {
                         "name": "Arabica Coffee",
-                        "description": "Cafe inside the Star Ferry Pier",
+                        "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
                         "tracker": {
@@ -1094,7 +1094,7 @@
                     },
                     {
                         "name": "Peninsula Lights",
-                        "description": "Christmas lights",
+                        "description": "Striking Festive Displays",
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
@@ -1106,7 +1106,7 @@
                     },
                     {
                         "name": "Airport Express",
-                        "description": "Easiest way to get to HK Airport",
+                        "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
                         "iLink": "ticket:0",
                         "tag": "popular",

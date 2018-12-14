@@ -26,6 +26,7 @@ export default class ScrollBanner extends React.Component {
                 slidesToScroll: 2.5,
             },
             articles: [],
+            titleHeight: 0,
         }
     }
     componentDidMount() {
@@ -37,6 +38,15 @@ export default class ScrollBanner extends React.Component {
                 },
             })
         }
+        // find the tallest title div and sync the other in the row
+        let maxHeight = 0;
+        this.props.content.forEach(fa => {
+            const h = document.getElementById(fa.name).clientHeight;
+            if (h > maxHeight) { maxHeight = h }
+        });
+        this.setState({
+            titleHeight: maxHeight,
+        });
     }
     render() {
         return (
@@ -74,6 +84,7 @@ export default class ScrollBanner extends React.Component {
                                     // });
                                 }}
                                 tag={fa.tag}
+                                titleHeight={this.state.titleHeight}
                             />
                         </VisibilitySensor>
                     ))}

@@ -85,7 +85,16 @@ class ToDoCard extends React.Component {
                         />
                         <CardContent className={classes.content}>
                             <div className="articleInfo">
-                                <p className="articleTitle">{this.props.title}</p>
+                                <p
+                                    className="articleTitle"
+                                    id={this.props.title}
+                                    style={(this.props.titleHeight !== 0) ? {
+                                        height: this.props.titleHeight
+                                    } : {}
+                                    }
+                                >
+                                    {this.props.title}
+                                </p>
                                 {
                                     (this.props.transportType) ?
                                         <div className="transportTime">
