@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import mixpanel from 'utils/mixpanel';
 import trackerInfo from "utils/trackerInfo";
@@ -19,7 +18,8 @@ export default class LanguageBanner extends React.Component {
                                 const info = trackerInfo.langBanner;
                                 const event = info.Event;
                                 const data = info.data;
-                                data.user_language = lang.full;
+                                data.choose_language = lang.full;
+                                // console.log(event, data)
                                 mixpanel().track(event, data);
                             }}
                             language={lang.full.toUpperCase()}
@@ -36,7 +36,8 @@ export default class LanguageBanner extends React.Component {
                             const info = trackerInfo.langBanner;
                             const event = info.Event;
                             const data = info.data;
-                            data.user_language = "more";
+                            data.choose_language = "more";
+                            // console.log(event, data)
                             mixpanel().track(event, data);
                         }}
                     >

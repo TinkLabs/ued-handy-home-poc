@@ -1,14 +1,14 @@
 import * as React from "react";
 import { connect } from 'react-redux';
 import mixpanel from 'utils/mixpanel';
-// import VisibilitySensor from "react-visibility-sensor";
 import PropTypes from 'prop-types';
 
-import LanguageBanner from "components/LanguageBanner/LanguageBanner";
 import MostPopular from "components/Blocks/MostPopular/MostPopular";
 import District from "components/Blocks/District/District";
-// import PromotionBanner from "components/PromotionBanner/PromotionBanner";
-import SignUp from "components/SignUp/SignUp";
+import LanguageBanner from "components/LanguageBanner/LanguageBanner"
+import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
+// import SignUp from "components/SignUp/SignUp";
+import VisibiltyChecker from "components/VisibiltyChecker/VisibiltyChecker";
 
 import {
 	setGlobalProperties,
@@ -40,6 +40,7 @@ class PureHomePage extends React.Component {
 			promotions: [],
 			hiDotComURL: process.env.REACT_APP_HI_REDIRECT,
 			hiDotComBanner: "",
+			loadVS: false,
 		}
 
 		this.lastPosition = [];
@@ -79,6 +80,7 @@ class PureHomePage extends React.Component {
 				"deviceLocale": "en_US",
 			};
 		}
+		this.setState({ loadVS: true });
 		this.props.setGlobalProperties(gp);
 	}
 	componentWillUnmount() {
@@ -178,6 +180,9 @@ class PureHomePage extends React.Component {
 		if (this.state.imgLoaded) {
 			return (
 				<div className="homePage">
+					{
+						(this.state.loadVS) ? <VisibiltyChecker /> : null
+					}
 					{/* lang banner */}
 					<LanguageBanner
 						availableLanguage={this.props.availableLanguage}
@@ -193,23 +198,22 @@ class PureHomePage extends React.Component {
 					{
 						this.renderDistrict()
 					}
-					<SignUp
+					{/* <SignUp
 						displayLanguage={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
 						bg={require(`images/hi_dot_com_pre_launch_bg.jpg`)}
-					/>
-					{/* <VisibilitySensor
-						onChange={(isVisible) => {
-							if (isVisible) {
-								mixpanel().track("Screen View", {
-									"Screen Name": "Home",
-									screen_number: 2,
-								});
-							}
-						}}
-					>
-						<div style={{ height: "1px", opacity: "0" }} />
-					</VisibilitySensor> */}
+					/> */}
+					<div className="signUp-poster">
+						<MainPosterBanner
+							bannerInfo={{
+								path: `url(${require("images/hi_dot_com_pre_launch_bg.jpg")})`,
+								iLink: this.state.hiDotComURL,
+								styles: {
+									height: "191px"
+								}
+							}}
+						/>
+					</div>
 					<button onClick={this.changeHotel}>249</button>
 					<button onClick={this.changeHotel}>3461</button>
 					<button onClick={this.changeHotel}>5640</button>

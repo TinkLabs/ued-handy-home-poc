@@ -1,5 +1,6 @@
 import * as React from "react";
 import PropTypes from 'prop-types';
+import VisibilitySensor from "react-visibility-sensor";
 
 import ToolTips from "components/ToolTips/ToolTips";
 import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
@@ -17,6 +18,7 @@ export default class District extends React.Component {
     render() {
         const locale = this.props.displayLanguage;
         const isChinese = (locale === "zh_TW") || (locale === "zh_CN");
+
         const imagePath = require(`images/${this.props.districtContent.mainSpot.image}`);
         const iconPath = require(`images/eta_${this.props.districtContent.eta.transport}.svg`);
         let etaText = "";
@@ -37,6 +39,7 @@ export default class District extends React.Component {
                 break
             }
         }
+
         const seeMore = t(`SEE MORE ON ${this.props.districtContent.district.toUpperCase()}`, locale);
 
         return (
@@ -49,20 +52,40 @@ export default class District extends React.Component {
                     iconPath={iconPath}
                     displayLanguage={this.props.displayLanguage}
                 />
-                <MainPosterBanner
-                    // img-path, styles, trackers, iLink
-                    bannerInfo={{
-                        ...this.props.districtContent.mainSpot,
-                        path: `url(${imagePath})`,
+                <VisibilitySensor
+                    onChange={(isVisible) => {
+                        if (isVisible) {
+                            // mixpanel().track("Screen View", {
+                            //     "Screen Name": "Home",
+                            //     screen_number: 2,
+                            // });
+                        }
                     }}
-                    // darken bg
-                    shade
                 >
-                    <div className={`district-banner ${(isChinese) ? "district-banner-zh" : ""}`}>
-                        <div className="district-banner-name">{t(this.props.districtContent.mainSpot.name, locale)}</div>
-                        <div className="district-banner-desc">{t(this.props.districtContent.mainSpot.description, locale)}</div>
-                    </div>
-                </MainPosterBanner>
+                    <MainPosterBanner
+                        // img-path, styles, trackers, iLink
+                        bannerInfo={{
+                            ...this.props.districtContent.mainSpot,
+                            path: `url(${imagePath})`,
+                        }}
+                        // darken bg
+                        shade
+                        // track click
+                        tracker={() => {
+                            // mixpanel().track("POI Click", {
+                            //     item: banner.item,
+                            //     item_id: banner.item_id,
+                            //     item_type: banner.item_type,
+                            //     item_position: banner.item_position,
+                            // });
+                        }}
+                    >
+                        <div className={`district-banner ${(isChinese) ? "district-banner-zh" : ""}`}>
+                            <div className="district-banner-name">{t(this.props.districtContent.mainSpot.name, locale)}</div>
+                            <div className="district-banner-desc">{t(this.props.districtContent.mainSpot.description, locale)}</div>
+                        </div>
+                    </MainPosterBanner>
+                </VisibilitySensor>
                 <ScrollBanner
                     sliderSettings={{
                         slidesToShow: 2.5,
@@ -74,9 +97,9 @@ export default class District extends React.Component {
                 <div
                     className="seeMoreOn"
                 >
-                    { seeMore }
+                    {seeMore}
                 </div>
-            </div>
+            </div >
         )
     }
 }

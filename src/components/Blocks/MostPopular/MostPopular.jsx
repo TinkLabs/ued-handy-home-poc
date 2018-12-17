@@ -1,5 +1,6 @@
 import * as React from "react";
 import PropTypes from 'prop-types';
+import VisibilitySensor from "react-visibility-sensor";
 
 import ToolTips from "components/ToolTips/ToolTips";
 import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
@@ -10,7 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import t from "translation/translate";
 
-import mixpanel from 'utils/mixpanel';
+// import mixpanel from 'utils/mixpanel';
 import trackerInfo from "utils/trackerInfo";
 
 const IProps = {
@@ -33,30 +34,12 @@ const styles = theme => ({
 });
 
 class MostPopular extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.onClickMixpanel = this.onClickMixpanel.bind(this);
-    }
-    onClickMixpanel(e) {
-        const info = trackerInfo.contentImpression;
-        const event = info.Event;
-        const data = info.data;
-        const dataset = e.currentTarget.dataset.tracker;
-        data.content_id = dataset.item_id;
-        data.content_title = dataset.item;
-        data.content_type = dataset.item_type;
-        data.content_locale = this.props.displayLanguage;
-        data.content_position = e.currentTarget.dataset.id;
-        console.log(event, data);
-        // mixpanel().track(event, data);
-    }
     render() {
         const bannerPath = require(`images/${this.props.content.banner.image}`);
         const { classes } = this.props;
         const locale = this.props.displayLanguage;
 
-        const template = trackerInfo.popularSeeMore;
+        const seeMoreTracker = trackerInfo.popularSeeMore;
 
         return (
             <div className="mostPopular">
@@ -67,7 +50,7 @@ class MostPopular extends React.Component {
                     RHS={t("See More", locale)}
                     iLink={this.props.content.popularSeeMore.iLink}
                     // tracker object
-                    tracker={template}
+                    tracker={seeMoreTracker}
                     // custom css
                     styles={{
                         marginBottom: "0.5rem",
@@ -77,11 +60,10 @@ class MostPopular extends React.Component {
                     <div className="popularSpots">
                         {
                             this.props.content.events.map((e, i) => (
-                                <Card className={classes.card}>
+                                <Card className={classes.card} key={i}>
                                     <a
-                                        key={i}
                                         href={e.iLink}
-                                        onClick={this.onClickMixpanel}
+                                        onClick={this.trackerCardClick}
                                         data-id={i}
                                         data-tracker={e.tracker}
                                     >
@@ -100,19 +82,39 @@ class MostPopular extends React.Component {
                         }
                     </div>
                 </div>
-                <MainPosterBanner
-                    // img-path, styles, trackers, iLink
-                    bannerInfo={{
-                        ...this.props.content.banner,
-                        path: `url(${bannerPath})`,
-                        styles: {
-                            height: "84px",
-                            borderRadius: 0,
-                            marginLeft: "-1rem",
-                            marginRight: "-1rem",
+                <VisibilitySensor
+                    onChange={(isVisible) => {
+                        if (isVisible) {
+                            // mixpanel().track("Screen View", {
+                            //     "Screen Name": "Home",
+                            //     screen_number: 2,
+                            // });
                         }
                     }}
-                />
+                >
+                    <MainPosterBanner
+                        // img-path, styles, iLink
+                        bannerInfo={{
+                            ...this.props.content.banner,
+                            path: `url(${bannerPath})`,
+                            styles: {
+                                height: "84px",
+                                borderRadius: 0,
+                                marginLeft: "-1rem",
+                                marginRight: "-1rem",
+                            }
+                        }}
+                        // track click
+                        tracker={() => {
+                            // mixpanel().track("POI Click", {
+                            //     item: banner.item,
+                            //     item_id: banner.item_id,
+                            //     item_type: banner.item_type,
+                            //     item_position: banner.item_position,
+                            // });
+                        }}
+                    />
+                </VisibilitySensor>
             </div>
         )
     }

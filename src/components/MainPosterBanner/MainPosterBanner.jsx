@@ -12,16 +12,11 @@ export default class MainPosterBanner extends React.Component {
             <a
                 className={`main-poster-banner-wrapper ${(this.props.shade ? "mainPosterBanner-shade" : "")}`}
                 href={banner.iLink}
-                // onClick={() => {
-                //     if (this.props.tracking) {
-                //         mixpanel().track("POI Click", {
-                //             item: banner.item,
-                //             item_id: banner.item_id,
-                //             item_type: banner.item_type,
-                //             item_position: banner.item_position,
-                //         });
-                //     }
-                // }}
+                onClick={() => {
+                    if (this.props.tracker) {
+                        // this.props.tracker();
+                    }
+                }}
             >
                 <div 
                     className="mainPosterBanner"

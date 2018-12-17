@@ -1,0 +1,10 @@
+.visibiltyWrapper {
+    position: relative;
+    width: 100vw;
+}
+
+.visibiltyChecker {
+    position: absolute;
+    width: 100vw;
+    z-index: -100;
+}

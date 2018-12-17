@@ -3,7 +3,7 @@ module.exports = {
         "Event": "Homepage Click",
         "data": {
             "click_type": "choose_language",
-            "user_language": "lang in full | more"
+            "choose_language": "English | 简体中文 | 繁體中文 | more"
         }
     },
     "popularSeeMore": {
@@ -30,8 +30,17 @@ module.exports = {
             "content_position": "0",
         }
     },
-    "popularBanner": {
+    "popularBannerClick": {
         "Event": "POI Click",
+        "data": {
+            "item": "??",
+            "item_id": "1",
+            "item_type": "??",
+            "item_position": "1",
+        }
+    },
+    "popularBannerShow": {
+        "Event": "Content Impression",
         "data": {
             "item": "??",
             "item_id": "1",

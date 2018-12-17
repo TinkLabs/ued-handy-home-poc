@@ -5,6 +5,7 @@ import ToDoCard from "components/ToDoCard/ToDoCard";
 import VisibilitySensor from "react-visibility-sensor";
 
 import t from "translation/translate";
+// import trackerInfo from "utils/trackerInfo";
 
 import PropTypes from 'prop-types';
 const IProps = {
@@ -59,13 +60,11 @@ export default class ScrollBanner extends React.Component {
             this.props.content.forEach(fa => {
                 const id = t(fa.name, this.props.displayLanguage);
                 const h = document.getElementById(id).clientHeight;
-                console.log(document.getElementById(id))
                 if (h > maxHeight) { maxHeight = h }
             });
         } else {
             maxHeight = height;
         }
-        console.log(maxHeight);
         if (this.state.titleHeight !== maxHeight) {
             this.setState({
                 titleHeight: maxHeight,
@@ -83,7 +82,7 @@ export default class ScrollBanner extends React.Component {
                         <VisibilitySensor
                             key={i}
                             onChange={(isVisible) => {
-                                // if (isVisible) {
+                                if (isVisible) {
                                 //     mixpanel().track("Content Impression", {
                                 //         content_title: fa.title,
                                 //         content_id: fa.content_id,
@@ -91,7 +90,7 @@ export default class ScrollBanner extends React.Component {
                                 //         content_locale: fa.content_locale,
                                 //         content_position: fa.content_position,
                                 //     });
-                                // }
+                                }
                             }}
                         >
                             <ToDoCard

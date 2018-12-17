@@ -13,11 +13,11 @@ const getAndroidGlobalProperty = () => {
 };
 
 let user_id = getAndroidGlobalProperty().device_user_id;
-mixpanel.identify(user_id)
+mixpanel.init('6c29862add298fba05d9fd796a51e441');
+mixpanel.identify(user_id);
 
 export default () => {
 	// mixpanel.init('cannotbeempty');
-	mixpanel.init('6c29862add298fba05d9fd796a51e441');
 	mixpanel.register({
         ...getAndroidGlobalProperty(),
         section: 'home',
