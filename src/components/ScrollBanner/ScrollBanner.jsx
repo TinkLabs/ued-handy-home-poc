@@ -59,6 +59,7 @@ export default class ScrollBanner extends React.Component {
         if (typeof(height) === "undefined") {
             this.props.content.forEach(fa => {
                 const id = t(fa.name, this.props.displayLanguage);
+                console.log(id)
                 const h = document.getElementById(id).clientHeight;
                 if (h > maxHeight) { maxHeight = h }
             });

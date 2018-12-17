@@ -1,5 +1,6 @@
 import * as React from "react";
 import VisibilitySensor from "react-visibility-sensor";
+import mixpanel from "utils/mixpanel";
 
 // this component creates consecutive empty divs of height equal to 
 // screen height that has z-index smaller than that of the main content
@@ -45,10 +46,10 @@ export default class VisibiltyChecker extends React.Component {
                     onChange={(isVisible) => {
                         if (isVisible) {
                             // console.log(i)
-                            // mixpanel().track("Screen View", {
-                            //     "Screen Name": "Home",
-                            //     screen_number: i,
-                            // });
+                            mixpanel().track("Screen View", {
+                                "Screen Name": "Home",
+                                screen_number: i,
+                            });
                         }
                     }}
                 >

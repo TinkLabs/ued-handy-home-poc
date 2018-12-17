@@ -13,7 +13,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "0",
+                        "item_id": "1",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
@@ -35,11 +35,11 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "article:22",
+                    "iLink": "dealcatalog:21",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
-                        "item_id": "0",
+                        "item_id": "21",
                         "item_type": "attractions",
                         "item_position": "3"
                     }
@@ -70,13 +70,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -100,7 +100,7 @@
                             "content_id": "103",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -113,7 +113,7 @@
                             "content_id": "40941",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -126,7 +126,7 @@
                             "content_id": "32012",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -138,7 +138,7 @@
                             "content_id": "26852",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -152,13 +152,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -169,12 +169,12 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Times Square Mall",
+                        "name": "Times Square",
                         "description": "Trendy X'mas Shopping",
                         "image": "place_time_square_mall.jpg",
                         "iLink": "article:104",
@@ -182,7 +182,7 @@
                             "content_id": "104",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -194,7 +194,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -206,7 +206,7 @@
                             "content_id": "23976",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -218,7 +218,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -232,13 +232,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -249,7 +249,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
@@ -263,7 +263,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -275,11 +275,11 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
-                        "name": "Winston's Coffee",
+                        "name": "Winstons Coffee",
                         "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
@@ -287,19 +287,19 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Metropolitain",
                         "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
-                        "iLink": "",
+                        "iLink": "https://goo.gl/maps/DhtEDXa4xQD2",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -319,12 +319,12 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Arabica Coffee",
+                        "name": "% Arabica",
                         "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
@@ -332,7 +332,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -344,7 +344,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -356,20 +356,20 @@
                             "content_id": "10941",
                             "content_type": "article",
                             "content_locale": "en_US",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Airport Express",
                         "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
-                        "iLink": "ticket:0",
+                        "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "deals",
                             "content_locale": "en_US",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -390,7 +390,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "0",
+                        "item_id": "1",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
@@ -412,11 +412,11 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "article:22",
+                    "iLink": "dealcatalog:21",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
-                        "item_id": "0",
+                        "item_id": "21",
                         "item_type": "attractions",
                         "item_position": "3"
                     }
@@ -447,13 +447,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -477,7 +477,7 @@
                             "content_id": "103",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -490,7 +490,7 @@
                             "content_id": "40941",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -503,7 +503,7 @@
                             "content_id": "32012",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -515,7 +515,7 @@
                             "content_id": "26852",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -529,13 +529,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -546,12 +546,12 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Times Square Mall",
+                        "name": "Times Square",
                         "description": "Trendy X'mas Shopping",
                         "image": "place_time_square_mall.jpg",
                         "iLink": "article:104",
@@ -559,7 +559,7 @@
                             "content_id": "104",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -571,7 +571,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -583,7 +583,7 @@
                             "content_id": "23976",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -595,7 +595,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -609,13 +609,9 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMoreOn-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
                     "tracker": {
                         "Event": "Homepage Click"
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -626,7 +622,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
@@ -640,7 +636,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -652,11 +648,11 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
-                        "name": "Winston's Coffee",
+                        "name": "Winstons Coffee",
                         "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
@@ -664,19 +660,19 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Metropolitain",
                         "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
-                        "iLink": "",
+                        "iLink": "https://goo.gl/maps/DhtEDXa4xQD2",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -696,12 +692,12 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Arabica Coffee",
+                        "name": "% Arabica",
                         "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
@@ -709,7 +705,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -721,7 +717,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -733,20 +729,20 @@
                             "content_id": "10941",
                             "content_type": "article",
                             "content_locale": "zh_CN",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Airport Express",
                         "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
-                        "iLink": "ticket:0",
+                        "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "deals",
                             "content_locale": "zh_CN",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -767,7 +763,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "0",
+                        "item_id": "1",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
@@ -789,11 +785,11 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "article:22",
+                    "iLink": "dealcatalog:21",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
-                        "item_id": "0",
+                        "item_id": "21",
                         "item_type": "attractions",
                         "item_position": "3"
                     }
@@ -824,13 +820,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -841,7 +837,7 @@
                         "content_id": "59",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
@@ -854,7 +850,7 @@
                             "content_id": "103",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -867,7 +863,7 @@
                             "content_id": "40941",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -880,7 +876,7 @@
                             "content_id": "32012",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -892,7 +888,7 @@
                             "content_id": "26852",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -906,13 +902,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -923,12 +919,12 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Times Square Mall",
+                        "name": "Times Square",
                         "description": "Trendy X'mas Shopping",
                         "image": "place_time_square_mall.jpg",
                         "iLink": "article:104",
@@ -936,7 +932,7 @@
                             "content_id": "104",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -948,7 +944,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -960,7 +956,7 @@
                             "content_id": "23976",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
@@ -972,7 +968,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -986,13 +982,13 @@
                 "seeMoreOn": {
                     "text": "See More On",
                     "iLink": "seeMore-link",
-"seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "tracker": {
-                        "Event": "Homepage Click"
+                    "seeMoreOn": {
+                        "text": "See More On",
+                        "iLink": "seeMore-link",
+                        "tracker": {
+                            "Event": "Homepage Click"
+                        }
                     }
-                }
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -1003,7 +999,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
@@ -1017,7 +1013,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -1029,11 +1025,11 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
-                        "name": "Winston's Coffee",
+                        "name": "Winstons Coffee",
                         "description": "Aussie-Style Coffee Shop",
                         "image": "place_winstons_coffee.jpg",
                         "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
@@ -1041,19 +1037,19 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Metropolitain",
                         "description": "Casual French Bistro",
                         "image": "place_metropolitain.jpg",
-                        "iLink": "",
+                        "iLink": "https://goo.gl/maps/DhtEDXa4xQD2",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
@@ -1073,12 +1069,12 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "1"
+                        "content_position": "2"
                     }
                 },
                 "otherSpot": [
                     {
-                        "name": "Arabica Coffee",
+                        "name": "% Arabica",
                         "description": "Cafe Inside the Star Ferry Pier",
                         "image": "place_arabica_coffee.jpg",
                         "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
@@ -1086,7 +1082,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "1"
+                            "content_position": "2"
                         }
                     },
                     {
@@ -1098,7 +1094,7 @@
                             "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "2"
+                            "content_position": "3"
                         }
                     },
                     {
@@ -1110,20 +1106,20 @@
                             "content_id": "10941",
                             "content_type": "article",
                             "content_locale": "zh_TW",
-                            "content_position": "3"
+                            "content_position": "4"
                         }
                     },
                     {
                         "name": "Airport Express",
                         "description": "Easiest Way to Get to HK Airport",
                         "image": "place_airport_express.jpg",
-                        "iLink": "ticket:0",
+                        "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
                             "content_id": "0",
                             "content_type": "deals",
                             "content_locale": "zh_TW",
-                            "content_position": "4"
+                            "content_position": "5"
                         }
                     }
                 ]
