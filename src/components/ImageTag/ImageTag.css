@@ -1,12 +1,17 @@
 .image-tag-container {
-    border: none;
-    color: white;
-    background-color: #ff8400;
-    width: 75px;
-    /* height: 14px; */
-    letter-spacing: 1px;
-    max-width: 100%;
-    text-overflow: clip;
+  color: white;
+  background-color: #ff8400;
+  border: none;
+  width: 75px;
+  max-width: 100%;
+  padding-top: 2px;
+  font-size: 9px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-overflow: clip;
+  position: absolute;
+  top: 6px;
+  left: 10px;
 }
 
 .image-tag-text {

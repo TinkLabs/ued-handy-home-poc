@@ -194,7 +194,7 @@ class PureHomePage extends React.Component {
 						this.renderDistrict()
 					}
 					<SignUp
-						locale={this.props.displayLanguage}
+						displayLanguage={this.props.displayLanguage}
 						redirectURL={this.state.hiDotComURL}
 						bg={require(`images/hi_dot_com_pre_launch_bg.jpg`)}
 					/>

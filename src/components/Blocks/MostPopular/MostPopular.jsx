@@ -8,6 +8,8 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import { withStyles } from '@material-ui/core/styles';
 
+import t from "translation/translate";
+
 const IProps = {
     displayLanguage: PropTypes.string,
     content: PropTypes.object,
@@ -31,14 +33,19 @@ class MostPopular extends React.Component {
     render() {
         const bannerPath = require(`images/${this.props.content.banner.image}`);
         const { classes } = this.props;
+        const locale = this.props.displayLanguage;
+
         return (
             <div className="mostPopular">
                 <ToolTips
                     // string
-                    LHS="Most Popular"
-                    // iLink, tracker, text
-                    RHS={this.props.content.popularSeeMore}
+                    LHS={t("Most Popular", locale)}
+                    // string
+                    RHS={t("See More", locale)}
+                    iLink={this.props.content.popularSeeMore.iLink}
+                    // tracker object
                     tracker={this.props.content.popularSeeMore.tracker}
+                    // custom css
                     styles={{
                         marginBottom: "0.5rem",
                     }}
@@ -54,8 +61,8 @@ class MostPopular extends React.Component {
                                         title="popular places"
                                     />
                                     <div className="popular-spot-text">
-                                        <div className="popular-spot-name">{e.name}</div>
-                                        <div className="popular-spot-desc">{e.subtext}</div>
+                                        <div className="popular-spot-name">{t(e.name, locale)}</div>
+                                        <div className="popular-spot-desc">{t(e.subtext, locale)}</div>
                                     </div>
                                 </Card>
                             ))

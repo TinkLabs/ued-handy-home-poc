@@ -3,6 +3,7 @@ import LoadingAnimate from "components/LoadingAnimate/LoadingAnimate";
 import PromotionTicket from "components/PromotionTicket/PromotionTicket";
 import GPTAD from "components/gptAD/gptAD"
 import mixpanel from 'utils/mixpanel';
+import trackerInfo from 'utils/trackerInfo.js';
 
 export default class PromotionBanner extends React.Component {
     constructor(props) {
@@ -17,25 +18,32 @@ export default class PromotionBanner extends React.Component {
     }
     // fired after user click ad and right before redirect
     onClickADBanner(e) {
-        mixpanel().track("Advertising Banner Click", {
-            campaignid: this.props.adInfo.campaignid,
-            campaignname: this.props.adInfo.campaignname,
-            bannerid: this.props.adInfo.bannerid,
-            bannername: this.props.adInfo.bannername,
-            "screen name": this.props.adInfo["screen name"],
-            position: 1
+        const template = trackerInfo.adClick;
+        const event = template.Event;
+        const dataKey = Object.keys(template);
+        const data = {};
+        dataKey.forEach(key => {
+            if (key !== "Event") {
+                data[key] = template[key]
+            }
         });
+        data.position = 1;
+        mixpanel().track(event, data);
     }
     // fired after slot (locale) specific ad is displayed
     localeADReady() {
-        mixpanel().track("Ads Image downloaded", {
-            campaignid: this.props.adInfo.campaignid,
-            campaignname: this.props.adInfo.campaignname,
-            bannerid: this.props.adInfo.bannerid,
-            bannername: this.props.adInfo.bannername,
-            "screen name": this.props.adInfo["screen name"],
-            position: 1
+        const template = trackerInfo.adDownload;
+        const event = template.Event;
+        const dataKey = Object.keys(template);
+        const data = {};
+        dataKey.forEach(key => {
+            if (key !== "Event") {
+                data[key] = template[key]
+            }
         });
+        data.position = 1;
+        mixpanel().track(event, data);
+
         this.setState({
             adReady: true,
         });
@@ -54,7 +62,7 @@ export default class PromotionBanner extends React.Component {
                         />
                     }
                     <GPTAD
-                        adUnitPath={"/21623654641/Tinklabs/NHS-01"}
+                        adUnitPath={process.env.REACT_APP_GPTAD_ID}
                         slotSize={[328, 210]}
                         targetArr={["lang", localeArray]}
                         target={this.props.displayLanguage.toLowerCase()}

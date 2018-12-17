@@ -9,3 +9,9 @@
     line-height: 1;
     margin-bottom: 1.5rem;
 }
+.district-banner-zh > .district-banner-name {
+    font-size: 28px;
+}
+.district-banner-zh > .district-banner-desc {
+    font-size: 13px;
+}

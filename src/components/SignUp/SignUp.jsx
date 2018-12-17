@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import mixpanel from 'utils/mixpanel';
+import trackerInfo from 'utils/trackerInfo.js';
 // import { ValidatorForm } from "react-form-validator-core";
 // import SignUpTextBox from "textBox/textBox";
 // import PopUp from "popUp/popUp";
@@ -30,6 +32,8 @@ class PureSignUp extends React.Component {
         this.handleSuccess = this.handleSuccess.bind(this);
         this.handleFail = this.handleFail.bind(this);
         this.closePop = this.closePop.bind(this);
+
+        this.onClick = this.onClick.bind(this);
     }
     componentDidMount() {
         // 
@@ -89,26 +93,40 @@ class PureSignUp extends React.Component {
         this.setState({
             popUp: false,
             popUpMsg: "",
+
         });
     }
+    onClick() {
+        const template = trackerInfo.signUp;
+        const event = template.Event;
+        const dataKey = Object.keys(template);
+        const data = {};
+        dataKey.forEach(key => {
+            if (key !== "Event") {
+                data[key] = template[key]
+            }
+        });
+        data["home_language"] = this.props.displayLanguage;
+        mixpanel().track(event, data);
+    }
     render() {
-        const translation = {
-            h1: {
-                en_US: "Subscribe today",
-                zh_CN: "Subscribe today",
-                zh_TW: "Subscribe today",
-            },
-            h2: {
-                en_US: "For more services and the best offers.",
-                zh_CN: "For more services and the best offers.",
-                zh_TW: "For more services and the best offers.",
-            },
-            btn: {
-                en_US: "SUBSCRIBE NOW",
-                zh_CN: "SUBSCRIBE NOW",
-                zh_TW: "SUBSCRIBE NOW",
-            },
-        }
+        // const translation = {
+        //     h1: {
+        //         en_US: "Subscribe today",
+        //         zh_CN: "Subscribe today",
+        //         zh_TW: "Subscribe today",
+        //     },
+        //     h2: {
+        //         en_US: "For more services and the best offers.",
+        //         zh_CN: "For more services and the best offers.",
+        //         zh_TW: "For more services and the best offers.",
+        //     },
+        //     btn: {
+        //         en_US: "SUBSCRIBE NOW",
+        //         zh_CN: "SUBSCRIBE NOW",
+        //         zh_TW: "SUBSCRIBE NOW",
+        //     },
+        // }
         return (
             <div>
                 {/* <ValidatorForm
@@ -120,6 +138,7 @@ class PureSignUp extends React.Component {
                 <div className="signUp-container">
                     <a
                         href={this.props.redirectURL}
+                        onClick={this.onClick}
                     >
                         <img src={this.props.bg} alt="sign-up" />
                     </a>

@@ -32,6 +32,9 @@
     margin: 0;
     hyphens: auto;
 }
+.articleInfo .articleTitle-zh {
+    font-size: 0.95rem;
+}
 .articleInfo .transportTime {
     padding-top: 0.4rem;
     display: flex;

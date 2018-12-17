@@ -13,8 +13,8 @@ const getAndroidGlobalProperty = () => {
 };
 
 export default () => {
-	mixpanel.init('cannotbeempty');
-	// mixpanel.init('6c29862add298fba05d9fd796a51e441');
+	// mixpanel.init('cannotbeempty');
+	mixpanel.init('6c29862add298fba05d9fd796a51e441');
 	mixpanel.register({
         ...getAndroidGlobalProperty(),
         section: 'home',

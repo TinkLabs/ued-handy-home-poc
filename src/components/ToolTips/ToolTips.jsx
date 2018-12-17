@@ -4,7 +4,7 @@ import mixpanel from 'utils/mixpanel';
 import PropTypes from 'prop-types';
 const IProps = {
     LHS: PropTypes.string,
-    RHS: PropTypes.object,
+    RHS: PropTypes.string,
     tracker: PropTypes.object,
 }
 
@@ -15,51 +15,35 @@ export default class ToolTips extends React.Component {
         this.renderRHS = this.renderRHS.bind(this);
     }
     renderRHS() {
-        if (this.props.RHS.iLink !== undefined) {
+        if (typeof(this.props.RHS.iLink) !== "undefined") {
             return (
                 <a
                     className="toolTips-RHS"
                     href={this.props.RHS.iLink}
-                    onClick={() => {
-                        mixpanel().track(this.props.RHS.tracker.name, {
-                            click_type: this.props.RHS.tracker.click_type
-                        });
-                    }}
+                    // onClick={() => {
+                    //     mixpanel().track(this.props.RHS.tracker.name, {
+                    //         click_type: this.props.RHS.tracker.click_type
+                    //     });
+                    // }}
                 >
-                    {this.props.RHS.text}
+                    {this.props.RHS}
                 </a>
             )
-        } else if (this.props.RHS.transport) {
-            const iconPath = require(`images/eta_${this.props.RHS.transport}.svg`);
-            let etaText = "";
-            switch(this.props.displayLanguage) {
-                case "en_US": {
-                    etaText = `${this.props.RHS.duration} from hotel`;
-                    break;
-                }
-                case "zh_CN": {
-                    etaText = `距离酒店 ${this.props.RHS.duration} 分钟`;
-                    break;
-                }
-                case "zh_TW": {
-                    etaText = `距離酒店 ${this.props.RHS.duration} 分鐘`;
-                    break;
-                }
-                default: {
-                    break
-                }
-            }
+        } else {
             return (
                 <div
                     className="toolTips-RHS toolTips-eta"
                 >
-                    <img
-                        src={iconPath}
-                        alt="icon"
-                        className="toolTips-icon"
-                    />
+                {
+                    (this.props.iconPath) ? 
+                        <img
+                            src={this.props.iconPath}
+                            alt="icon"
+                            className="toolTips-icon"
+                        /> : null
+                }
                     <span>
-                        {etaText}
+                        {this.props.RHS}
                     </span>
                 </div>
             )

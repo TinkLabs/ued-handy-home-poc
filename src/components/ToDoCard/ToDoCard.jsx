@@ -47,14 +47,6 @@ class ToDoCard extends React.Component {
                 return (
                     <ImageTag
                         text={tag.toUpperCase()}
-                        style={{
-                            position: "absolute",
-                            fontSize: "9px",
-                            lineHeight: "1.2",
-                            paddingTop: "1px",
-                            top: "6px",
-                            left: "10px",
-                        }}
                     />
                 )
             }
@@ -67,6 +59,7 @@ class ToDoCard extends React.Component {
         if (this.props.transportType) {
             etaIcon = require(`images/eta_${this.props.transportType}.svg`);
         }
+        const isChinese = (this.props.displayLanguage === "zh_TW") || (this.props.displayLanguage === "zh_CN");
         return (
             <a
                 className="toDoCardATag"
@@ -86,7 +79,7 @@ class ToDoCard extends React.Component {
                         <CardContent className={classes.content}>
                             <div className="articleInfo">
                                 <p
-                                    className="articleTitle"
+                                    className={`articleTitle ${(isChinese) ? "articleTitle-zh" : ""}`}
                                     id={this.props.title}
                                     style={(this.props.titleHeight !== 0) ? {
                                         height: this.props.titleHeight

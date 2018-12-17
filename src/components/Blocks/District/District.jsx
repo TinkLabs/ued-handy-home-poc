@@ -5,6 +5,8 @@ import ToolTips from "components/ToolTips/ToolTips";
 import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
 import ScrollBanner from "components/ScrollBanner/ScrollBanner";
 
+import t from "translation/translate";
+
 const IProps = {
     availableLanguage: PropTypes.array,
     displayLanguage: PropTypes.string,
@@ -13,14 +15,38 @@ const IProps = {
 
 export default class District extends React.Component {
     render() {
+        const locale = this.props.displayLanguage;
+        const isChinese = (locale === "zh_TW") || (locale === "zh_CN");
         const imagePath = require(`images/${this.props.districtContent.mainSpot.image}`);
+        const iconPath = require(`images/eta_${this.props.districtContent.eta.transport}.svg`);
+        let etaText = "";
+        switch (locale) {
+            case "en_US": {
+                etaText = `${this.props.districtContent.eta.duration} from hotel`;
+                break;
+            }
+            case "zh_CN": {
+                etaText = `距离酒店 ${this.props.districtContent.eta.duration} 分钟`;
+                break;
+            }
+            case "zh_TW": {
+                etaText = `距離酒店 ${this.props.districtContent.eta.duration} 分鐘`;
+                break;
+            }
+            default: {
+                break
+            }
+        }
+        const seeMore = t(`SEE MORE ON ${this.props.districtContent.district.toUpperCase()}`, locale);
+
         return (
             <div className="district">
                 <ToolTips
                     // string
-                    LHS={this.props.districtContent.district}
+                    LHS={t(this.props.districtContent.district, locale)}
                     // text, icon
-                    RHS={this.props.districtContent.eta}
+                    RHS={etaText}
+                    iconPath={iconPath}
                     displayLanguage={this.props.displayLanguage}
                 />
                 <MainPosterBanner
@@ -29,10 +55,12 @@ export default class District extends React.Component {
                         ...this.props.districtContent.mainSpot,
                         path: `url(${imagePath})`,
                     }}
+                    // darken bg
+                    shade
                 >
-                    <div className="district-banner">
-                        <div className="district-banner-name">{this.props.districtContent.mainSpot.name}</div>
-                        <div className="district-banner-desc">{this.props.districtContent.mainSpot.description}</div>
+                    <div className={`district-banner ${(isChinese) ? "district-banner-zh" : ""}`}>
+                        <div className="district-banner-name">{t(this.props.districtContent.mainSpot.name, locale)}</div>
+                        <div className="district-banner-desc">{t(this.props.districtContent.mainSpot.description, locale)}</div>
                     </div>
                 </MainPosterBanner>
                 <ScrollBanner
@@ -46,7 +74,7 @@ export default class District extends React.Component {
                 <div
                     className="seeMoreOn"
                 >
-                    See More On {this.props.districtContent.district}
+                    { seeMore }
                 </div>
             </div>
         )
