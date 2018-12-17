@@ -1,6 +1,7 @@
 
 import * as React from "react";
-// import mixpanel from 'utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
+import trackerInfo from "utils/trackerInfo";
 
 import logo from "images/lang.svg";
 import LanguageButton from "components/LanguageButton/LanguageButton";
@@ -14,12 +15,13 @@ export default class LanguageBanner extends React.Component {
                         <LanguageButton
                             key={i}
                             onClick={this.props.onClick}
-                            // onClickMixpanel={() => {
-                            //     mixpanel().track('Homepage Click', {
-                            //         click_type: "choose_language",
-                            //         user_language: lang.full
-                            //     });
-                            // }}
+                            onClickMixpanel={() => {
+                                const info = trackerInfo.langBanner;
+                                const event = info.Event;
+                                const data = info.data;
+                                data.user_language = lang.full;
+                                mixpanel().track(event, data);
+                            }}
                             language={lang.full.toUpperCase()}
                             locale={lang.short}
                             selected={
@@ -28,14 +30,15 @@ export default class LanguageBanner extends React.Component {
                     ))
                 }
                 <div className="langBtnWrapper systemLanguageSelector">
-                    <a 
+                    <a
                         href="chooselang:"
-                        // onClick={() => {
-                        //     mixpanel().track("Homepage Click", {
-                        //         click_type: "choose_language",
-                        //         choose_language: "more"
-                        //     });
-                        // }}
+                        onClick={() => {
+                            const info = trackerInfo.langBanner;
+                            const event = info.Event;
+                            const data = info.data;
+                            data.user_language = "more";
+                            mixpanel().track(event, data);
+                        }}
                     >
                         <img src={logo} alt="" />
                     </a>

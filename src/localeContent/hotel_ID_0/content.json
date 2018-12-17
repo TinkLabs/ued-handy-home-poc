@@ -22,7 +22,7 @@
                     "type": "Eat",
                     "name": "Kau Kee",
                     "subtext": "Beef Noodles",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_eat.jpg",
                     "tracker": {
                         "item": "Kau Kee Restaurant",
@@ -35,7 +35,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
@@ -71,10 +71,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -152,10 +149,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -231,10 +225,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -306,6 +297,13 @@
                 "eta": {
                     "transport": "train",
                     "duration": "0 mins"
+                },
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "seeMore-link",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
                 },
                 "mainSpot": {
                     "name": "Harbour City",
@@ -396,7 +394,7 @@
                     "type": "Eat",
                     "name": "Kau Kee",
                     "subtext": "Beef Noodles",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_eat.jpg",
                     "tracker": {
                         "item": "Kau Kee Restaurant",
@@ -409,7 +407,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
@@ -445,10 +443,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -526,10 +521,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -605,10 +597,7 @@
                     "text": "See More On",
                     "iLink": "seeMoreOn-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -680,6 +669,13 @@
                 "eta": {
                     "transport": "train",
                     "duration": "0 mins"
+                },
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "seeMore-link",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
                 },
                 "mainSpot": {
                     "name": "Harbour City",
@@ -770,7 +766,7 @@
                     "type": "Eat",
                     "name": "Kau Kee",
                     "subtext": "Beef Noodles",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_eat.jpg",
                     "tracker": {
                         "item": "Kau Kee Restaurant",
@@ -783,7 +779,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:7",
+                    "iLink": "article:22",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
@@ -819,10 +815,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -900,10 +893,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -979,10 +969,7 @@
                     "text": "See More On",
                     "iLink": "seeMore-link",
                     "tracker": {
-                        "item": "see-more",
-                        "item_id": "7",
-                        "item_type": "attractions",
-                        "item_position": "0"
+                        "Event": "Homepage Click"
                     }
                 },
                 "mainSpot": {
@@ -1054,6 +1041,13 @@
                 "eta": {
                     "transport": "train",
                     "duration": "0 mins"
+                },
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "seeMore-link",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
                 },
                 "mainSpot": {
                     "name": "Harbour City",

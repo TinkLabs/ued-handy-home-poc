@@ -1,32 +1,80 @@
 module.exports = {
+    "langBanner": {
+        "Event": "Homepage Click",
+        "data": {
+            "click_type": "choose_language",
+            "user_language": "lang in full | more"
+        }
+    },
+    "popularSeeMore": {
+        "Event": "Homepage Click",
+        "data": {
+            "click_type": "see-more",
+            "district": "popular",
+        }
+    },
+    "districtSeeMore": {
+        "Event": "Homepage Click",
+        "data": {
+            "click_type": "see-more",
+            "district": "",
+        }
+    },
+    "contentImpression": {
+        "Event": "Content Impression",
+        "data": {
+            "content_title": "title",
+            "content_id": "0",
+            "content_type": "article",
+            "content_locale": "locale",
+            "content_position": "0",
+        }
+    },
+    "popularBanner": {
+        "Event": "POI Click",
+        "data": {
+            "item": "??",
+            "item_id": "1",
+            "item_type": "??",
+            "item_position": "1",
+        }
+    },
     "screenView": {
         "Event": "Screen View",
-        "Screen Name": "Home",
-        "screen_number": "0",
-        "home_language": "this.props.displayLanguage",
+        "data": {
+            "Screen Name": "Home",
+            "screen_number": "0",
+            "home_language": "",
+        }
     },
     "adDownload": {
         "Event": "Ads Image downloaded",
-        "campaignid": "1",
-        "campaignname": "abc",
-        "bannerid": "123",
-        "bannername": "edf",
-        "screen name": "Home",
-        "position": "0",
+        "data": {
+            "campaignid": "1",
+            "campaignname": "abc",
+            "bannerid": "123",
+            "bannername": "edf",
+            "screen name": "Home",
+            "position": "0",
+        }
     },
     "adClick": {
         "Event": "Advertising Banner Click",
-        "campaignid": "1",
-        "campaignname": "abc",
-        "bannerid": "123",
-        "bannername": "edf",
-        "screen name": "Home",
-        "position": "0",
+        "data": {
+            "campaignid": "1",
+            "campaignname": "abc",
+            "bannerid": "123",
+            "bannername": "edf",
+            "screen name": "Home",
+            "position": "0",
+        }
     },
     "signUp": {
         "Event": "Email Sign Up",
-        "Screen Name": "Home",
-        "screen_number": "??",
-        "home_language": "this.props.displayLanguage",
-    }
+        "data": {
+            "Screen Name": "Home",
+            "screen_number": "??",
+            "home_language": "this.props.displayLanguage",
+        }
+    },
 }

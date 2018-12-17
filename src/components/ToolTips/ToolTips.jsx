@@ -20,11 +20,11 @@ export default class ToolTips extends React.Component {
                 <a
                     className="toolTips-RHS"
                     href={this.props.RHS.iLink}
-                    // onClick={() => {
-                    //     mixpanel().track(this.props.RHS.tracker.name, {
-                    //         click_type: this.props.RHS.tracker.click_type
-                    //     });
-                    // }}
+                    onClick={() => {
+                        mixpanel().track(this.props.RHS.tracker.name, {
+                            click_type: this.props.RHS.tracker.click_type
+                        });
+                    }}
                 >
                     {this.props.RHS}
                 </a>

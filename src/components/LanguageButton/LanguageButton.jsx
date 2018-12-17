@@ -8,7 +8,7 @@ export default class LanguageButton extends React.Component {
     }
 
     onClick = (e) => {
-        this.props.onClickMixpanel();
+        // this.props.onClickMixpanel();
         this.props.onClick(this.props.locale);
     }
     shouldComponentUpdate(nextProps) {
