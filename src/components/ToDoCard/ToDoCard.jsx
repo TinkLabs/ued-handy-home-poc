@@ -40,13 +40,15 @@ class ToDoCard extends React.Component {
 
         this.renderTag = this.renderTag.bind(this);
     }
-    renderTag() {
+    renderTag(isChinese, locale) {
         const tag = this.props.tag;
         if (typeof (tag) !== "undefined") {
             if (tag.trim().length > 0) {
                 return (
                     <ImageTag
                         text={tag.toUpperCase()}
+                        isChinese={isChinese}
+                        locale={locale}
                     />
                 )
             }
@@ -68,7 +70,7 @@ class ToDoCard extends React.Component {
             >
                 <Card className={classes.card}>
                     {
-                        this.renderTag()
+                        this.renderTag(isChinese, this.props.displayLanguage)
                     }
                     <div className="toDoCard">
                         <CardMedia

@@ -13,6 +13,9 @@
   top: 6px;
   left: 10px;
 }
-
-.image-tag-text {
+.image-tag-zh {
+  font-size: 8px;
+  width: 50px;
 }
+/* .image-tag-text {
+} */

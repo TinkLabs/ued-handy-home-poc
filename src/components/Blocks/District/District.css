@@ -15,3 +15,6 @@
 .district-banner-zh > .district-banner-desc {
     font-size: 13px;
 }
+.district-banner-zh.fashion-walk {
+    top: -75px;
+}

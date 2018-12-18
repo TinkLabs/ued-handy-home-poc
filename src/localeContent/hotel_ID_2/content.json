@@ -63,20 +63,16 @@
         "districts": [
             {
                 "district": "Central",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/yddZWvRp19Q2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -145,20 +141,16 @@
             },
             {
                 "district": "Causeway Bay",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/kvjPH46mVwG2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -169,7 +161,7 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -225,20 +217,16 @@
             },
             {
                 "district": "Sai Ying Pun",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/himVkFvRz3L2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -249,7 +237,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -306,6 +294,13 @@
             },
             {
                 "district": "Tsim Sha Tsui",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/2udVVUcHwbm",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
@@ -319,7 +314,7 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "en_US",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -440,20 +435,16 @@
         "districts": [
             {
                 "district": "Central",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/yddZWvRp19Q2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -522,20 +513,16 @@
             },
             {
                 "district": "Causeway Bay",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/kvjPH46mVwG2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -602,16 +589,16 @@
             },
             {
                 "district": "Sai Ying Pun",
-                "eta": {
-                    "transport": "train",
-                    "duration": "2 mins"
-                },
                 "seeMoreOn": {
                     "text": "See More On",
-                    "iLink": "seeMoreOn-link",
+                    "iLink": "https://goo.gl/maps/himVkFvRz3L2",
                     "tracker": {
                         "Event": "Homepage Click"
                     }
+                },
+                "eta": {
+                    "transport": "train",
+                    "duration": "2 mins"
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -679,6 +666,13 @@
             },
             {
                 "district": "Tsim Sha Tsui",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/2udVVUcHwbm",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
@@ -813,20 +807,16 @@
         "districts": [
             {
                 "district": "Central",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/yddZWvRp19Q2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "PMQ",
@@ -895,20 +885,16 @@
             },
             {
                 "district": "Causeway Bay",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/kvjPH46mVwG2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "Fashion Walk",
@@ -975,20 +961,16 @@
             },
             {
                 "district": "Sai Ying Pun",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/himVkFvRz3L2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"
-                },
-                "seeMoreOn": {
-                    "text": "See More On",
-                    "iLink": "seeMore-link",
-                    "seeMoreOn": {
-                        "text": "See More On",
-                        "iLink": "seeMore-link",
-                        "tracker": {
-                            "Event": "Homepage Click"
-                        }
-                    }
                 },
                 "mainSpot": {
                     "name": "Instagram Pier",
@@ -1056,6 +1038,13 @@
             },
             {
                 "district": "Tsim Sha Tsui",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/2udVVUcHwbm",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
                 "eta": {
                     "transport": "train",
                     "duration": "2 mins"

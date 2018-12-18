@@ -80,7 +80,10 @@ export default class District extends React.Component {
                             // });
                         }}
                     >
-                        <div className={`district-banner ${(isChinese) ? "district-banner-zh" : ""}`}>
+                        <div className={`district-banner 
+                            ${(isChinese) ? "district-banner-zh" : ""} 
+                            ${(this.props.districtContent.mainSpot.name === "Fashion Walk" && isChinese) ? "fashion-walk" : ""}`}
+                        >
                             <div className="district-banner-name">{t(this.props.districtContent.mainSpot.name, locale)}</div>
                             <div className="district-banner-desc">{t(this.props.districtContent.mainSpot.description, locale)}</div>
                         </div>
@@ -97,7 +100,17 @@ export default class District extends React.Component {
                 <div
                     className="seeMoreOn"
                 >
-                    {seeMore}
+                    <a
+                        href={this.props.districtContent.seeMoreOn.iLink}
+                        onClick={() => {
+                            // mixpanel().track("POI Click", {
+                            //     item: banner.item,
+                            //     item_id: banner.item_id,
+                            //     item_type: banner.item_type,
+                            //     item_position: banner.item_position,
+                            // });
+                        }}
+                    >{seeMore}</a>
                 </div>
             </div >
         )

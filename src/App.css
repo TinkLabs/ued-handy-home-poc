@@ -81,3 +81,7 @@ textarea {
 textarea:disabled {
   background-color: white;
 }
+a {
+  color: #0d47a1;
+  text-decoration: none;
+}
