@@ -1,14 +1,15 @@
 import * as React from "react";
 import { connect } from 'react-redux';
-import mixpanel from 'utils/mixpanel';
 import PropTypes from 'prop-types';
+import VisibilitySensor from "react-visibility-sensor";
 
 import MostPopular from "components/Blocks/MostPopular/MostPopular";
 import District from "components/Blocks/District/District";
 import LanguageBanner from "components/LanguageBanner/LanguageBanner"
 import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
-// import SignUp from "components/SignUp/SignUp";
 import VisibiltyChecker from "components/VisibiltyChecker/VisibiltyChecker";
+
+import mixpanel from 'utils/mixpanel';
 
 import {
 	setGlobalProperties,
@@ -43,16 +44,13 @@ class PureHomePage extends React.Component {
 			loadVS: false,
 		}
 
-		this.lastPosition = [];
 		this.onSelectLang = this.onSelectLang.bind(this);
-		this.handleScroll = this.handleScroll.bind(this);
 		this.getCookies = this.getCookies.bind(this);
 		this.setCookies = this.setCookies.bind(this);
 		// render component
 		this.renderDistrict = this.renderDistrict.bind(this);
 		// demo
 		this.changeHotel = this.changeHotel.bind(this);
-		this.autoCopy = this.autoCopy.bind(this);
 	}
 	componentDidMount() {
 		// add scrollspy
@@ -97,7 +95,6 @@ class PureHomePage extends React.Component {
 		/*
 		 *	Change lang, target lang loaded, nth special, go on.
 		 */
-
 		/*
 		 *	Read user preference, switch to previous language.
 		 *	prevLang > sysLang > defaultLang
@@ -109,20 +106,6 @@ class PureHomePage extends React.Component {
 			return false;
 		}
 		return true;
-	}
-	handleScroll(event) {
-		// if (window.Android) {window.Android.showToast(window.scrollY);}
-		// screen 1 = 'chicken rice' = window.scrollY === 105?
-		// screen 2 = bottom = window.scrollY === 704?
-		if ((this.lastPosition < 105 && window.scrollY >= 105)
-			|| (this.lastPosition > 105 && window.scrollY <= 105)) {
-			// if (window.Android) { window.Android.showToast(window.scrollY); }
-			mixpanel().track("Screen View", {
-				"Screen Name": "Home",
-				screen_number: 1,
-			});
-		}
-		this.lastPosition = window.scrollY;
 	}
 	getCookies(label) {
 		console.log(this.props.cookies.get(label));
@@ -141,12 +124,6 @@ class PureHomePage extends React.Component {
 	}
 	changeHotel(e) {
 		this.props.setGlobalProperties({ "hotel_id": e.currentTarget.innerHTML, "deviceLocale": this.props.displayLanguage });
-	}
-	autoCopy(e) {
-		const s = e.currentTarget.innerHTML;
-		const id = s.match(/(?<=#)(\d+)/g)[0];
-		console.log(id);
-		window.execCommand('copy', true, id);
 	}
 	renderDistrict() {
 		const comp = [];
@@ -180,6 +157,7 @@ class PureHomePage extends React.Component {
 		if (this.state.imgLoaded) {
 			return (
 				<div className="homePage">
+					{/* full screen divs under everything for screen tracking */}
 					{
 						(this.state.loadVS) ? <VisibiltyChecker /> : null
 					}
@@ -198,22 +176,54 @@ class PureHomePage extends React.Component {
 					{
 						this.renderDistrict()
 					}
-					{/* <SignUp
-						displayLanguage={this.props.displayLanguage}
-						redirectURL={this.state.hiDotComURL}
-						bg={require(`images/hi_dot_com_pre_launch_bg.jpg`)}
-					/> */}
+					{/* sign up banner */}
 					<div className="signUp-poster">
-						<MainPosterBanner
-							bannerInfo={{
-								path: `url(${require("images/hi_dot_com_pre_launch_bg.jpg")})`,
-								iLink: this.state.hiDotComURL,
-								styles: {
-									height: "191px"
+						<VisibilitySensor
+							onChange={(isVisible) => {
+								if (isVisible) {
+									console.log("Ads Image downloaded");
+									mixpanel().track("Ads Image downloaded", {
+										"Screen Name": "Home",
+										"campaignid": "0",
+										"campaignname": "hi-signup",
+										"bannerid": "0",
+										"bannername": "hi-signup",
+										"screen name": "Home",
+										"position": "2",
+									});
 								}
 							}}
-						/>
+						>
+							<MainPosterBanner
+								bannerInfo={{
+									path: `url(${require("images/hi_dot_com_pre_launch_bg.jpg")})`,
+									iLink: this.state.hiDotComURL,
+									styles: {
+										height: "191px"
+									}
+								}}
+								tracker={() => {
+									console.log('Email Sign Up', this.props.districtContent.district);
+									mixpanel().track("Email Sign Up", {
+										"Screen Name": "Home",
+										"screen_number": "last",
+									});
+									mixpanel().track("Ads Image downloaded", {
+										"Screen Name": "Home",
+										"campaignid": "0",
+										"campaignname": "hi-signup",
+										"bannerid": "0",
+										"bannername": "hi-signup",
+										"screen name": "Home",
+										"position": "2",
+									});
+								}}
+							/>
+						</VisibilitySensor>
 					</div>
+					{/* demo btn */}
+					<button onClick={this.changeHotel}>0</button>
+					<button onClick={this.changeHotel}>2</button>
 					<button onClick={this.changeHotel}>249</button>
 					<button onClick={this.changeHotel}>3461</button>
 					<button onClick={this.changeHotel}>5640</button>

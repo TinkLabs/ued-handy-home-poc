@@ -10,9 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { withStyles } from '@material-ui/core/styles';
 
 import t from "translation/translate";
-
-// import mixpanel from 'utils/mixpanel';
-import trackerInfo from "utils/trackerInfo";
+import mixpanel from 'utils/mixpanel';
 
 const IProps = {
     displayLanguage: PropTypes.string,
@@ -39,8 +37,6 @@ class MostPopular extends React.Component {
         const { classes } = this.props;
         const locale = this.props.displayLanguage;
 
-        const seeMoreTracker = trackerInfo.popularSeeMore;
-
         return (
             <div className="mostPopular">
                 <ToolTips
@@ -49,8 +45,14 @@ class MostPopular extends React.Component {
                     // string
                     RHS={t("See More", locale)}
                     iLink={this.props.content.popularSeeMore.iLink}
-                    // tracker object
-                    tracker={seeMoreTracker}
+                    // tracker
+                    RHSTracker={() => {
+                        console.log("homepage click", "see-more", "popular");
+                        mixpanel().track("Homepage Click", {
+                            "click_type": "see-more",
+                            "content_location": "popular",
+                        })
+                    }}
                     // custom css
                     styles={{
                         marginBottom: "0.5rem",
@@ -60,61 +62,84 @@ class MostPopular extends React.Component {
                     <div className="popularSpots">
                         {
                             this.props.content.events.map((e, i) => (
-                                <Card className={classes.card} key={i}>
-                                    <a
-                                        href={e.iLink}
-                                        onClick={this.trackerCardClick}
-                                        data-id={i}
-                                        data-tracker={e.tracker}
-                                    >
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={require(`images/${e.image}`)}
-                                            title="popular places"
-                                        />
-                                    </a>
-                                    <div className="popular-spot-text">
-                                        <div className="popular-spot-name">{t(e.name, locale)}</div>
-                                        <div className="popular-spot-desc">{t(e.subtext, locale)}</div>
-                                    </div>
-                                </Card>
+                                <VisibilitySensor
+                                    key={i}
+                                    onChange={(isVisible) => {
+                                        if (isVisible) {
+                                            console.log('Content Impression',
+                                                e.name,
+                                                e.tracker.item_id,
+                                                e.tracker.item_type,
+                                                this.props.displayLanguage,
+                                                e.tracker.item_position,
+                                                "popular",
+                                                e.iLink,
+                                            );
+                                            mixpanel().track("Content Impression", {
+                                                "content_title": e.name,
+                                                "content_id": e.tracker.item_id,
+                                                "content_type": e.tracker.item_type,
+                                                "content_locale": this.props.displayLanguage,
+                                                "content_position": e.tracker.item_position,
+                                                "content_location": "popular",
+                                            });
+                                        }
+                                    }}
+                                >
+                                    <Card className={classes.card}>
+                                        <a
+                                            href={e.iLink}
+                                            onClick={() => {
+                                                console.log("Listing Banner Click",
+                                                    e.name,
+                                                    e.tracker.item_id,
+                                                    e.tracker.item_type,
+                                                    this.props.displayLanguage,
+                                                    e.tracker.item_position,
+                                                    "popular",
+                                                    e.iLink,
+                                                );
+                                                mixpanel().track("Listing Banner Click", {
+                                                    "content_title": e.name,
+                                                    "content_id": e.tracker.item_id,
+                                                    "content_type": e.tracker.item_type,
+                                                    "content_locale": this.props.displayLanguage,
+                                                    "content_position": e.tracker.item_position,
+                                                    "content_location": "popular",
+                                                })
+                                            }}
+                                            data-id={i}
+                                            data-tracker={e.tracker}
+                                        >
+                                            <CardMedia
+                                                className={classes.media}
+                                                image={require(`images/${e.image}`)}
+                                                title="popular places"
+                                            />
+                                        </a>
+                                        <div className="popular-spot-text">
+                                            <div className="popular-spot-name">{t(e.name, locale)}</div>
+                                            <div className="popular-spot-desc">{t(e.subtext, locale)}</div>
+                                        </div>
+                                    </Card>
+                                </VisibilitySensor>
                             ))
                         }
                     </div>
                 </div>
-                <VisibilitySensor
-                    onChange={(isVisible) => {
-                        if (isVisible) {
-                            // mixpanel().track("Screen View", {
-                            //     "Screen Name": "Home",
-                            //     screen_number: 2,
-                            // });
+                <MainPosterBanner
+                    // img-path, styles, iLink
+                    bannerInfo={{
+                        ...this.props.content.banner,
+                        path: `url(${bannerPath})`,
+                        styles: {
+                            height: "84px",
+                            borderRadius: 0,
+                            marginLeft: "-1rem",
+                            marginRight: "-1rem",
                         }
                     }}
-                >
-                    <MainPosterBanner
-                        // img-path, styles, iLink
-                        bannerInfo={{
-                            ...this.props.content.banner,
-                            path: `url(${bannerPath})`,
-                            styles: {
-                                height: "84px",
-                                borderRadius: 0,
-                                marginLeft: "-1rem",
-                                marginRight: "-1rem",
-                            }
-                        }}
-                        // track click
-                        tracker={() => {
-                            // mixpanel().track("POI Click", {
-                            //     item: banner.item,
-                            //     item_id: banner.item_id,
-                            //     item_type: banner.item_type,
-                            //     item_position: banner.item_position,
-                            // });
-                        }}
-                    />
-                </VisibilitySensor>
+                />
             </div>
         )
     }

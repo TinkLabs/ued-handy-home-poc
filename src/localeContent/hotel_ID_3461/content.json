@@ -53,7 +53,7 @@
             },
             "popularSeeMore": {
                 "text": "See More",
-                "iLink": "",
+                "iLink": "category:1",
                 "tracker": {
                     "name": "",
                     "click_type": ""
@@ -425,7 +425,7 @@
             },
             "popularSeeMore": {
                 "text": "See More",
-                "iLink": "",
+                "iLink": "category:1",
                 "tracker": {
                     "name": "",
                     "click_type": ""
@@ -533,7 +533,7 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -609,7 +609,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -686,7 +686,7 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "zh_CN",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -797,7 +797,7 @@
             },
             "popularSeeMore": {
                 "text": "See More",
-                "iLink": "",
+                "iLink": "category:1",
                 "tracker": {
                     "name": "",
                     "click_type": ""
@@ -827,7 +827,7 @@
                         "content_id": "59",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -905,7 +905,7 @@
                         "content_id": "10641",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -981,7 +981,7 @@
                         "content_id": "0",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [
@@ -1058,7 +1058,7 @@
                         "content_id": "10944",
                         "content_type": "article",
                         "content_locale": "zh_TW",
-                        "content_position": "2"
+                        "content_position": "1"
                     }
                 },
                 "otherSpot": [

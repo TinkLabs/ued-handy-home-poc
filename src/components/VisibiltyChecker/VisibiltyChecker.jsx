@@ -45,7 +45,7 @@ export default class VisibiltyChecker extends React.Component {
                     partialVisibility
                     onChange={(isVisible) => {
                         if (isVisible) {
-                            // console.log(i)
+                            console.log("screen", i);
                             mixpanel().track("Screen View", {
                                 "Screen Name": "Home",
                                 screen_number: i,

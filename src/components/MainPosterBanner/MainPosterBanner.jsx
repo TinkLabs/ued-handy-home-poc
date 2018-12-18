@@ -14,7 +14,7 @@ export default class MainPosterBanner extends React.Component {
                 href={banner.iLink}
                 onClick={() => {
                     if (this.props.tracker) {
-                        // this.props.tracker();
+                        this.props.tracker();
                     }
                 }}
             >

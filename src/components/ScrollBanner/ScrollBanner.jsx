@@ -1,11 +1,10 @@
 import * as React from "react";
 import Slider from "react-slick";
-// import mixpanel from 'utils/mixpanel';
+import mixpanel from 'utils/mixpanel';
 import ToDoCard from "components/ToDoCard/ToDoCard";
 import VisibilitySensor from "react-visibility-sensor";
 
 import t from "translation/translate";
-// import trackerInfo from "utils/trackerInfo";
 
 import PropTypes from 'prop-types';
 const IProps = {
@@ -59,7 +58,6 @@ export default class ScrollBanner extends React.Component {
         if (typeof(height) === "undefined") {
             this.props.content.forEach(fa => {
                 const id = t(fa.name, this.props.displayLanguage);
-                console.log(id)
                 const h = document.getElementById(id).clientHeight;
                 if (h > maxHeight) { maxHeight = h }
             });
@@ -74,6 +72,7 @@ export default class ScrollBanner extends React.Component {
     }
     render() {
         const locale = this.props.displayLanguage;
+        console.log(locale)
         return (
             <div className="sliderContainer">
                 <Slider
@@ -84,13 +83,23 @@ export default class ScrollBanner extends React.Component {
                             key={i}
                             onChange={(isVisible) => {
                                 if (isVisible) {
-                                //     mixpanel().track("Content Impression", {
-                                //         content_title: fa.title,
-                                //         content_id: fa.content_id,
-                                //         content_type: fa.content_type,
-                                //         content_locale: fa.content_locale,
-                                //         content_position: fa.content_position,
-                                //     });
+                                    console.log("Content Impression",
+                                    fa.name,
+                                    fa.tracker.content_id,
+                                    fa.tracker.content_type,
+                                    this.props.displayLanguage,
+                                    fa.tracker.content_position,
+                                    this.props.district,
+                                    fa.iLink,
+                                    )
+                                    mixpanel().track("Content Impression", {
+                                        content_title: fa.name,
+                                        content_id: fa.tracker.content_id,
+                                        content_type: fa.tracker.content_type,
+                                        content_locale: this.props.displayLanguage,
+                                        content_position: fa.tracker.content_position,
+                                        content_location: this.props.district,
+                                    });
                                 }
                             }}
                         >
@@ -100,13 +109,23 @@ export default class ScrollBanner extends React.Component {
                                 description={t(fa.description, locale)}
                                 image={require(`images/${fa.image}`)}
                                 onClickMixpanel={() => {
-                                    // mixpanel().track("Listing Banner Click", {
-                                    //     content_title: fa.title,
-                                    //     content_id: fa.tracker.content_id,
-                                    //     content_type: fa.tracker.content_type,
-                                    //     content_locale: fa.tracker.content_locale,
-                                    //     content_position: fa.tracker.content_position,
-                                    // });
+                                    console.log("Listing Banner Click",
+                                    fa.name,
+                                    fa.tracker.content_id,
+                                    fa.tracker.content_type,
+                                    this.props.displayLanguage,
+                                    fa.tracker.content_position,
+                                    this.props.district,
+                                    fa.iLink,
+                                    )
+                                    mixpanel().track("Listing Banner Click", {
+                                        content_title: fa.name,
+                                        content_id: fa.tracker.content_id,
+                                        content_type: fa.tracker.content_type,
+                                        content_locale: this.props.displayLanguage,
+                                        content_position: fa.tracker.content_position,
+                                        content_location: this.props.district,
+                                    });
                                 }}
                                 tag={fa.tag}
                                 titleHeight={this.state.titleHeight}

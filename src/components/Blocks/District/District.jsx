@@ -7,6 +7,7 @@ import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
 import ScrollBanner from "components/ScrollBanner/ScrollBanner";
 
 import t from "translation/translate";
+import mixpanel from "utils/mixpanel";
 
 const IProps = {
     availableLanguage: PropTypes.array,
@@ -55,10 +56,23 @@ export default class District extends React.Component {
                 <VisibilitySensor
                     onChange={(isVisible) => {
                         if (isVisible) {
-                            // mixpanel().track("Screen View", {
-                            //     "Screen Name": "Home",
-                            //     screen_number: 2,
-                            // });
+                            console.log('Content Impression', 
+                            this.props.districtContent.mainSpot.name,
+                            this.props.districtContent.mainSpot.tracker.content_id,
+                            this.props.districtContent.mainSpot.tracker.content_type,
+                            this.props.displayLanguage,
+                            this.props.districtContent.mainSpot.tracker.content_position,
+                            this.props.districtContent.district,
+                            this.props.districtContent.mainSpot.iLink,
+                            );
+                            mixpanel().track("Content Impression", {
+                                "content_title": this.props.districtContent.mainSpot.name,
+                                "content_id": this.props.districtContent.mainSpot.tracker.content_id,
+                                "content_type": this.props.districtContent.mainSpot.tracker.content_type,
+                                "content_locale": this.props.displayLanguage,
+                                "content_position": this.props.districtContent.mainSpot.tracker.content_position,
+                                "content_location": this.props.districtContent.district,
+                            });
                         }
                     }}
                 >
@@ -72,12 +86,21 @@ export default class District extends React.Component {
                         shade
                         // track click
                         tracker={() => {
-                            // mixpanel().track("POI Click", {
-                            //     item: banner.item,
-                            //     item_id: banner.item_id,
-                            //     item_type: banner.item_type,
-                            //     item_position: banner.item_position,
-                            // });
+                            console.log('Listing Banner Click', 
+                            this.props.districtContent.mainSpot.name,
+                            this.props.districtContent.mainSpot.tracker.content_id,
+                            this.props.districtContent.mainSpot.tracker.content_type,
+                            this.props.displayLanguage,
+                            this.props.districtContent.mainSpot.tracker.content_position,
+                            this.props.districtContent.district)
+                            mixpanel().track("Listing Banner Click", {
+                                "content_title": this.props.districtContent.mainSpot.name,
+                                "content_id": this.props.districtContent.mainSpot.tracker.content_id,
+                                "content_type": this.props.districtContent.mainSpot.tracker.content_type,
+                                "content_locale": this.props.displayLanguage,
+                                "content_position": this.props.districtContent.mainSpot.tracker.content_position,
+                                "content_location": this.props.districtContent.district,
+                            });
                         }}
                     >
                         <div className={`district-banner 
@@ -94,21 +117,19 @@ export default class District extends React.Component {
                         slidesToShow: 2.5,
                     }}
                     // title, iLink, type, time, img, tracker
+                    district={this.props.districtContent.district}
                     content={this.props.districtContent.otherSpot}
                     displayLanguage={this.props.displayLanguage}
                 />
-                <div
-                    className="seeMoreOn"
-                >
+                <div className="seeMoreOn">
                     <a
                         href={this.props.districtContent.seeMoreOn.iLink}
                         onClick={() => {
-                            // mixpanel().track("POI Click", {
-                            //     item: banner.item,
-                            //     item_id: banner.item_id,
-                            //     item_type: banner.item_type,
-                            //     item_position: banner.item_position,
-                            // });
+                            console.log('see-more', this.props.districtContent.district, this.props.districtContent.seeMoreOn.iLink);
+                            mixpanel().track("Homepage Click", {
+                                "click_type": "see-more",
+                                "content_location": this.props.districtContent.district,
+                            });
                         }}
                     >{seeMore}</a>
                 </div>

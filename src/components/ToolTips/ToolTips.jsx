@@ -1,5 +1,4 @@
 import * as React from "react";
-import mixpanel from 'utils/mixpanel';
 
 import PropTypes from 'prop-types';
 const IProps = {
@@ -15,16 +14,12 @@ export default class ToolTips extends React.Component {
         this.renderRHS = this.renderRHS.bind(this);
     }
     renderRHS() {
-        if (typeof(this.props.RHS.iLink) !== "undefined") {
+        if (typeof(this.props.iLink) !== "undefined") {
             return (
                 <a
                     className="toolTips-RHS"
-                    href={this.props.RHS.iLink}
-                    onClick={() => {
-                        mixpanel().track(this.props.RHS.tracker.name, {
-                            click_type: this.props.RHS.tracker.click_type
-                        });
-                    }}
+                    href={this.props.iLink}
+                    onClick={this.props.RHSTracker}
                 >
                     {this.props.RHS}
                 </a>
