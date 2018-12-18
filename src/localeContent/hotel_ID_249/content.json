@@ -13,7 +13,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "1",
+                        "item_id": "0",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
@@ -385,7 +385,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "1",
+                        "item_id": "0",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
@@ -757,7 +757,7 @@
                     "image": "most_popular_shop.jpg",
                     "tracker": {
                         "item": "Off-White",
-                        "item_id": "1",
+                        "item_id": "0",
                         "item_type": "attractions",
                         "item_position": "1"
                     }
