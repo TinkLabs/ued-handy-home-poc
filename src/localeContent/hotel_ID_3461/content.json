@@ -348,7 +348,7 @@
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
-                            "content_id": "10941",
+                            "content_id": "0",
                             "content_type": "article",
                             "content_locale": "en_US",
                             "content_position": "4"
@@ -361,7 +361,7 @@
                         "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
-                            "content_id": "0",
+                            "content_id": "35",
                             "content_type": "deals",
                             "content_locale": "en_US",
                             "content_position": "5"
@@ -720,7 +720,7 @@
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
-                            "content_id": "10941",
+                            "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_CN",
                             "content_position": "4"
@@ -733,7 +733,7 @@
                         "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
-                            "content_id": "0",
+                            "content_id": "35",
                             "content_type": "deals",
                             "content_locale": "zh_CN",
                             "content_position": "5"
@@ -1092,7 +1092,7 @@
                         "image": "place_peninsula_lights.jpg",
                         "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f3461551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
                         "tracker": {
-                            "content_id": "10941",
+                            "content_id": "0",
                             "content_type": "article",
                             "content_locale": "zh_TW",
                             "content_position": "4"
@@ -1105,7 +1105,7 @@
                         "iLink": "ticket:35",
                         "tag": "popular",
                         "tracker": {
-                            "content_id": "0",
+                            "content_id": "35",
                             "content_type": "deals",
                             "content_locale": "zh_TW",
                             "content_position": "5"
