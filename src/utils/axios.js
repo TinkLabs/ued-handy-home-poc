@@ -68,8 +68,8 @@ axiosInstance.interceptors.response.use(
         }
         if (error.config.url.includes('/api/content')) {
             return new Promise((resolve) => {
-                const data = JSON.parse(error.config.data);
-                const hotelID = data.hotelID;
+                const data = error.config;
+                const hotelID = data.param.hotelID;
                 const hotelContent = require(`localeContent/hotel_ID_${hotelID}/content.json`);
                 setTimeout(() => {
                     resolve({

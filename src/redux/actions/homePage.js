@@ -24,7 +24,8 @@ export const setDisplayLanguage = (locale) => {
 }
 export const getContent = (hotelID) => dispatch => {
     // dispatch(getContentSuccess(hotelID));
-    axios.post('/api/content', {hotelID})
+    const param = { hotelID };
+    axios.get(`/api/content`, { param })
         .then(res => {
             switch (res.status) {
                 case 200: {
@@ -45,7 +46,6 @@ export const getContent = (hotelID) => dispatch => {
         
 }
 export const getContentSuccess = (content) => {
-    // const content = require(`localeContent/hotel_ID_${hotelID}/content.json`);
     return {
         type: homePageActions.GET_CONTENT_SUCCESS,
         content,

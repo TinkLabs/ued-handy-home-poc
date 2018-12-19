@@ -47,7 +47,7 @@ class MostPopular extends React.Component {
                     iLink={this.props.content.popularSeeMore.iLink}
                     // tracker
                     RHSTracker={() => {
-                        console.log("homepage click", "see-more", "popular");
+                        // console.log("homepage click", "see-more", "popular");
                         mixpanel().track("Homepage Click", {
                             "click_type": "see-more",
                             "content_location": "popular",
@@ -66,15 +66,15 @@ class MostPopular extends React.Component {
                                     key={i}
                                     onChange={(isVisible) => {
                                         if (isVisible) {
-                                            console.log('Content Impression',
-                                                e.name,
-                                                e.tracker.item_id,
-                                                e.tracker.item_type,
-                                                this.props.displayLanguage,
-                                                e.tracker.item_position,
-                                                "popular",
-                                                e.iLink,
-                                            );
+                                            // console.log('Content Impression',
+                                            //     e.name,
+                                            //     e.tracker.item_id,
+                                            //     e.tracker.item_type,
+                                            //     this.props.displayLanguage,
+                                            //     e.tracker.item_position,
+                                            //     "popular",
+                                            //     e.iLink,
+                                            // );
                                             mixpanel().track("Content Impression", {
                                                 "content_title": e.name,
                                                 "content_id": e.tracker.item_id,
@@ -90,15 +90,15 @@ class MostPopular extends React.Component {
                                         <a
                                             href={e.iLink}
                                             onClick={() => {
-                                                console.log("Listing Banner Click",
-                                                    e.name,
-                                                    e.tracker.item_id,
-                                                    e.tracker.item_type,
-                                                    this.props.displayLanguage,
-                                                    e.tracker.item_position,
-                                                    "popular",
-                                                    e.iLink,
-                                                );
+                                                // console.log("Listing Banner Click",
+                                                //     e.name,
+                                                //     e.tracker.item_id,
+                                                //     e.tracker.item_type,
+                                                //     this.props.displayLanguage,
+                                                //     e.tracker.item_position,
+                                                //     "popular",
+                                                //     e.iLink,
+                                                // );
                                                 mixpanel().track("Listing Banner Click", {
                                                     "content_title": e.name,
                                                     "content_id": e.tracker.item_id,
@@ -116,11 +116,11 @@ class MostPopular extends React.Component {
                                                 image={require(`images/${e.image}`)}
                                                 title="popular places"
                                             />
+                                            <div className="popular-spot-text">
+                                                <div className="popular-spot-name">{t(e.name, locale)}</div>
+                                                <div className="popular-spot-desc">{t(e.subtext, locale)}</div>
+                                            </div>
                                         </a>
-                                        <div className="popular-spot-text">
-                                            <div className="popular-spot-name">{t(e.name, locale)}</div>
-                                            <div className="popular-spot-desc">{t(e.subtext, locale)}</div>
-                                        </div>
                                     </Card>
                                 </VisibilitySensor>
                             ))

@@ -72,7 +72,6 @@ export default class ScrollBanner extends React.Component {
     }
     render() {
         const locale = this.props.displayLanguage;
-        console.log(locale)
         return (
             <div className="sliderContainer">
                 <Slider
@@ -83,15 +82,15 @@ export default class ScrollBanner extends React.Component {
                             key={i}
                             onChange={(isVisible) => {
                                 if (isVisible) {
-                                    console.log("Content Impression",
-                                    fa.name,
-                                    fa.tracker.content_id,
-                                    fa.tracker.content_type,
-                                    this.props.displayLanguage,
-                                    fa.tracker.content_position,
-                                    this.props.district,
-                                    fa.iLink,
-                                    )
+                                    // console.log("Content Impression",
+                                    // fa.name,
+                                    // fa.tracker.content_id,
+                                    // fa.tracker.content_type,
+                                    // this.props.displayLanguage,
+                                    // fa.tracker.content_position,
+                                    // this.props.district,
+                                    // fa.iLink,
+                                    // )
                                     mixpanel().track("Content Impression", {
                                         content_title: fa.name,
                                         content_id: fa.tracker.content_id,
@@ -109,15 +108,15 @@ export default class ScrollBanner extends React.Component {
                                 description={t(fa.description, locale)}
                                 image={require(`images/${fa.image}`)}
                                 onClickMixpanel={() => {
-                                    console.log("Listing Banner Click",
-                                    fa.name,
-                                    fa.tracker.content_id,
-                                    fa.tracker.content_type,
-                                    this.props.displayLanguage,
-                                    fa.tracker.content_position,
-                                    this.props.district,
-                                    fa.iLink,
-                                    )
+                                    // console.log("Listing Banner Click",
+                                    // fa.name,
+                                    // fa.tracker.content_id,
+                                    // fa.tracker.content_type,
+                                    // this.props.displayLanguage,
+                                    // fa.tracker.content_position,
+                                    // this.props.district,
+                                    // fa.iLink,
+                                    // )
                                     mixpanel().track("Listing Banner Click", {
                                         content_title: fa.name,
                                         content_id: fa.tracker.content_id,

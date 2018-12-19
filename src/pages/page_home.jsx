@@ -8,6 +8,7 @@ import District from "components/Blocks/District/District";
 import LanguageBanner from "components/LanguageBanner/LanguageBanner"
 import MainPosterBanner from "components/MainPosterBanner/MainPosterBanner";
 import VisibiltyChecker from "components/VisibiltyChecker/VisibiltyChecker";
+// import GPTAD from "components/gptAD/gptAD";
 
 import mixpanel from 'utils/mixpanel';
 
@@ -35,7 +36,6 @@ class PureHomePage extends React.Component {
 
 		this.state = {
 			userPreference: [],
-			// imgLoaded: false,
 			imgLoaded: true,
 			mainBannerPkg: [],
 			promotions: [],
@@ -78,6 +78,14 @@ class PureHomePage extends React.Component {
 				"deviceLocale": "en_US",
 			};
 		}
+		/*
+		 *	Read user preference, switch to previous language.
+		 *	prevLang > sysLang > defaultLang
+		 */
+		const prevLocale = localStorage.getItem('homePageLocale');
+		if (prevLocale !== null) {
+			gp.deviceLocale = prevLocale;
+		}
 		this.setState({ loadVS: true });
 		this.props.setGlobalProperties(gp);
 	}
@@ -95,16 +103,6 @@ class PureHomePage extends React.Component {
 		/*
 		 *	Change lang, target lang loaded, nth special, go on.
 		 */
-		/*
-		 *	Read user preference, switch to previous language.
-		 *	prevLang > sysLang > defaultLang
-		 */
-		const prevLocale = localStorage.getItem('homePageLocale');
-		if (prevLocale !== null
-			&& prevLocale !== nextProps.displayLanguage) {
-			this.props.setDisplayLanguage(prevLocale);
-			return false;
-		}
 		return true;
 	}
 	getCookies(label) {
@@ -150,6 +148,18 @@ class PureHomePage extends React.Component {
 					AD
 					</div>)
 			}
+			// when ad is ready
+			// if (i === 1) {
+			// 	const localeArray = this.props.availableLanguage.map(lang => lang.short.toLowerCase());
+			// 	comp.push(
+			// 		<GPTAD
+			// 			adUnitPath={process.env.REACT_APP_GPTAD_ID}
+			// 			slotSize={[328, 210]}
+			// 			targetArr={["lang", localeArray]}
+			// 			target={this.props.displayLanguage.toLowerCase()}
+			// 		/>
+			// 	)
+			// }
 		});
 		return comp;
 	}
@@ -181,7 +191,7 @@ class PureHomePage extends React.Component {
 						<VisibilitySensor
 							onChange={(isVisible) => {
 								if (isVisible) {
-									console.log("Ads Image downloaded");
+									// console.log("Ads Image downloaded");
 									mixpanel().track("Ads Image downloaded", {
 										"Screen Name": "Home",
 										"campaignid": "0",
@@ -203,12 +213,12 @@ class PureHomePage extends React.Component {
 									}
 								}}
 								tracker={() => {
-									console.log('Email Sign Up', this.props.districtContent.district);
+									// console.log('Email Sign Up', this.props.districtContent.district);
 									mixpanel().track("Email Sign Up", {
 										"Screen Name": "Home",
 										"screen_number": "last",
 									});
-									mixpanel().track("Ads Image downloaded", {
+									mixpanel().track("Advertising Banner Click", {
 										"Screen Name": "Home",
 										"campaignid": "0",
 										"campaignname": "hi-signup",

@@ -56,15 +56,15 @@ export default class District extends React.Component {
                 <VisibilitySensor
                     onChange={(isVisible) => {
                         if (isVisible) {
-                            console.log('Content Impression', 
-                            this.props.districtContent.mainSpot.name,
-                            this.props.districtContent.mainSpot.tracker.content_id,
-                            this.props.districtContent.mainSpot.tracker.content_type,
-                            this.props.displayLanguage,
-                            this.props.districtContent.mainSpot.tracker.content_position,
-                            this.props.districtContent.district,
-                            this.props.districtContent.mainSpot.iLink,
-                            );
+                            // console.log('Content Impression', 
+                            // this.props.districtContent.mainSpot.name,
+                            // this.props.districtContent.mainSpot.tracker.content_id,
+                            // this.props.districtContent.mainSpot.tracker.content_type,
+                            // this.props.displayLanguage,
+                            // this.props.districtContent.mainSpot.tracker.content_position,
+                            // this.props.districtContent.district,
+                            // this.props.districtContent.mainSpot.iLink,
+                            // );
                             mixpanel().track("Content Impression", {
                                 "content_title": this.props.districtContent.mainSpot.name,
                                 "content_id": this.props.districtContent.mainSpot.tracker.content_id,
@@ -86,13 +86,13 @@ export default class District extends React.Component {
                         shade
                         // track click
                         tracker={() => {
-                            console.log('Listing Banner Click', 
-                            this.props.districtContent.mainSpot.name,
-                            this.props.districtContent.mainSpot.tracker.content_id,
-                            this.props.districtContent.mainSpot.tracker.content_type,
-                            this.props.displayLanguage,
-                            this.props.districtContent.mainSpot.tracker.content_position,
-                            this.props.districtContent.district)
+                            // console.log('Listing Banner Click', 
+                            // this.props.districtContent.mainSpot.name,
+                            // this.props.districtContent.mainSpot.tracker.content_id,
+                            // this.props.districtContent.mainSpot.tracker.content_type,
+                            // this.props.displayLanguage,
+                            // this.props.districtContent.mainSpot.tracker.content_position,
+                            // this.props.districtContent.district)
                             mixpanel().track("Listing Banner Click", {
                                 "content_title": this.props.districtContent.mainSpot.name,
                                 "content_id": this.props.districtContent.mainSpot.tracker.content_id,
@@ -125,7 +125,7 @@ export default class District extends React.Component {
                     <a
                         href={this.props.districtContent.seeMoreOn.iLink}
                         onClick={() => {
-                            console.log('see-more', this.props.districtContent.district, this.props.districtContent.seeMoreOn.iLink);
+                            // console.log('see-more', this.props.districtContent.district, this.props.districtContent.seeMoreOn.iLink);
                             mixpanel().track("Homepage Click", {
                                 "click_type": "see-more",
                                 "content_location": this.props.districtContent.district,

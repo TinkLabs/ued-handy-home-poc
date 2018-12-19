@@ -35,7 +35,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:21",
+                    "iLink": "ticket:104",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
@@ -407,7 +407,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:21",
+                    "iLink": "ticket:104",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
@@ -779,7 +779,7 @@
                     "type": "Do",
                     "name": "The Peak",
                     "subtext": "Best View",
-                    "iLink": "dealcatalog:21",
+                    "iLink": "ticket:104",
                     "image": "most_popular_do.jpg",
                     "tracker": {
                         "item": "The Peak",
