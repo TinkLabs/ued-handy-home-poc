@@ -210,11 +210,26 @@ class PureHomePage extends React.Component {
 								)
 							})
 					}
-					<SignUp
-						locale={this.props.displayLanguage}
-						redirectURL={this.state.hiDotComURL}
-						bg={require(`images/hi_dot_com_prelaunch.jpg`)}
-					/>
+					<VisibilitySensor
+						onChange={(isVisible) => {
+							if (isVisible) {
+								mixpanel().track("Ads Image downloaded", {
+									campaignid: "0",
+                                    campaignname: "hi-signup",
+                                    bannerid: "0",
+                                    bannername: "hi-signup",
+                                    "screen name": "Home",
+                                    position: "2",
+								});
+							}
+						}}
+					>
+						<SignUp
+							locale={this.props.displayLanguage}
+							redirectURL={this.state.hiDotComURL}
+							bg={require(`images/hi_dot_com_prelaunch.jpg`)}
+						/>
+					</VisibilitySensor>
 					<VisibilitySensor
 						onChange={(isVisible) => {
 							if (isVisible) {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import mixpanel from 'utils/mixpanel';
 // import { ValidatorForm } from "react-form-validator-core";
 // import SignUpTextBox from "textBox/textBox";
 // import PopUp from "popUp/popUp";
@@ -120,6 +121,16 @@ class PureSignUp extends React.Component {
                     <div className="signUp-container">
                         <a
                             href={this.props.redirectURL}
+                            onClick={() => {
+                                mixpanel().track("Advertising Banner Click", {
+                                    campaignid: "0",
+                                    campaignname: "hi-signup",
+                                    bannerid: "0",
+                                    bannername: "hi-signup",
+                                    "screen name": "Home",
+                                    position: "2",
+                                });
+                            }}
                         >
                             <img src={this.props.bg} alt="sign-up" />
                         </a>
