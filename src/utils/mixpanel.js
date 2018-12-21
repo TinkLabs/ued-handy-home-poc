@@ -12,15 +12,19 @@ const getAndroidGlobalProperty = () => {
 	return JSON.parse(window.Android.getGlobalProperties());
 };
 
+let user_id = getAndroidGlobalProperty().device_user_id;
+mixpanel.init('6c29862add298fba05d9fd796a51e441');
+mixpanel.identify(user_id);
+
 export default () => {
 	// mixpanel.init('cannotbeempty');
-	mixpanel.init('6c29862add298fba05d9fd796a51e441');
 	mixpanel.register({
         ...getAndroidGlobalProperty(),
         section: 'home',
         category: 'index',
         subcategory: 'index',
-        screen_name: 'home_index_index',
+		screen_name: 'home_index_index',
+		$user_id: user_id,
 		// Domain: window.location.hostname,
 		// section: 'ird',
 		// hotel_id: store.getState().getIn(['roomServiceConfig', 'hotel_id']),
