@@ -97,7 +97,7 @@ class PureHomePage extends React.Component {
 		 *	`hotel_id` changed (DidMount / demo), write new hotel specific content to store 
 		 */
 		if (this.props.hotel_ID !== nextProps.hotel_ID) {
-			this.props.getContent(nextProps.hotel_ID);
+			// this.props.getContent(nextProps.hotel_ID);
 			return false;
 		}
 		/*
@@ -231,12 +231,6 @@ class PureHomePage extends React.Component {
 							/>
 						</VisibilitySensor>
 					</div>
-					{/* demo btn */}
-					<button onClick={this.changeHotel}>0</button>
-					<button onClick={this.changeHotel}>2</button>
-					<button onClick={this.changeHotel}>249</button>
-					<button onClick={this.changeHotel}>3461</button>
-					<button onClick={this.changeHotel}>5640</button>
 				</div>
 			)
 		}

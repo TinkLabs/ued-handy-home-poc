@@ -1,5 +1,377 @@
 {
-    "en_US": {
+	"ja_JP": {
+        "locale": "ja_JP",
+        "hotel_ID": "2",
+        "mostPopular": {
+            "locale": "ja_JP",
+            "events": [
+                {
+                    "type": "Shop",
+                    "name": "Off-White",
+                    "subtext": "Hippest Brand",
+                    "iLink": "https://goo.gl/maps/jMhEixBPPet",
+                    "image": "most_popular_shop.jpg",
+                    "tracker": {
+                        "item": "Off-White",
+                        "item_id": "0",
+                        "item_type": "attractions",
+                        "item_position": "1"
+                    }
+                },
+                {
+                    "type": "Eat",
+                    "name": "Kau Kee",
+                    "subtext": "Beef Noodles",
+                    "iLink": "article:22",
+                    "image": "most_popular_eat.jpg",
+                    "tracker": {
+                        "item": "Kau Kee Restaurant",
+                        "item_id": "22",
+                        "item_type": "attractions",
+                        "item_position": "2"
+                    }
+                },
+                {
+                    "type": "Do",
+                    "name": "The Peak",
+                    "subtext": "Best View",
+                    "iLink": "ticket:104",
+                    "image": "most_popular_do.jpg",
+                    "tracker": {
+                        "item": "The Peak",
+                        "item_id": "21",
+                        "item_type": "attractions",
+                        "item_position": "3"
+                    }
+                }
+            ],
+            "banner": {
+                "title": "Best places to go at Hong Kong",
+                "subTitle": "Explore city's life here with handy’s recommendation list.",
+                "image": "en_US/best_places_to_go_en_US.jpg",
+                "tracker": {}
+            },
+            "popularSeeMore": {
+                "text": "See More",
+                "iLink": "category:1",
+                "tracker": {
+                    "name": "",
+                    "click_type": ""
+                }
+            }
+        },
+        "districts": [
+            {
+                "district": "Odaiba",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://www.google.com/destination/map/topsights?q=tokyo+travel+guide&site=search&output=search&dest_mid=/m/07dfk&sa=X&ved=2ahUKEwjl283wmOXfAhWJEbwKHVzHCuMQ69EBKAAwAHoECAUQAw#trifp=skpm%3D/m/026vw4",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
+                "eta": {
+                    "transport": "train",
+                    "duration": "2 mins"
+                },
+                "mainSpot": {
+                    "name": "PMQ",
+                    "description": "\"Police Married Quarters\" Local Artist Hub",
+                    "image": "place_pmq.jpg",
+                    "iLink": "article:59",
+                    "tracker": {
+                        "content_id": "59",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "IFC Mall",
+                        "description": "A Luxurious Shopping Experience",
+                        "image": "place_ifc_mall.jpg",
+                        "iLink": "article:103",
+                        "tracker": {
+                            "content_id": "103",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Tai Kwun",
+                        "description": "Heritage & Art Centre",
+                        "image": "place_tai_kwun.jpg",
+                        "iLink": "article:40941",
+                        "tag": "INSTAWORTHY",
+                        "tracker": {
+                            "content_id": "40941",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Lan Fong Yuen",
+                        "description": "Best Cha Chaan Teng",
+                        "image": "place_lan_fong_yuen.jpg",
+                        "iLink": "article:32012",
+                        "tag": "MUST EAT",
+                        "tracker": {
+                            "content_id": "32012",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
+                        }
+                    },
+                    {
+                        "name": "Shake Shack",
+                        "description": "Hottest Made to Order Burger Chain",
+                        "image": "place_shack_shack.jpg",
+                        "iLink": "article:26852",
+                        "tracker": {
+                            "content_id": "26852",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "5"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Causeway Bay",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/kvjPH46mVwG2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
+                "eta": {
+                    "transport": "train",
+                    "duration": "2 mins"
+                },
+                "mainSpot": {
+                    "name": "Fashion Walk",
+                    "description": "Unique Fusion of Dining, Fashion & Lifestyle",
+                    "image": "place_fashion_walk.jpg",
+                    "iLink": "article:10641",
+                    "tracker": {
+                        "content_id": "10641",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "Times Square",
+                        "description": "Trendy X'mas Shopping",
+                        "image": "place_time_square_mall.jpg",
+                        "iLink": "article:104",
+                        "tracker": {
+                            "content_id": "104",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Yee Shun Milk Company",
+                        "description": "HK Style Dessert Shop",
+                        "image": "place_yee_shun_milk_company.jpg",
+                        "iLink": "https://goo.gl/maps/EjJKXc2pL1D2",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Elephant Grounds",
+                        "description": "Specialty Coffee with Comfort Foods",
+                        "image": "place_elephant_grounds.jpg",
+                        "iLink": "article:23976",
+                        "tracker": {
+                            "content_id": "23976",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
+                        }
+                    },
+                    {
+                        "name": "Wing Kee Noodle",
+                        "description": "Hong Kong Style Cart Noodle",
+                        "image": "place_wing_kee_noodle.jpg",
+                        "iLink": "https://goo.gl/maps/GSafwMCZbjw",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "5"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Sai Ying Pun",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/himVkFvRz3L2",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
+                "eta": {
+                    "transport": "train",
+                    "duration": "2 mins"
+                },
+                "mainSpot": {
+                    "name": "Instagram Pier",
+                    "description": "Best Views of the Sunset",
+                    "image": "place_instagram_pier.jpg",
+                    "iLink": "https://g.co/kgs/HpJWFd",
+                    "tracker": {
+                        "content_id": "0",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "Swimming Shed",
+                        "description": "Hidden Photography Spot in Sai Wan",
+                        "image": "place_sai_wan_swimming_shed.jpg",
+                        "iLink": "https://goo.gl/maps/7PB1y9sSygL2",
+                        "tag": "INSTAWORTHY",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Kwan Kee Claypot Rice",
+                        "description": "Must-Try Claypot Rice",
+                        "image": "place_kwan_kee_claypot_rice.jpg",
+                        "iLink": "https://goo.gl/maps/rDRMjqQgLGD2",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Winstons Coffee",
+                        "description": "Aussie-Style Coffee Shop",
+                        "image": "place_winstons_coffee.jpg",
+                        "iLink": "https://goo.gl/maps/xMVwGbkJVZv",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
+                        }
+                    },
+                    {
+                        "name": "Metropolitain",
+                        "description": "Casual French Bistro",
+                        "image": "place_metropolitain.jpg",
+                        "iLink": "https://goo.gl/maps/DhtEDXa4xQD2",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "5"
+                        }
+                    }
+                ]
+            },
+            {
+                "district": "Tsim Sha Tsui",
+                "seeMoreOn": {
+                    "text": "See More On",
+                    "iLink": "https://goo.gl/maps/2udVVUcHwbm",
+                    "tracker": {
+                        "Event": "Homepage Click"
+                    }
+                },
+                "eta": {
+                    "transport": "train",
+                    "duration": "2 mins"
+                },
+                "mainSpot": {
+                    "name": "Harbour City",
+                    "description": "Premier Shopping Destination",
+                    "image": "place_harbour_city.jpg",
+                    "iLink": "article:10944",
+                    "tracker": {
+                        "content_id": "10944",
+                        "content_type": "article",
+                        "content_locale": "en_US",
+                        "content_position": "1"
+                    }
+                },
+                "otherSpot": [
+                    {
+                        "name": "% Arabica",
+                        "description": "Cafe Inside the Star Ferry Pier",
+                        "image": "place_arabica_coffee.jpg",
+                        "iLink": "https://goo.gl/maps/XZJhnaj8TqN2",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "2"
+                        }
+                    },
+                    {
+                        "name": "Macau Restaurant",
+                        "description": "For Egg Tart Connoisseurs",
+                        "image": "place_macau_restaurant.jpg",
+                        "iLink": "https://goo.gl/maps/5XDDb35uCp52",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "3"
+                        }
+                    },
+                    {
+                        "name": "Peninsula Hotel",
+                        "description": "Striking Festive Displays",
+                        "image": "place_peninsula_lights.jpg",
+                        "iLink": "https://www.google.com/maps/place/The+Peninsula+Hong+Kong/@22.2951073,114.1696597,17z/data=!3m1!4b1!4m5!3m4!1s0x340400f249551975:0xefa3d013e6ba94ab!8m2!3d22.2951024!4d114.1718537",
+                        "tracker": {
+                            "content_id": "0",
+                            "content_type": "article",
+                            "content_locale": "en_US",
+                            "content_position": "4"
+                        }
+                    },
+                    {
+                        "name": "Airport Express",
+                        "description": "Easiest Way to Get to HK Airport",
+                        "image": "place_airport_express.jpg",
+                        "iLink": "ticket:35",
+                        "tag": "popular",
+                        "tracker": {
+                            "content_id": "35",
+                            "content_type": "deals",
+                            "content_locale": "en_US",
+                            "content_position": "5"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+	"en_US": {
         "locale": "en_US",
         "hotel_ID": "2",
         "mostPopular": {
@@ -371,7 +743,7 @@
             }
         ]
     },
-    "zh_CN": {
+	"zh_CN": {
         "locale": "zh_CN",
         "hotel_ID": "2",
         "mostPopular": {
